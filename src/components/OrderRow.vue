@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Order } from '@/types'
-import StatusBadge from './StatusBadge.vue'
 
 const props = defineProps<{
 	order: Order
@@ -9,28 +8,24 @@ const props = defineProps<{
 
 const formattedDate = computed(() => {
 	return new Date(props.order.date).toLocaleDateString('en-US', {
-		month: 'short',
-		day: 'numeric',
-		year: 'numeric',
+		month: 'short', day: 'numeric', year: 'numeric',
 	})
 })
+
+// Capitalize first letter
+function capitalize(s: string): string {
+	return s.charAt(0).toUpperCase() + s.slice(1)
+}
 </script>
 
 <template>
-	<tr class="border-b border-gray-100 last:border-b-0 transition-all duration-200 hover:bg-bg-light/50">
-		<td class="py-4 pr-4 text-sm text-text-secondary">{{ formattedDate }}</td>
-		<td class="py-4 pr-4 text-sm font-medium text-text-primary max-w-[200px] truncate">{{ order.product }}</td>
-		<td class="py-4 pr-4 text-sm font-semibold text-text-primary">{{ order.amount }}</td>
-		<td class="py-4 pr-4">
-			<StatusBadge :status="order.status" />
-		</td>
-		<td class="py-4">
-			<a
-				:href="order.invoiceUrl"
-				class="text-sm text-brand-blue hover:underline transition-all duration-200"
-			>
-				Generate Invoice
-			</a>
+	<tr class="border-t border-border">
+		<td class="py-4 pr-4 text-body text-brand-navy">{{ formattedDate }}</td>
+		<td class="py-4 pr-4 text-body text-brand-navy">{{ order.product }}</td>
+		<td class="py-4 pr-4 text-body text-brand-navy">{{ order.amount }}</td>
+		<td class="py-4 pr-4 text-body text-brand-navy">{{ capitalize(order.status) }}</td>
+		<td class="py-4 text-body">
+			<a :href="order.invoiceUrl" class="aio-link underline">Generate Invoice</a>
 		</td>
 	</tr>
 </template>
