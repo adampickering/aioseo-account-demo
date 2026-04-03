@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Addon } from '@/types'
+import AddonIcon from './AddonIcon.vue'
 
 defineProps<{
 	addon: Addon
@@ -9,12 +10,7 @@ defineProps<{
 <template>
 	<div class="aio-card-sm flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 group">
 		<div class="aio-addon-icon">
-			<img
-				v-if="addon.iconUrl && addon.iconUrl !== '#'"
-				:src="addon.iconUrl"
-				:alt="addon.name"
-			/>
-			<span v-else class="text-sm font-bold text-brand-blue">{{ addon.name.charAt(0) }}</span>
+			<AddonIcon :addon-id="addon.id" />
 		</div>
 		<div class="min-w-0 flex-1">
 			<p class="text-sm font-medium text-text-primary truncate">{{ addon.name }}</p>

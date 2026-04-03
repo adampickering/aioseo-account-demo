@@ -142,7 +142,7 @@ export const upgradeOffer: UpgradeOffer = {
 	ctaLabel: 'Upgrade Now',
 	ctaUrl: '#',
 	ctaColor: 'blue',
-	expiresAt: new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString(),
+	expiresAt: '2026-07-15T00:00:00Z',
 	features: [
 		{ icon: 'robot', label: '200,000 AI Credits' },
 		{ icon: 'link', label: 'Link Assistant' },

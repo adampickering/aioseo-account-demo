@@ -202,26 +202,29 @@ const legalLinks = [
 				</nav>
 			</div>
 
-			<!-- Badges -->
-			<div class="flex items-center gap-6 mt-6">
-				<img
-					src="https://aioseo.com/wp-content/uploads/2020/11/norton-secure-1.svg"
-					alt="Norton Secured"
-					class="w-[85px] h-[46px]"
-					loading="lazy"
-				/>
-				<img
-					src="https://aioseo.com/wp-content/uploads/2020/10/PPbadgetp.png"
-					alt="PayPal Verified"
-					class="w-[54px] h-[54px]"
-					loading="lazy"
-				/>
-				<img
-					src="https://aioseo.com/wp-content/uploads/2020/11/wpbeginner-badge-dark.svg"
-					alt="WPBeginner Recommended"
-					class="w-[256px] h-[46px]"
-					loading="lazy"
-				/>
+			<!-- Badges — positioned to match aioseo.com (right-aligned with legal links) -->
+			<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mt-6">
+				<div></div>
+				<div class="flex items-center gap-5">
+					<img
+						src="/assets/images/norton-secure-1.svg"
+						alt="Norton Secured"
+						class="h-[46px] w-auto"
+						loading="lazy"
+					/>
+					<img
+						src="/assets/images/PPbadgetp.png"
+						alt="PayPal Verified"
+						class="h-[46px] w-auto"
+						loading="lazy"
+					/>
+					<img
+						src="/assets/images/wpbeginner-badge-dark.svg"
+						alt="WPBeginner Verified"
+						class="h-[46px] w-auto"
+						loading="lazy"
+					/>
+				</div>
 			</div>
 		</div>
 	</footer>
