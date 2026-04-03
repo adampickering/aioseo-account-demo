@@ -46,7 +46,7 @@ const formattedExpiry = computed(() => {
 <template>
 	<div class="bg-white flex items-center gap-4 transition-all duration-200 border border-border rounded-card p-4">
 		<!-- Brand badge -->
-		<div class="w-14 h-9 rounded flex items-center justify-center text-[11px] font-bold tracking-wide shrink-0" :class="brandColors">
+		<div class="w-14 h-9 rounded-btn flex items-center justify-center text-[11px] font-bold tracking-wide shrink-0" :class="brandColors">
 			{{ brandLabel }}
 		</div>
 
@@ -70,13 +70,13 @@ const formattedExpiry = computed(() => {
 			<button
 				v-else
 				@click="$emit('makeDefault', method.id)"
-				class="px-3 py-1.5 text-xs font-medium text-white bg-brand-blue rounded-md hover:bg-brand-blue/90 transition-all duration-200 cursor-pointer"
+				class="px-3 py-1.5 text-xs font-medium text-white bg-brand-blue rounded-btn hover:bg-brand-blue/90 transition-all duration-200 cursor-pointer"
 			>
 				Make Default
 			</button>
 			<button
 				@click="$emit('delete', method.id)"
-				class="px-3 py-1.5 text-xs font-medium text-brand-red hover:text-brand-red/80 hover:bg-brand-red/5 rounded-md transition-all duration-200 cursor-pointer"
+				class="px-3 py-1.5 text-xs font-medium text-brand-red hover:text-brand-red/80 hover:bg-brand-red/5 rounded-btn transition-all duration-200 cursor-pointer"
 			>
 				Delete
 			</button>

@@ -37,7 +37,7 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 		<section>
 			<div class="flex justify-between items-center mb-5">
 				<h2 class="text-xl font-heading font-semibold text-text-primary">Saved Payment Methods</h2>
-				<button class="border border-brand-blue text-brand-blue bg-white hover:bg-bg-light transition-all duration-200 cursor-pointer rounded-btn px-5 py-[13.2px] text-base font-semibold">
+				<button class="aio-btn-outline-blue cursor-pointer">
 					Add Payment Method
 				</button>
 			</div>

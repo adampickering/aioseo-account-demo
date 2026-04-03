@@ -64,10 +64,10 @@
   --text-xl: 20px;
   --text-xl--line-height: 30px;
 
-  /* Border radius */
+  /* Border radius — standardized to 5px for all non-pill elements */
   --radius-card: 5px;
-  --radius-btn: 4px;
-  --radius-btn-lg: 4.5px;
+  --radius-btn: 5px;
+  --radius-btn-lg: 5px;
 
   /* Shadows */
   --shadow-xs: 0 1px 2px var(--color-shadow-xs);
