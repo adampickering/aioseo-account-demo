@@ -19,6 +19,8 @@ const profiles: { key: ProfileKey; label: string }[] = [
 				v-for="profile in profiles"
 				:key="profile.key"
 				@click="setProfile(profile.key)"
+				:aria-label="`Switch to ${profile.label} profile`"
+				:aria-pressed="activeProfile === profile.key"
 				class="px-3 py-1 text-xs font-medium rounded transition-all duration-200 cursor-pointer"
 				:class="activeProfile === profile.key
 					? 'bg-brand-blue text-white shadow-sm'

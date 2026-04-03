@@ -86,8 +86,8 @@ const legalLinks = [
 						v-for="social in socialLinks"
 						:key="social.icon"
 						:href="social.href"
-						:title="social.label"
-						class="text-brand-navy-60 hover:text-brand-blue transition-colors duration-200"
+						:aria-label="social.label"
+						class="inline-flex items-center justify-center w-11 h-11 -m-3.5 text-brand-navy-60 hover:text-brand-blue transition-colors duration-200"
 					>
 						<!-- X / Twitter -->
 						<svg v-if="social.icon === 'x'" class="w-[13px] h-[13px]" viewBox="0 0 24 24" fill="currentColor">
@@ -190,7 +190,7 @@ const legalLinks = [
 				</div>
 
 				<!-- Legal links -->
-				<nav class="flex flex-wrap items-center gap-4">
+				<nav aria-label="Legal links" class="flex flex-wrap items-center gap-4">
 					<a
 						v-for="link in legalLinks"
 						:key="link.label"

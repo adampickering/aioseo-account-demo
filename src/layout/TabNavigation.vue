@@ -77,6 +77,7 @@ onBeforeUnmount(() => {
 					:to="{ name: tab.routeName }"
 					class="aio-tab no-underline whitespace-nowrap text-base md:text-lg"
 					:class="{ 'aio-tab-active': isTabActive(tab) }"
+					:aria-current="isTabActive(tab) ? 'page' : undefined"
 				>
 					{{ tab.label }}
 				</RouterLink>
@@ -126,6 +127,7 @@ onBeforeUnmount(() => {
 								:to="{ name: item.routeName }"
 								class="block no-underline transition-colors duration-150 px-4 py-2.5 text-[15px] leading-[22.5px]"
 								:class="isMoreItemActive(item) ? 'text-brand-blue font-medium bg-bg-light' : 'text-brand-navy-60 font-normal bg-transparent'"
+								:aria-current="isMoreItemActive(item) ? 'page' : undefined"
 							>
 								{{ item.label }}
 							</RouterLink>

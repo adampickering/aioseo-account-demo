@@ -19,7 +19,7 @@ const formattedDate = computed(() => {
 <template>
 	<tr class="border-b border-gray-100 last:border-b-0 transition-all duration-200 hover:bg-bg-light/50">
 		<td class="py-4 pr-4 text-sm text-text-secondary">{{ formattedDate }}</td>
-		<td class="py-4 pr-4 text-sm font-medium text-text-primary">{{ order.product }}</td>
+		<td class="py-4 pr-4 text-sm font-medium text-text-primary max-w-[200px] truncate">{{ order.product }}</td>
 		<td class="py-4 pr-4 text-sm font-semibold text-text-primary">{{ order.amount }}</td>
 		<td class="py-4 pr-4">
 			<StatusBadge :status="order.status" />
