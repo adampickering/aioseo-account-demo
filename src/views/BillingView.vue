@@ -1,9 +1,88 @@
 <script setup lang="ts">
+import { useSubscriptions } from '@/composables/useSubscriptions'
+import SubscriptionRow from '@/components/SubscriptionRow.vue'
+import PaymentMethodCard from '@/components/PaymentMethodCard.vue'
+import OrderRow from '@/components/OrderRow.vue'
+
+const { subscriptions, paymentMethods, orders } = useSubscriptions()
 </script>
 
 <template>
-  <div>
-    <h2 class="text-2xl font-semibold font-heading">Billing</h2>
-    <p class="text-text-muted mt-2">Content goes here.</p>
-  </div>
+	<div class="space-y-10">
+		<!-- Section 1: Auto-Renewal Subscriptions -->
+		<section>
+			<h2 class="text-xl font-heading font-semibold text-text-primary mb-5">Auto-Renewal Subscriptions</h2>
+			<div class="overflow-x-auto">
+				<table class="w-full">
+					<thead>
+						<tr class="border-b border-gray-200">
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Date</th>
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Product</th>
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Status</th>
+							<th class="pb-3 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<SubscriptionRow
+							v-for="sub in subscriptions"
+							:key="sub.id"
+							:subscription="sub"
+						/>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- Section 2: Saved Payment Methods -->
+		<section>
+			<div class="flex justify-between items-center mb-5">
+				<h2 class="text-xl font-heading font-semibold text-text-primary">Saved Payment Methods</h2>
+				<button class="border border-brand-blue text-brand-blue rounded-lg px-4 py-2 text-sm font-medium hover:bg-brand-blue/5 transition-all duration-200 cursor-pointer">
+					Add Payment Method
+				</button>
+			</div>
+
+			<!-- Empty state -->
+			<div
+				v-if="paymentMethods.length === 0"
+				class="bg-brand-blue/5 rounded-lg p-6 text-center"
+			>
+				<p class="text-text-muted text-sm">No saved payment methods. Add one to make renewals easier.</p>
+			</div>
+
+			<!-- Payment method cards -->
+			<div v-else class="space-y-3">
+				<PaymentMethodCard
+					v-for="method in paymentMethods"
+					:key="method.id"
+					:method="method"
+				/>
+			</div>
+		</section>
+
+		<!-- Section 3: Past Orders -->
+		<section>
+			<h2 class="text-xl font-heading font-semibold text-text-primary mb-5">Past Orders</h2>
+			<div class="overflow-x-auto">
+				<table class="w-full">
+					<thead>
+						<tr class="border-b border-gray-200">
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Date</th>
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Product</th>
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Amount</th>
+							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Status</th>
+							<th class="pb-3 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<OrderRow
+							v-for="order in orders"
+							:key="order.id"
+							:order="order"
+						/>
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</div>
 </template>
