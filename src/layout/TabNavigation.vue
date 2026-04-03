@@ -97,9 +97,8 @@ onBeforeUnmount(() => {
 				>
 					More
 					<svg
-						class="transition-transform duration-200"
+						class="w-3 h-3 transition-transform duration-200"
 						:class="{ 'rotate-180': moreOpen }"
-						class="w-3 h-3"
 						viewBox="0 0 12 12"
 						fill="none"
 					>
