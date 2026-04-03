@@ -20,24 +20,6 @@ const router = createRouter({
           path: 'downloads',
           name: 'downloads',
           component: () => import('@/views/DownloadsView.vue'),
-          redirect: { name: 'downloads-aioseo' },
-          children: [
-            {
-              path: 'aioseo',
-              name: 'downloads-aioseo',
-              component: () => import('@/views/DownloadsAioseoView.vue'),
-            },
-            {
-              path: 'ai-credits',
-              name: 'downloads-ai-credits',
-              component: () => import('@/views/DownloadsAiCreditsView.vue'),
-            },
-            {
-              path: 'broken-link-checker',
-              name: 'downloads-blc',
-              component: () => import('@/views/DownloadsBLCView.vue'),
-            },
-          ],
         },
         {
           path: 'services',
