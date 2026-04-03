@@ -65,7 +65,7 @@ const legalLinks = [
 	<footer class="bg-bg-light text-brand-navy-60 text-lg leading-[27px] font-body">
 		<!-- Footer link columns -->
 		<div
-			class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 aio-container gap-6 py-10 text-[15px] leading-[22.5px]"
+			class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 aio-container gap-6 py-10 text-body leading-[22.5px]"
 		>
 			<!-- Company -->
 			<div>
@@ -183,7 +183,7 @@ const legalLinks = [
 							class="h-5 w-auto opacity-60"
 						/>
 					</div>
-					<div class="text-[15px] leading-[22.5px] text-brand-navy-60">
+					<div class="text-body leading-[22.5px] text-brand-navy-60">
 						<p class="m-0">Copyright &copy; 2013-2026 All-in-One SEO Pack, LLC.</p>
 						<p class="m-0">All-in-One SEO Pack&reg; is a registered trademark Awesome Motive Inc.</p>
 					</div>
@@ -195,7 +195,7 @@ const legalLinks = [
 						v-for="link in legalLinks"
 						:key="link.label"
 						:href="link.href"
-						class="underline hover:text-brand-blue transition-colors duration-200 text-[15px] leading-[22.5px] text-brand-navy-60"
+						class="underline hover:text-brand-blue transition-colors duration-200 text-body leading-[22.5px] text-brand-navy-60"
 					>
 						{{ link.label }}
 					</a>
@@ -208,16 +208,19 @@ const legalLinks = [
 					src="https://aioseo.com/wp-content/uploads/2020/11/norton-secure-1.svg"
 					alt="Norton Secured"
 					class="w-[85px] h-[46px]"
+					loading="lazy"
 				/>
 				<img
 					src="https://aioseo.com/wp-content/uploads/2020/10/PPbadgetp.png"
 					alt="PayPal Verified"
 					class="w-[54px] h-[54px]"
+					loading="lazy"
 				/>
 				<img
 					src="https://aioseo.com/wp-content/uploads/2020/11/wpbeginner-badge-dark.svg"
 					alt="WPBeginner Recommended"
 					class="w-[256px] h-[46px]"
+					loading="lazy"
 				/>
 			</div>
 		</div>

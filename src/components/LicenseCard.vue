@@ -101,7 +101,7 @@ async function copyKey() {
 					<code class="text-sm font-mono text-text-secondary truncate max-w-[180px] inline-block align-bottom">{{ truncatedKey }}</code>
 					<button
 						@click="copyKey"
-						class="relative p-1 rounded hover:bg-gray-100 transition-all duration-200 text-text-muted hover:text-text-primary cursor-pointer"
+						class="relative p-1 rounded-btn hover:bg-gray-100 transition-all duration-200 text-text-muted hover:text-text-primary cursor-pointer"
 						:title="copied ? 'Copied!' : 'Copy license key'"
 						:aria-label="copied ? 'Copied!' : 'Copy license key'"
 					>
@@ -113,7 +113,7 @@ async function copyKey() {
 						</svg>
 						<span
 							v-if="copied"
-							class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand-navy text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+							class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand-navy text-white text-xs px-2 py-1 rounded-btn whitespace-nowrap"
 						>
 							Copied!
 						</span>

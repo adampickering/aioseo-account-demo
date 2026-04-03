@@ -6,8 +6,7 @@ const mobileMenuOpen = ref(false)
 
 <template>
 	<header
-		class="flex items-center justify-center bg-white border-b border-border font-body text-lg text-brand-navy"
-		style="height: 88px;"
+		class="flex items-center justify-center bg-white border-b border-border font-body text-lg text-brand-navy h-[88px]"
 	>
 		<div class="aio-container flex items-center h-[76px]">
 			<!-- Logo -->
@@ -36,7 +35,7 @@ const mobileMenuOpen = ref(false)
 
 			<!-- Desktop Nav -->
 			<nav
-				class="hidden md:flex items-center flex-1 justify-end text-[15px] leading-[22.5px]"
+				class="hidden md:flex items-center flex-1 justify-end text-body leading-[22.5px]"
 				aria-label="Main navigation"
 			>
 				<a href="https://aioseo.com/features/" class="aio-nav-link no-underline">
@@ -68,11 +67,11 @@ const mobileMenuOpen = ref(false)
 		>
 			<div v-if="mobileMenuOpen" class="md:hidden absolute top-[88px] left-0 right-0 bg-white border-b border-border shadow-card z-50">
 				<nav class="flex flex-col py-4 px-5 gap-1" aria-label="Mobile navigation">
-					<a href="https://aioseo.com/features/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Features</a>
-					<a href="https://aioseo.com/pricing/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Pricing</a>
-					<a href="https://aioseo.com/testimonials/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Testimonials</a>
-					<a href="https://aioseo.com/docs/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Resources</a>
-					<a href="https://aioseo.com/account/" class="py-3 text-[15px] text-brand-blue font-semibold no-underline border-t border-border mt-2 pt-4 hover:opacity-80 transition-opacity duration-200" @click="mobileMenuOpen = false">My Account</a>
+					<a href="https://aioseo.com/features/" class="py-3 text-body text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Features</a>
+					<a href="https://aioseo.com/pricing/" class="py-3 text-body text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Pricing</a>
+					<a href="https://aioseo.com/testimonials/" class="py-3 text-body text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Testimonials</a>
+					<a href="https://aioseo.com/docs/" class="py-3 text-body text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Resources</a>
+					<a href="https://aioseo.com/account/" class="py-3 text-body text-brand-blue font-semibold no-underline border-t border-border mt-2 pt-4 hover:opacity-80 transition-opacity duration-200" @click="mobileMenuOpen = false">My Account</a>
 				</nav>
 			</div>
 		</Transition>

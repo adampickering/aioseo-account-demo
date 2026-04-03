@@ -52,11 +52,11 @@ function formatDate(iso: string): string {
 							class="w-16 h-16 rounded-full object-cover shrink-0"
 						/>
 						<div class="min-w-0">
-							<h2 class="text-[30px] leading-tight font-heading font-semibold text-brand-navy truncate">
+							<h2 class="text-display-sm leading-tight font-heading font-semibold text-brand-navy truncate">
 								{{ fullName }}
 							</h2>
 							<div class="flex items-center gap-1.5 mt-1">
-								<span class="text-[15px] text-brand-navy-60 truncate">{{ user.email }}</span>
+								<span class="text-body text-brand-navy-60 truncate">{{ user.email }}</span>
 								<router-link
 									to="/profile"
 									class="shrink-0 text-brand-navy-40 hover:text-brand-blue transition-colors duration-200"
@@ -74,14 +74,14 @@ function formatDate(iso: string): string {
 					<div class="border-t border-gray-100 my-6"></div>
 
 					<!-- Quick Links -->
-					<h3 class="text-[23px] leading-[1.25] font-heading font-semibold text-brand-navy mb-4">Quick Links</h3>
+					<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-4">Quick Links</h3>
 					<QuickLinks :links="quickLinks" />
 
 					<!-- Divider -->
 					<div class="border-t border-gray-100 my-6"></div>
 
 					<!-- Subscriptions -->
-					<h3 class="text-[23px] leading-[1.25] font-heading font-semibold text-brand-navy mb-4">Subscriptions</h3>
+					<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-4">Subscriptions</h3>
 
 					<!-- Column headers -->
 					<div class="flex items-center justify-between mb-2">
@@ -96,15 +96,15 @@ function formatDate(iso: string): string {
 							class="flex items-center justify-between py-2 border-b border-gray-100 last:border-0"
 						>
 							<div class="flex items-center gap-2 min-w-0">
-								<span class="text-[15px] font-medium text-brand-navy truncate">{{ sub.product }}</span>
+								<span class="text-body font-medium text-brand-navy truncate">{{ sub.product }}</span>
 								<StatusBadge :status="sub.status" />
 							</div>
-							<span class="text-[15px] text-brand-navy-60 shrink-0 ml-4">{{ formatDate(sub.renewsAt) }}</span>
+							<span class="text-body text-brand-navy-60 shrink-0 ml-4">{{ formatDate(sub.renewsAt) }}</span>
 						</div>
 					</div>
 					<router-link
 						to="/billing"
-						class="inline-flex items-center gap-1 text-[15px] font-medium text-brand-blue hover:underline transition-all duration-200 mt-4"
+						class="inline-flex items-center gap-1 text-body font-medium text-brand-blue hover:underline transition-all duration-200 mt-4"
 					>
 						Manage Subscriptions
 						<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -117,7 +117,7 @@ function formatDate(iso: string): string {
 
 					<!-- AI Credits -->
 					<template v-if="hasCredits">
-						<h3 class="text-[23px] leading-[1.25] font-heading font-semibold text-brand-navy mb-4">AI Credits</h3>
+						<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-4">AI Credits</h3>
 
 						<div class="flex items-center gap-3 mb-4">
 							<!-- AI sparkle icon -->
@@ -127,19 +127,19 @@ function formatDate(iso: string): string {
 								</svg>
 							</div>
 							<div>
-								<span class="text-[24px] font-semibold text-brand-navy">{{ formatNumber(remaining) }}</span>
-								<span class="text-[15px] text-brand-navy-60 ml-1.5">Total Available</span>
+								<span class="text-credits font-semibold text-brand-navy">{{ formatNumber(remaining) }}</span>
+								<span class="text-body text-brand-navy-60 ml-1.5">Total Available</span>
 							</div>
 						</div>
 
-						<div class="space-y-1.5 text-[15px] text-brand-navy-60">
+						<div class="space-y-1.5 text-body text-brand-navy-60">
 							<p>{{ formatNumber(credits.includedInSubscription) }} Credits Included in Subscriptions</p>
 							<p v-if="credits.paidCredits > 0">{{ formatNumber(credits.paidCredits) }} PAYG credits</p>
 						</div>
 
 						<router-link
 							to="/downloads/ai-credits"
-							class="inline-flex items-center gap-1 text-[15px] font-medium text-brand-blue hover:underline transition-all duration-200 mt-4"
+							class="inline-flex items-center gap-1 text-body font-medium text-brand-blue hover:underline transition-all duration-200 mt-4"
 						>
 							Add More Credits
 							<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -154,7 +154,7 @@ function formatDate(iso: string): string {
 			<div>
 				<!-- Promo offers (elite users) — ONE card wrapping everything -->
 				<div v-if="showPromos" class="aio-card">
-					<h3 class="text-[30px] leading-tight font-heading font-semibold text-brand-navy mb-8">Special Offer for You!</h3>
+					<h3 class="text-display-sm leading-tight font-heading font-semibold text-brand-navy mb-8">Special Offer for You!</h3>
 					<div class="space-y-8">
 						<PromoOfferCard
 							v-for="offer in promoOffers"
@@ -173,7 +173,7 @@ function formatDate(iso: string): string {
 
 		<!-- Announcements (full width) -->
 		<div>
-			<h3 class="text-[23px] leading-[1.25] font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
+			<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<AnnouncementCard
 					v-for="item in announcements"
@@ -185,7 +185,7 @@ function formatDate(iso: string): string {
 
 		<!-- Need Help (full width) -->
 		<div>
-			<h3 class="text-[23px] leading-[1.25] font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
+			<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
 			<HelpSearchSection />
 		</div>
 	</div>

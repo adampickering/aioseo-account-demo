@@ -54,7 +54,7 @@
   --font-heading: "Proxima Nova", system-ui, sans-serif;
   --font-body: "Proxima Nova", system-ui, sans-serif;
 
-  /* Font sizes */
+  /* Font sizes — from Figma design tokens */
   --text-display-lg: 48px;
   --text-display-lg--line-height: 60px;
   --text-display-sm: 30px;
@@ -63,6 +63,10 @@
   --text-h3--line-height: 1.25;
   --text-xl: 20px;
   --text-xl--line-height: 30px;
+  --text-body: 15px;
+  --text-body--line-height: 22.5px;
+  --text-credits: 24px;
+  --text-credits--line-height: 1;
 
   /* Border radius — standardized to 5px for all non-pill elements */
   --radius-card: 5px;

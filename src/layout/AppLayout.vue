@@ -9,6 +9,12 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 
 <template>
 	<div class="min-h-screen flex flex-col bg-white font-body relative">
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:p-3 focus:rounded-card focus:shadow-card focus:text-brand-blue focus:font-semibold focus:no-underline"
+		>
+			Skip to content
+		</a>
 		<SiteHeader />
 
 		<!-- Welcome Banner — white bg with graph SVG decoration -->
@@ -44,7 +50,7 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 
 			<!-- Content -->
 			<div class="relative z-10 text-center py-8 md:py-12">
-				<h1 class="font-heading text-[24px] md:text-[36px] font-semibold text-brand-navy text-center leading-normal">
+				<h1 class="font-heading text-[24px] md:text-display-sm md:leading-display-sm font-semibold text-brand-navy text-center leading-normal">
 					Welcome to Your AIOSEO Account
 				</h1>
 				<p class="text-lg text-brand-navy-40 mt-2">
@@ -55,7 +61,7 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 
 		<div class="aio-container">
 			<TabNavigation />
-			<main class="py-8">
+			<main id="main-content" class="py-8">
 				<RouterView v-slot="{ Component }">
 					<Transition name="fade" mode="out-in">
 						<component :is="Component" />

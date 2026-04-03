@@ -21,7 +21,7 @@ const profiles: { key: ProfileKey; label: string }[] = [
 				@click="setProfile(profile.key)"
 				:aria-label="`Switch to ${profile.label} profile`"
 				:aria-pressed="activeProfile === profile.key"
-				class="px-3 py-1 text-xs font-medium rounded transition-all duration-200 cursor-pointer"
+				class="px-3 py-1 text-xs font-medium rounded-btn transition-all duration-200 cursor-pointer"
 				:class="activeProfile === profile.key
 					? 'bg-brand-blue text-white shadow-sm'
 					: 'bg-gray-100 text-text-secondary hover:bg-gray-200'"

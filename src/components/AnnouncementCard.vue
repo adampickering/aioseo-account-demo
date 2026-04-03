@@ -15,6 +15,7 @@ defineProps<{
 				:src="announcement.imageUrl"
 				:alt="announcement.title"
 				class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+				loading="lazy"
 			/>
 			<div v-else class="w-full h-full flex items-center justify-center">
 				<svg class="w-10 h-10 text-text-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
