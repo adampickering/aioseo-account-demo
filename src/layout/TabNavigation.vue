@@ -63,36 +63,38 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-	<nav>
+	<nav aria-label="Account navigation">
 		<ul
-			class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px]"
+			class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px] overflow-x-auto scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0"
 		>
 			<!-- Primary tabs -->
 			<li
 				v-for="tab in primaryTabs"
 				:key="tab.routeName"
-				class="flex p-0 m-0"
+				class="flex p-0 m-0 shrink-0"
 			>
 				<RouterLink
 					:to="{ name: tab.routeName }"
-					class="aio-tab no-underline whitespace-nowrap"
+					class="aio-tab no-underline whitespace-nowrap text-base md:text-lg"
 					:class="{ 'aio-tab-active': isTabActive(tab) }"
 				>
 					{{ tab.label }}
 				</RouterLink>
 			</li>
 
-			<!-- Spacer -->
-			<li class="flex-1 list-none"></li>
+			<!-- Spacer (desktop only) -->
+			<li class="hidden md:flex flex-1 list-none"></li>
 
 			<!-- More dropdown -->
 			<li
 				ref="moreRef"
-				class="relative flex p-0 m-0"
+				class="relative flex p-0 m-0 shrink-0"
 			>
 				<button
 					@click="toggleMore"
-					class="aio-tab flex items-center gap-1.5 whitespace-nowrap cursor-pointer bg-transparent border-0 font-inherit"
+					aria-label="More navigation options"
+					:aria-expanded="moreOpen"
+					class="aio-tab flex items-center gap-1.5 whitespace-nowrap cursor-pointer bg-transparent border-0 font-inherit text-base md:text-lg"
 					:class="{ 'aio-tab-active': isMoreActive || moreOpen }"
 				>
 					More
@@ -141,3 +143,14 @@ onBeforeUnmount(() => {
 		</ul>
 	</nav>
 </template>
+
+<style>
+/* Hide scrollbar on tab overflow */
+.scrollbar-hide {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+</style>

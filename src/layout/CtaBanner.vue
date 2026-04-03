@@ -8,7 +8,7 @@
 			<div
 				class="aio-card !p-0 overflow-hidden"
 			>
-				<div class="flex items-center justify-between px-[93px] py-10">
+				<div class="flex flex-col md:flex-row items-center justify-between px-6 md:px-[93px] py-8 md:py-10 gap-6 text-center md:text-left">
 					<!-- Text side -->
 					<div class="max-w-[563px]">
 						<h2 class="text-h3 font-semibold leading-[28.75px] text-brand-navy m-0">

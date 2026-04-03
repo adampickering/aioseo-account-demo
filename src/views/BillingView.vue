@@ -12,8 +12,8 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 		<!-- Section 1: Auto-Renewal Subscriptions -->
 		<section>
 			<h2 class="text-xl font-heading font-semibold text-text-primary mb-5">Auto-Renewal Subscriptions</h2>
-			<div class="overflow-x-auto">
-				<table class="w-full">
+			<div class="overflow-x-auto -mx-5 px-5 md:mx-0 md:px-0">
+				<table class="w-full min-w-[600px]">
 					<thead>
 						<tr class="border-b border-gray-200">
 							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Date</th>
@@ -63,8 +63,8 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 		<!-- Section 3: Past Orders -->
 		<section>
 			<h2 class="text-xl font-heading font-semibold text-text-primary mb-5">Past Orders</h2>
-			<div class="overflow-x-auto">
-				<table class="w-full">
+			<div class="overflow-x-auto -mx-5 px-5 md:mx-0 md:px-0">
+				<table class="w-full min-w-[700px]">
 					<thead>
 						<tr class="border-b border-gray-200">
 							<th class="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-muted">Date</th>

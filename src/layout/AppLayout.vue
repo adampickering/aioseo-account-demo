@@ -8,7 +8,7 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 </script>
 
 <template>
-	<div class="min-h-screen flex flex-col bg-white font-body">
+	<div class="min-h-screen flex flex-col bg-white font-body relative">
 		<SiteHeader />
 
 		<!-- Welcome Banner -- Figma blue gradient with wave -->
@@ -32,7 +32,7 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 
 			<!-- Content -->
 			<div class="relative z-10 text-center py-12">
-				<h1 class="font-heading text-[36px] font-semibold text-white text-center leading-normal">
+				<h1 class="font-heading text-[24px] md:text-[36px] font-semibold text-white text-center leading-normal">
 					Welcome to Your AIOSEO Account
 				</h1>
 				<p class="text-lg text-white/60 mt-4">

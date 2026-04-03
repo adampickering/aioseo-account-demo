@@ -65,10 +65,10 @@ const legalLinks = [
 	<footer class="bg-bg-light text-brand-navy-60 text-lg leading-[27px] font-body">
 		<!-- Footer link columns -->
 		<div
-			class="flex aio-container gap-6 py-10 text-[15px] leading-[22.5px]"
+			class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 aio-container gap-6 py-10 text-[15px] leading-[22.5px]"
 		>
 			<!-- Company -->
-			<div class="flex-1">
+			<div>
 				<h2 class="aio-footer-heading mt-0">Company</h2>
 				<ul class="list-none p-0 m-0">
 					<li v-for="link in companyLinks" :key="link.label">
@@ -106,7 +106,7 @@ const legalLinks = [
 			</div>
 
 			<!-- Features col 1 -->
-			<div class="flex-1">
+			<div>
 				<h2 class="aio-footer-heading mt-0">Features</h2>
 				<ul class="list-none p-0 m-0">
 					<li v-for="link in features1" :key="link.label">
@@ -121,7 +121,7 @@ const legalLinks = [
 			</div>
 
 			<!-- Features col 2 -->
-			<div class="flex-1">
+			<div>
 				<h2 class="aio-footer-heading mt-0 invisible">Features</h2>
 				<ul class="list-none p-0 m-0">
 					<li v-for="link in features2" :key="link.label">
@@ -136,7 +136,7 @@ const legalLinks = [
 			</div>
 
 			<!-- Our Brands -->
-			<div class="flex-1">
+			<div>
 				<h2 class="aio-footer-heading mt-0">Our Brands</h2>
 				<ul class="list-none p-0 m-0">
 					<li v-for="link in brands" :key="link.label">
@@ -151,7 +151,7 @@ const legalLinks = [
 			</div>
 
 			<!-- Helpful Links -->
-			<div class="flex-1">
+			<div>
 				<h2 class="aio-footer-heading mt-0">Helpful Links</h2>
 				<ul class="list-none p-0 m-0">
 					<li v-for="link in helpfulLinks" :key="link.label">
@@ -173,7 +173,7 @@ const legalLinks = [
 
 		<!-- Bottom bar -->
 		<div class="aio-container py-8">
-			<div class="flex items-start justify-between">
+			<div class="flex flex-col md:flex-row items-start justify-between gap-6">
 				<!-- Copyright + Logo -->
 				<div>
 					<div class="mb-3">
