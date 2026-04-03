@@ -40,9 +40,9 @@ function formatDate(iso: string): string {
 <template>
 	<div class="space-y-10">
 		<!-- Two-column layout -->
-		<div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
 			<!-- Left column — ONE card containing all sections -->
-			<div class="lg:col-span-2">
+			<div>
 				<div class="aio-card">
 					<!-- User info -->
 					<div class="flex items-center gap-4">
@@ -151,7 +151,7 @@ function formatDate(iso: string): string {
 			</div>
 
 			<!-- Right column -->
-			<div class="lg:col-span-3">
+			<div>
 				<!-- Promo offers (elite users) — ONE card wrapping everything -->
 				<div v-if="showPromos" class="aio-card">
 					<h3 class="text-[30px] leading-tight font-heading font-semibold text-brand-navy mb-8">Special Offer for You!</h3>
