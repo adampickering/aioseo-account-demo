@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import type { PaymentMethod } from '@/types'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const props = defineProps<{
 	method: PaymentMethod
 }>()
@@ -25,7 +27,7 @@ const brandName = computed(() => {
 	<div class="flex items-center gap-4 py-4">
 		<!-- Card brand logo from svg-credit-card-payment-icons -->
 		<img
-			:src="`/assets/icons/card-${method.brand}.svg`"
+			:src="baseUrl + `assets/icons/card-${method.brand}.svg`"
 			:alt="brandName"
 			class="w-14 h-9 shrink-0 rounded-btn"
 		/>
