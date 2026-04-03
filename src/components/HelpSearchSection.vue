@@ -39,10 +39,10 @@ const { articles } = useHelpArticles()
 		</div>
 
 		<!-- Divider -->
-		<div class="border-t border-border mb-4"></div>
+		<div class="border-t border-border"></div>
 
-		<!-- Footer — centered, different weight -->
-		<p class="text-sm text-brand-navy-60 text-center">
+		<!-- Footer -->
+		<p class="text-lg font-semibold text-brand-navy text-center pt-10">
 			Can't find what you need? Browse our
 			<a href="https://aioseo.com/docs/" target="_blank" rel="noopener" class="text-brand-blue font-semibold hover:underline transition-all duration-200">Documentation</a>
 			or
