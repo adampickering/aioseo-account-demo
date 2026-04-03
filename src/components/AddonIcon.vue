@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import ImageSeoIcon from '/assets/icons/addon-image-seo.svg'
-import VideoSitemapIcon from '/assets/icons/addon-video-sitemap.svg'
-import LocalBusinessIcon from '/assets/icons/addon-local-business.svg'
-import NewsSitemapIcon from '/assets/icons/addon-news-sitemap.svg'
-import LinkAssistantIcon from '/assets/icons/addon-link-assistant.svg'
-import IndexNowIcon from '/assets/icons/addon-index-now.svg'
-import RestApiIcon from '/assets/icons/addon-rest-api.svg'
-import EeatIcon from '/assets/icons/addon-eeat.svg'
+import ImageSeoIcon from '@/assets/icons/addon-image-seo.svg?component'
+import VideoSitemapIcon from '@/assets/icons/addon-video-sitemap.svg?component'
+import LocalBusinessIcon from '@/assets/icons/addon-local-business.svg?component'
+import NewsSitemapIcon from '@/assets/icons/addon-news-sitemap.svg?component'
+import LinkAssistantIcon from '@/assets/icons/addon-link-assistant.svg?component'
+import IndexNowIcon from '@/assets/icons/addon-index-now.svg?component'
+import RestApiIcon from '@/assets/icons/addon-rest-api.svg?component'
+import EeatIcon from '@/assets/icons/addon-eeat.svg?component'
 
 const props = defineProps<{
 	addonId: string
