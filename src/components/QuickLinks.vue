@@ -16,7 +16,7 @@ function isInternal(href: string): boolean {
 			<router-link
 				v-if="isInternal(link.href)"
 				:to="link.href"
-				class="text-sm text-brand-blue hover:underline transition-all duration-200 py-1"
+				class="text-lg font-semibold text-brand-blue hover:underline transition-all duration-200 py-1"
 			>
 				{{ link.label }}
 			</router-link>
@@ -25,7 +25,7 @@ function isInternal(href: string): boolean {
 				:href="link.href"
 				target="_blank"
 				rel="noopener"
-				class="text-sm text-brand-blue hover:underline transition-all duration-200 py-1"
+				class="text-lg font-semibold text-brand-blue hover:underline transition-all duration-200 py-1"
 			>
 				{{ link.label }}
 			</a>

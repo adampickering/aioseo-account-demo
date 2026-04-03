@@ -28,8 +28,8 @@ defineProps<{
 			<p class="text-sm text-brand-navy leading-[18px] mt-1">{{ offer.description }}</p>
 			<a
 				:href="offer.ctaUrl"
-				class="inline-flex items-center justify-center bg-brand-green text-white rounded-btn-lg no-underline mt-3 text-[13.9px] font-semibold capitalize"
-				style="padding: 10px 25px;"
+				class="inline-flex items-center justify-center bg-brand-green text-white rounded-btn-lg no-underline mt-3 text-sm font-semibold border border-brand-green hover:opacity-90 transition-all duration-200"
+				style="padding: 9px 24px;"
 			>
 				{{ offer.ctaLabel }}
 			</a>

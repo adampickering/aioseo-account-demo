@@ -5,7 +5,7 @@ const { articles } = useHelpArticles()
 </script>
 
 <template>
-	<div>
+	<div class="aio-card">
 		<!-- Search -->
 		<div class="relative mb-6">
 			<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -38,12 +38,15 @@ const { articles } = useHelpArticles()
 			</a>
 		</div>
 
-		<!-- Footer -->
-		<p class="text-sm text-text-secondary">
-			Can't find what you need?
-			<a href="https://aioseo.com/docs/" target="_blank" rel="noopener" class="text-brand-blue hover:underline transition-all duration-200">Browse our Documentation</a>
+		<!-- Divider -->
+		<div class="border-t border-border mb-4"></div>
+
+		<!-- Footer — centered, different weight -->
+		<p class="text-sm text-brand-navy-60 text-center">
+			Can't find what you need? Browse our
+			<a href="https://aioseo.com/docs/" target="_blank" rel="noopener" class="text-brand-blue font-semibold hover:underline transition-all duration-200">Documentation</a>
 			or
-			<a href="https://aioseo.com/contact/" target="_blank" rel="noopener" class="text-brand-blue hover:underline transition-all duration-200">Submit a Support Ticket</a>
+			<a href="https://aioseo.com/contact/" target="_blank" rel="noopener" class="text-brand-blue font-semibold hover:underline transition-all duration-200">Submit a Support Ticket</a>
 		</p>
 	</div>
 </template>
