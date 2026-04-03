@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-	<div class="bg-white flex items-center gap-4 hover:-translate-y-0.5 transition-all duration-200 group" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 16px;">
+	<div class="aio-card-sm flex items-center gap-4 hover:-translate-y-0.5 transition-all duration-200 group">
 		<!-- Icon -->
 		<div
 			class="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
@@ -31,8 +31,7 @@ defineProps<{
 		<!-- CTA -->
 		<a
 			:href="offer.ctaUrl"
-			class="shrink-0 inline-flex items-center text-white bg-brand-green hover:bg-brand-green/90 transition-all duration-200"
-			style="border-radius: 4px; padding: 13.2px 20px; font-size: 16px; font-weight: 600;"
+			class="aio-btn-green-sm shrink-0"
 		>
 			{{ offer.ctaLabel }}
 		</a>

@@ -3,35 +3,31 @@
 
 <template>
 	<header
-		class="flex items-center justify-center bg-white"
-		style="height: 88px; border-bottom: 1px solid #E6EEFC; font-family: 'Proxima Nova', system-ui, sans-serif; font-size: 18px; color: #141B38;"
+		class="flex items-center justify-center bg-white h-[88px] border-b border-border font-body text-lg text-brand-navy"
 	>
 		<div
-			class="flex items-center w-full"
-			style="max-width: 1110px; height: 76px;"
+			class="flex items-center w-full max-w-[1110px] h-[76px]"
 		>
 			<!-- Logo -->
-			<a href="https://aioseo.com/" class="shrink-0" style="width: 127px; height: 25px;">
+			<a href="https://aioseo.com/" class="shrink-0 w-[127px] h-[25px]">
 				<img
 					src="/assets/icons/aioseo-logo.svg"
 					alt="AIOSEO"
-					style="width: 127px; height: 25px;"
+					class="w-[127px] h-[25px]"
 				/>
 			</a>
 
 			<!-- Nav -->
 			<nav
-				class="flex items-center flex-1"
-				style="justify-content: flex-end; font-size: 15px; line-height: 22.5px;"
+				class="flex items-center flex-1 justify-end text-[15px] leading-[22.5px]"
 			>
 				<!-- Features -->
 				<a
 					href="https://aioseo.com/features/"
-					class="flex items-center no-underline"
-					style="padding: 6px 0 6px 8px; color: #141B38; font-size: 15px; font-weight: 400; line-height: 18px;"
+					class="aio-nav-link no-underline"
 				>
 					Features
-					<svg class="ml-1.5" style="width: 10px; height: 6px; color: #8C8F9A;" viewBox="0 0 10 6" fill="none">
+					<svg class="ml-1.5 w-[10px] h-[6px] text-brand-navy-40" viewBox="0 0 10 6" fill="none">
 						<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</a>
@@ -39,8 +35,7 @@
 				<!-- Pricing -->
 				<a
 					href="https://aioseo.com/pricing/"
-					class="no-underline"
-					style="display: block; padding: 6px 0 6px 8px; color: #141B38; font-size: 15px; font-weight: 400; line-height: 18px;"
+					class="aio-nav-link no-underline"
 				>
 					Pricing
 				</a>
@@ -48,8 +43,7 @@
 				<!-- Testimonials -->
 				<a
 					href="https://aioseo.com/testimonials/"
-					class="no-underline"
-					style="display: block; padding: 6px 0 6px 8px; color: #141B38; font-size: 15px; font-weight: 400; line-height: 18px;"
+					class="aio-nav-link no-underline"
 				>
 					Testimonials
 				</a>
@@ -57,11 +51,10 @@
 				<!-- Resources -->
 				<a
 					href="https://aioseo.com/docs/"
-					class="flex items-center no-underline"
-					style="padding: 6px 0 6px 8px; color: #141B38; font-size: 15px; font-weight: 400; line-height: 18px;"
+					class="aio-nav-link no-underline"
 				>
 					Resources
-					<svg class="ml-1.5" style="width: 10px; height: 6px; color: #8C8F9A;" viewBox="0 0 10 6" fill="none">
+					<svg class="ml-1.5 w-[10px] h-[6px] text-brand-navy-40" viewBox="0 0 10 6" fill="none">
 						<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
 				</a>
@@ -69,8 +62,7 @@
 				<!-- Divider + My Account -->
 				<a
 					href="https://aioseo.com/account/"
-					class="no-underline"
-					style="display: block; padding: 6px 0 6px 8px; color: #005AE0; font-size: 15px; font-weight: 400; line-height: 18px; border-left: 1px solid #D0D1D7; padding-left: 15px; margin-left: 15px;"
+					class="aio-nav-link no-underline !text-brand-blue border-l border-border-input pl-[15px] ml-[15px]"
 				>
 					My Account
 				</a>

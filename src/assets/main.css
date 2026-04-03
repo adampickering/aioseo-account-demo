@@ -46,6 +46,10 @@
   --color-shadow-xs: #0a0d120d;
   --color-shadow-inner: #0a0d122e;
 
+  /* Additional colors */
+  --color-border: #E6EEFC;
+  --color-border-input: #D0D1D7;
+
   /* Font families */
   --font-heading: "Proxima Nova", system-ui, sans-serif;
   --font-body: "Proxima Nova", system-ui, sans-serif;
@@ -59,6 +63,11 @@
   --text-h3--line-height: 1.25;
   --text-xl: 20px;
   --text-xl--line-height: 30px;
+
+  /* Border radius */
+  --radius-card: 5px;
+  --radius-btn: 4px;
+  --radius-btn-lg: 4.5px;
 
   /* Shadows */
   --shadow-xs: 0 1px 2px var(--color-shadow-xs);
@@ -76,5 +85,262 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+  }
+
+  /* Global focus styles for keyboard accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--color-brand-blue);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Card — the foundational card pattern from aioseo.com */
+  .aio-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 40px;
+    background-color: white;
+  }
+
+  .aio-card-sm {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 16px;
+    background-color: white;
+  }
+
+  .aio-card-md {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: 32px;
+    background-color: white;
+  }
+
+  /* Buttons */
+  .aio-btn-green {
+    background-color: var(--color-brand-green);
+    color: white;
+    border-radius: var(--radius-btn-lg);
+    padding: 14.85px 22.5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .aio-btn-green:hover { opacity: 0.9; }
+
+  .aio-btn-green-sm {
+    background-color: var(--color-brand-green);
+    color: white;
+    border-radius: var(--radius-btn);
+    padding: 13.2px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .aio-btn-green-sm:hover { opacity: 0.9; }
+
+  .aio-btn-blue {
+    background-color: var(--color-brand-blue);
+    color: white;
+    border-radius: var(--radius-btn-lg);
+    padding: 14.85px 22.5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .aio-btn-blue:hover { opacity: 0.9; }
+
+  .aio-btn-outline-blue {
+    border: 1px solid var(--color-brand-blue);
+    color: var(--color-brand-blue);
+    background-color: white;
+    border-radius: var(--radius-btn-lg);
+    padding: 14.85px 22.5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  .aio-btn-outline-blue:hover { background-color: var(--color-bg-light); }
+
+  /* Form inputs — from aioseo.com profile page */
+  .aio-input {
+    border: 1px solid var(--color-border-input);
+    border-radius: var(--radius-card);
+    padding: 12px 16px;
+    font-size: 15px;
+    width: 100%;
+    color: var(--color-brand-navy);
+    background-color: white;
+    transition: border-color 0.2s;
+  }
+  .aio-input:focus {
+    border-color: var(--color-brand-blue);
+    outline: none;
+  }
+
+  /* Tab links — from aioseo.com account nav */
+  .aio-tab {
+    display: block;
+    padding: 14.85px 22.5px;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: var(--color-brand-navy);
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s;
+  }
+  .aio-tab:hover {
+    color: var(--color-brand-blue);
+  }
+  .aio-tab-active {
+    color: var(--color-brand-blue);
+    font-weight: 600;
+    border-bottom-color: var(--color-brand-blue);
+  }
+
+  /* Nav links — from aioseo.com header */
+  .aio-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 0 6px 8px;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--color-brand-navy);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .aio-nav-link:hover { color: var(--color-brand-blue); }
+
+  /* Content container */
+  .aio-container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Section heading */
+  .aio-section-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-brand-navy);
+    margin-bottom: 16px;
+  }
+
+  /* Link */
+  .aio-link {
+    color: var(--color-brand-blue);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .aio-link:hover { opacity: 0.8; }
+
+  /* Footer link */
+  .aio-footer-link {
+    color: var(--color-brand-navy-60);
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 32.25px;
+    transition: color 0.2s;
+  }
+  .aio-footer-link:hover { color: var(--color-brand-blue); }
+
+  /* Footer heading */
+  .aio-footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-brand-navy-60);
+    margin-bottom: 16px;
+  }
+
+  /* Badge — active status */
+  .aio-badge-active {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 7px;
+    font-size: 16px;
+    border-radius: var(--radius-card);
+    background-color: rgba(0, 170, 99, 0.05);
+    color: var(--color-brand-green);
+    border: 1px solid var(--color-brand-green);
+  }
+
+  .aio-badge-expired {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 7px;
+    font-size: 16px;
+    border-radius: var(--radius-card);
+    background-color: rgba(223, 42, 74, 0.05);
+    color: var(--color-brand-red);
+    border: 1px solid var(--color-brand-red);
+  }
+
+  .aio-badge-pending {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 7px;
+    font-size: 16px;
+    border-radius: var(--radius-card);
+    background-color: rgba(241, 130, 0, 0.05);
+    color: var(--color-brand-amber);
+    border: 1px solid var(--color-brand-amber);
+  }
+
+  .aio-badge-neutral {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 7px;
+    font-size: 16px;
+    border-radius: var(--radius-card);
+    background-color: rgba(140, 143, 154, 0.05);
+    color: var(--color-brand-navy-40);
+    border: 1px solid var(--color-brand-navy-40);
+  }
+
+  /* Addon icon container */
+  .aio-addon-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .aio-addon-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
   }
 }

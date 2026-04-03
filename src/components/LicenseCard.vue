@@ -53,7 +53,7 @@ async function copyKey() {
 </script>
 
 <template>
-	<div class="bg-white transition-all duration-200" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 40px;">
+	<div class="aio-card transition-all duration-200">
 		<!-- Header -->
 		<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
 			<div class="flex items-center gap-3">
@@ -73,15 +73,13 @@ async function copyKey() {
 				<a
 					v-if="!isElite"
 					href="#"
-					class="inline-flex items-center gap-1.5 text-sm font-medium text-brand-blue border border-brand-blue hover:bg-brand-blue-5 transition-all duration-200"
-					style="border-radius: 4px; padding: 13.2px 20px;"
+					class="inline-flex items-center gap-1.5 text-sm font-medium text-brand-blue border border-brand-blue hover:bg-brand-blue-5 transition-all duration-200 rounded-btn px-5 py-[13.2px]"
 				>
 					Upgrade License
 				</a>
 				<a
 					:href="license.downloadUrl"
-					class="inline-flex items-center gap-1.5 font-medium text-white bg-brand-green hover:bg-brand-green/90 transition-all duration-200"
-					style="border-radius: 4px; padding: 13.2px 20px; font-size: 16px; font-weight: 600;"
+					class="aio-btn-green-sm inline-flex items-center gap-1.5 font-medium text-white bg-brand-green hover:bg-brand-green/90 transition-all duration-200"
 				>
 					<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />

@@ -21,7 +21,7 @@ const priceCents = priceParts[1] || '00'
 </script>
 
 <template>
-	<div class="bg-white flex flex-col" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 32px;">
+	<div class="aio-card-md flex flex-col">
 		<!-- Title -->
 		<h3 class="text-xl font-heading font-semibold text-text-primary text-center mb-6">
 			{{ title }}
@@ -52,8 +52,7 @@ const priceCents = priceParts[1] || '00'
 			<label class="text-sm font-semibold text-text-primary mb-1.5 block">Includes:</label>
 			<select
 				v-model="siteCount"
-				class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200 appearance-none bg-white bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]"
-				style="border-radius: 5px; padding: 12px 16px;"
+				class="aio-input text-sm appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]"
 			>
 				<option v-for="opt in siteOptions" :key="opt" :value="opt">
 					{{ opt }} {{ opt === '1' ? 'Site' : 'Sites' }}
@@ -83,8 +82,7 @@ const priceCents = priceParts[1] || '00'
 		<!-- Add to Cart button -->
 		<a
 			:href="cartUrl"
-			class="block w-full bg-brand-blue text-white text-center font-semibold hover:bg-brand-blue/90 transition-all duration-200"
-			style="border-radius: 4.5px; padding: 14.85px 22.5px; font-size: 18px; font-weight: 600;"
+			class="aio-btn-blue block w-full text-center hover:opacity-90 transition-all duration-200"
 		>
 			Add to Cart
 		</a>

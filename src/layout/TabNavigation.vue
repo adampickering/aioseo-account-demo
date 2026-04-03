@@ -65,61 +65,41 @@ onBeforeUnmount(() => {
 <template>
 	<nav>
 		<ul
-			class="flex items-end"
-			style="list-style: none; padding: 0; margin: 0; font-size: 18px; line-height: 28.8px;"
+			class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px]"
 		>
 			<!-- Primary tabs -->
 			<li
 				v-for="tab in primaryTabs"
 				:key="tab.routeName"
-				class="flex"
-				style="padding: 0; margin: 0;"
-				:style="isTabActive(tab) ? 'border-bottom: 3px solid #005AE0;' : 'border-bottom: 3px solid transparent;'"
+				class="flex p-0 m-0"
 			>
 				<RouterLink
 					:to="{ name: tab.routeName }"
-					class="no-underline whitespace-nowrap"
-					:style="{
-						display: 'block',
-						padding: '14.85px 22.5px',
-						fontSize: '18px',
-						fontWeight: isTabActive(tab) ? '600' : '400',
-						lineHeight: '21.6px',
-						color: isTabActive(tab) ? '#005AE0' : '#141B38',
-						textDecoration: 'none',
-					}"
+					class="aio-tab no-underline whitespace-nowrap"
+					:class="{ 'aio-tab-active': isTabActive(tab) }"
 				>
 					{{ tab.label }}
 				</RouterLink>
 			</li>
 
 			<!-- Spacer -->
-			<li class="flex-1" style="list-style: none;"></li>
+			<li class="flex-1 list-none"></li>
 
 			<!-- More dropdown -->
 			<li
 				ref="moreRef"
-				class="relative flex"
-				style="padding: 0; margin: 0;"
-				:style="(isMoreActive || moreOpen) ? 'border-bottom: 3px solid #005AE0;' : 'border-bottom: 3px solid transparent;'"
+				class="relative flex p-0 m-0"
 			>
 				<button
 					@click="toggleMore"
-					class="flex items-center gap-1.5 whitespace-nowrap cursor-pointer bg-transparent border-0"
-					:style="{
-						padding: '14.85px 22.5px',
-						fontSize: '18px',
-						fontWeight: (isMoreActive || moreOpen) ? '600' : '400',
-						lineHeight: '21.6px',
-						color: (isMoreActive || moreOpen) ? '#005AE0' : '#141B38',
-						fontFamily: 'inherit',
-					}"
+					class="aio-tab flex items-center gap-1.5 whitespace-nowrap cursor-pointer bg-transparent border-0 font-inherit"
+					:class="{ 'aio-tab-active': isMoreActive || moreOpen }"
 				>
 					More
 					<svg
 						class="transition-transform duration-200"
 						:class="{ 'rotate-180': moreOpen }"
-						style="width: 12px; height: 12px;"
+						class="w-3 h-3"
 						viewBox="0 0 12 12"
 						fill="none"
 					>
@@ -137,30 +117,21 @@ onBeforeUnmount(() => {
 				>
 					<div
 						v-if="moreOpen"
-						class="absolute right-0 top-full z-50"
-						style="width: 208px; background: #FFFFFF; border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 4px 0; margin-top: 0;"
+						class="absolute right-0 top-full z-50 w-[208px] bg-white border border-border rounded-card shadow-card py-1 mt-0"
 					>
 						<template v-for="item in moreItems" :key="item.label">
 							<RouterLink
 								v-if="item.routeName"
 								:to="{ name: item.routeName }"
-								class="block no-underline transition-colors duration-150"
-								:style="{
-									padding: '10px 16px',
-									fontSize: '15px',
-									lineHeight: '22.5px',
-									color: isMoreItemActive(item) ? '#005AE0' : '#434960',
-									fontWeight: isMoreItemActive(item) ? '500' : '400',
-									backgroundColor: isMoreItemActive(item) ? '#F2F7FD' : 'transparent',
-								}"
+								class="block no-underline transition-colors duration-150 px-4 py-2.5 text-[15px] leading-[22.5px]"
+								:class="isMoreItemActive(item) ? 'text-brand-blue font-medium bg-bg-light' : 'text-brand-navy-60 font-normal bg-transparent'"
 							>
 								{{ item.label }}
 							</RouterLink>
 							<a
 								v-else
 								:href="item.href"
-								class="block no-underline transition-colors duration-150"
-								style="padding: 10px 16px; font-size: 15px; line-height: 22.5px; color: #434960; font-weight: 400;"
+								class="block no-underline transition-colors duration-150 px-4 py-2.5 text-[15px] leading-[22.5px] text-brand-navy-60 font-normal"
 							>
 								{{ item.label }}
 							</a>

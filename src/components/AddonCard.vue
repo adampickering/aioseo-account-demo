@@ -7,14 +7,12 @@ defineProps<{
 </script>
 
 <template>
-	<div class="bg-white flex items-center gap-3 hover:-translate-y-0.5 transition-all duration-200 group" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 16px;">
-		<div class="shrink-0 overflow-hidden rounded-full flex items-center justify-center" style="width: 50px; height: 50px; background-color: #F2F7FD;">
+	<div class="aio-card-sm flex items-center gap-3 hover:-translate-y-0.5 transition-all duration-200 group">
+		<div class="aio-addon-icon">
 			<img
 				v-if="addon.iconUrl && addon.iconUrl !== '#'"
 				:src="addon.iconUrl"
 				:alt="addon.name"
-				class="object-contain"
-				style="width: 24px; height: 24px;"
 			/>
 			<span v-else class="text-sm font-bold text-brand-blue">{{ addon.name.charAt(0) }}</span>
 		</div>

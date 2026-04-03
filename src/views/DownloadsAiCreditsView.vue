@@ -24,7 +24,7 @@ const percentRemaining = computed(() => 100 - percentUsed.value)
 <template>
 	<div>
 		<!-- Has credits -->
-		<div v-if="hasCredits" class="bg-white" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 40px;">
+		<div v-if="hasCredits" class="aio-card">
 			<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-6">
 				<div class="flex-1 space-y-5">
 					<!-- Header with icon -->
@@ -72,8 +72,7 @@ const percentRemaining = computed(() => 100 - percentUsed.value)
 					<!-- CTA -->
 					<a
 						href="#"
-						class="inline-flex items-center gap-2 text-white bg-brand-blue hover:bg-brand-blue/90 transition-all duration-200"
-						style="border-radius: 4.5px; padding: 14.85px 22.5px; font-size: 18px; font-weight: 600;"
+						class="aio-btn-blue hover:opacity-90 transition-all duration-200"
 					>
 						<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -85,7 +84,7 @@ const percentRemaining = computed(() => 100 - percentUsed.value)
 		</div>
 
 		<!-- No credits -->
-		<div v-else class="bg-white text-center max-w-lg" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 40px;">
+		<div v-else class="aio-card text-center max-w-lg">
 			<div class="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center mx-auto mb-4">
 				<svg class="w-6 h-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
@@ -97,8 +96,7 @@ const percentRemaining = computed(() => 100 - percentUsed.value)
 			</p>
 			<a
 				href="#"
-				class="inline-flex items-center gap-2 text-white bg-brand-blue hover:bg-brand-blue/90 transition-all duration-200"
-				style="border-radius: 4.5px; padding: 14.85px 22.5px; font-size: 18px; font-weight: 600;"
+				class="aio-btn-blue hover:opacity-90 transition-all duration-200"
 			>
 				Purchase Credits
 			</a>

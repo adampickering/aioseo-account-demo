@@ -44,7 +44,7 @@ function formatDate(iso: string): string {
 			<!-- Left column -->
 			<div class="lg:col-span-2 space-y-8">
 				<!-- User card -->
-				<div class="bg-white" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 40px;">
+				<div class="aio-card">
 					<div class="flex items-center gap-4">
 						<img
 							:src="user.avatarUrl"
@@ -111,7 +111,7 @@ function formatDate(iso: string): string {
 				<!-- AI Credits -->
 				<div v-if="hasCredits">
 					<h3 class="text-lg font-heading font-semibold text-text-primary mb-4">AI Credits</h3>
-					<div class="bg-white" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 20px;">
+					<div class="bg-white border border-border rounded-card shadow-card p-5">
 						<div class="flex items-center gap-3 mb-4">
 							<!-- AI sparkle icon -->
 							<div class="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center shrink-0">

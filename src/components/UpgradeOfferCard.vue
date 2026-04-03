@@ -33,7 +33,7 @@ const badgeColor = computed(() => {
 </script>
 
 <template>
-	<div class="relative bg-white border-t-4 overflow-hidden transition-all duration-200" :class="borderColor" style="border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); border-right: 1px solid #E6EEFC; border-bottom: 1px solid #E6EEFC; border-left: 1px solid #E6EEFC;">
+	<div class="relative bg-white border-t-4 overflow-hidden transition-all duration-200 rounded-card shadow-card border-r border-b border-l border-border" :class="borderColor">
 		<!-- Badge -->
 		<div class="absolute top-4 right-4">
 			<span class="text-[11px] font-semibold px-2.5 py-1 rounded-full" :class="badgeColor">
@@ -77,8 +77,7 @@ const badgeColor = computed(() => {
 			<!-- CTA -->
 			<a
 				:href="offer.ctaUrl"
-				class="block w-full text-center text-white transition-all duration-200"
-				style="border-radius: 4.5px; padding: 14.85px 22.5px; font-size: 18px; font-weight: 600;"
+				class="block w-full text-center text-white transition-all duration-200 rounded-btn-lg px-[22.5px] py-[14.85px] text-lg font-semibold"
 				:class="buttonColor"
 			>
 				{{ offer.ctaLabel }}
