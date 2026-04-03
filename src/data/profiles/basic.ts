@@ -6,7 +6,7 @@ export const user: User = {
 	firstName: 'Arnaud',
 	lastName: 'Broes',
 	email: 'abroes@awesomemotive.com',
-	avatarUrl: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=80',
+	avatarUrl: '/assets/images/avatar-arnaud.jpg',
 	billingAddress: {
 		line1: '1209 Orange Street',
 		line2: '',

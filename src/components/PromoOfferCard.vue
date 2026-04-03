@@ -7,33 +7,32 @@ defineProps<{
 </script>
 
 <template>
-	<div class="aio-card-sm flex items-center gap-4 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 group">
-		<!-- Icon -->
+	<div class="flex gap-5 items-start">
+		<!-- Icon — large rounded square -->
 		<div
-			class="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
-			:style="{ backgroundColor: offer.iconBgColor }"
+			class="shrink-0 rounded-xl flex items-center justify-center"
+			:style="{ backgroundColor: offer.iconBgColor, width: '80px', height: '80px' }"
 		>
 			<img
 				v-if="offer.iconUrl && offer.iconUrl !== '#'"
 				:src="offer.iconUrl"
 				:alt="offer.productName"
-				class="w-6 h-6 object-contain"
+				class="w-10 h-10 object-contain"
+				style="filter: brightness(0) invert(1);"
 			/>
-			<span v-else class="text-white text-lg font-bold">{{ offer.productName.charAt(0) }}</span>
+			<span v-else class="text-white text-2xl font-bold">{{ offer.productName.charAt(0) }}</span>
 		</div>
 
 		<!-- Content -->
 		<div class="flex-1 min-w-0">
-			<p class="font-semibold text-text-primary text-sm">{{ offer.productName }}</p>
-			<p class="text-sm text-text-secondary line-clamp-2 mt-0.5">{{ offer.description }}</p>
+			<p class="font-bold text-brand-navy text-base">{{ offer.productName }}</p>
+			<p class="text-sm text-brand-navy-60 mt-1 leading-relaxed">{{ offer.description }}</p>
+			<a
+				:href="offer.ctaUrl"
+				class="aio-btn-green-sm no-underline inline-flex mt-3"
+			>
+				{{ offer.ctaLabel }}
+			</a>
 		</div>
-
-		<!-- CTA -->
-		<a
-			:href="offer.ctaUrl"
-			class="aio-btn-green-sm shrink-0"
-		>
-			{{ offer.ctaLabel }}
-		</a>
 	</div>
 </template>

@@ -6,7 +6,7 @@ export const user: User = {
 	firstName: 'Arnaud',
 	lastName: 'Broes',
 	email: 'abroes@awesomemotive.com',
-	avatarUrl: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=80',
+	avatarUrl: '/assets/images/avatar-arnaud.jpg',
 	billingAddress: {
 		line1: '1209 Orange Street',
 		line2: 'Suite 100',
@@ -151,17 +151,17 @@ export const orders: Order[] = [
 export const promoOffers: PromoOffer[] = [
 	{
 		id: 'promo-blc',
-		productName: 'Broken Link Checker',
-		description: 'Monitor your site for broken links and fix them in one click to improve SEO and user experience.',
+		productName: 'Broken Link Checker by AIOSEO',
+		description: 'Find and fix broken links across your site. Scan automatically, protect SEO, and keep customers from hitting dead ends.',
 		iconUrl: '/assets/icons/product-blc-icon.svg',
 		ctaLabel: 'Claim Offer',
 		ctaUrl: 'https://brokenlinkchecker.com/',
-		iconBgColor: '#DF2A4A',
+		iconBgColor: '#005AE0',
 	},
 	{
 		id: 'promo-lowfruits',
-		productName: 'LowFruits',
-		description: 'Find low-competition keywords that are easy to rank for with AI-powered SERP analysis.',
+		productName: 'LowFruits by AIOSEO',
+		description: 'Uncover low-competition keywords you can rank for faster. Focus on realistic SEO opportunities that drive traffic.',
 		iconUrl: '/assets/icons/product-lowfruits-icon.svg',
 		ctaLabel: 'Claim Offer',
 		ctaUrl: 'https://lowfruits.io/',
@@ -169,8 +169,8 @@ export const promoOffers: PromoOffer[] = [
 	},
 	{
 		id: 'promo-seoboost',
-		productName: 'SEOBoost',
-		description: 'Create better-ranking content with real-time optimization and content briefs powered by AI.',
+		productName: 'SEOBoost by AIOSEO',
+		description: 'Optimize your content to rank higher. Get clear, data-driven recommendations based on what performs in search.',
 		iconUrl: '/assets/icons/product-seoboost-icon.svg',
 		ctaLabel: 'Claim Offer',
 		ctaUrl: 'https://seoboost.com/',
