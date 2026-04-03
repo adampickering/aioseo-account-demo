@@ -85,8 +85,8 @@ function formatDate(iso: string): string {
 
 					<!-- Column headers -->
 					<div class="flex items-center justify-between mb-2">
-						<span class="text-sm text-brand-navy-40">Product</span>
-						<span class="text-sm text-brand-navy-40">Expires</span>
+						<span class="text-base text-text-muted">Product</span>
+						<span class="text-base text-text-muted">Expires</span>
 					</div>
 
 					<div class="space-y-3">
@@ -145,7 +145,7 @@ function formatDate(iso: string): string {
 
 						<router-link
 							to="/downloads/ai-credits"
-							class="inline-flex items-center gap-1 text-body font-medium text-brand-blue hover:underline transition-all duration-200 mt-4"
+							class="inline-flex items-center gap-1 text-lg font-semibold text-brand-blue hover:underline transition-all duration-200 mt-4"
 						>
 							Add More Credits
 							<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -177,7 +177,7 @@ function formatDate(iso: string): string {
 
 		<!-- Announcements (full width) -->
 		<div>
-			<h3 class="text-[32px] leading-[40px] font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
+			<h3 class="text-section font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<AnnouncementCard
 					v-for="item in announcements"
@@ -189,7 +189,7 @@ function formatDate(iso: string): string {
 
 		<!-- Need Help (full width) -->
 		<div>
-			<h3 class="text-[32px] leading-[40px] font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
+			<h3 class="text-section font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
 			<HelpSearchSection />
 		</div>
 	</div>

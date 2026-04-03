@@ -67,6 +67,8 @@
   --text-body--line-height: 22.5px;
   --text-credits: 24px;
   --text-credits--line-height: 1;
+  --text-section: 32px;
+  --text-section--line-height: 40px;
 
   /* Border radius — standardized to 5px for all non-pill elements */
   --radius-card: 5px;
