@@ -44,7 +44,7 @@ const formattedExpiry = computed(() => {
 </script>
 
 <template>
-	<div class="bg-white border border-gray-200 rounded-lg p-4 flex items-center gap-4 transition-all duration-200 hover:border-gray-300">
+	<div class="bg-white flex items-center gap-4 transition-all duration-200" style="border: 1px solid #E6EEFC; border-radius: 5px; padding: 16px;">
 		<!-- Brand badge -->
 		<div class="w-14 h-9 rounded flex items-center justify-center text-[11px] font-bold tracking-wide shrink-0" :class="brandColors">
 			{{ brandLabel }}

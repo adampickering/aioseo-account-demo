@@ -46,7 +46,7 @@ const showChat = ref(true)
 
 		<!-- Right column: sidebar -->
 		<div class="lg:col-span-2">
-			<div class="rounded-xl bg-white shadow-card p-8 text-center space-y-4">
+			<div class="bg-white text-center space-y-4" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 32px;">
 				<!-- Avatar group -->
 				<div class="flex items-center justify-center -space-x-3">
 					<img

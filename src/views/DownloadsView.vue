@@ -24,7 +24,8 @@ const activeTab = computed(() => route.name)
 				v-for="tab in tabs"
 				:key="tab.name"
 				:to="{ name: tab.name }"
-				class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+				class="inline-flex items-center gap-2 text-sm font-medium transition-all duration-200"
+				style="border-radius: 5px; padding: 8px 16px;"
 				:class="activeTab === tab.name
 					? 'bg-brand-blue text-white'
 					: 'bg-brand-blue-5 text-brand-navy-60 hover:bg-brand-blue-10 hover:text-brand-navy'"

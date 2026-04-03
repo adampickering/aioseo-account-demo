@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
 		>
 			<div
 				v-if="isOpen"
-				class="absolute right-0 top-full mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50"
+				class="absolute right-0 top-full mt-2 w-44 bg-white py-1 z-50" style="border-radius: 5px; border: 1px solid #E6EEFC; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06);"
 			>
 				<div class="px-3 py-2 border-b border-gray-100">
 					<p class="text-sm font-medium text-text-primary truncate">{{ user.firstName }} {{ user.lastName }}</p>

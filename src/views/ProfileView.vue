@@ -21,13 +21,13 @@ const { user } = useAccount()
 							type="text"
 							:value="user.firstName"
 							placeholder="First name"
-							class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+							class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 						/>
 						<input
 							type="text"
 							:value="user.lastName"
 							placeholder="Last name"
-							class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+							class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 						/>
 					</div>
 				</div>
@@ -41,7 +41,7 @@ const { user } = useAccount()
 						type="email"
 						:value="user.email"
 						placeholder="Email address"
-						class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+						class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 					/>
 				</div>
 			</div>
@@ -59,7 +59,7 @@ const { user } = useAccount()
 						type="text"
 						:value="user.billingAddress.line1"
 						placeholder="Street address"
-						class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+						class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 					/>
 				</div>
 
@@ -70,7 +70,7 @@ const { user } = useAccount()
 						type="text"
 						:value="user.billingAddress.line2"
 						placeholder="Apt, suite, etc. (optional)"
-						class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+						class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 					/>
 				</div>
 
@@ -82,7 +82,7 @@ const { user } = useAccount()
 							type="text"
 							:value="user.billingAddress.city"
 							placeholder="City"
-							class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+							class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 						/>
 					</div>
 					<div>
@@ -91,7 +91,7 @@ const { user } = useAccount()
 							type="text"
 							:value="user.billingAddress.zip"
 							placeholder="Zip / Postal code"
-							class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+							class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 						/>
 					</div>
 				</div>
@@ -102,7 +102,7 @@ const { user } = useAccount()
 						<label class="text-sm font-semibold text-text-primary mb-1 block">Country</label>
 						<select
 							:value="user.billingAddress.country"
-							class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200 appearance-none bg-white bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]"
+							class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200 appearance-none bg-white bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]" style="border-radius: 5px; padding: 12px 16px;"
 						>
 							<option value="">Select a country...</option>
 							<option value="US">United States</option>
@@ -122,7 +122,7 @@ const { user } = useAccount()
 						<label class="text-sm font-semibold text-text-primary mb-1 block">State / Province</label>
 						<select
 							:value="user.billingAddress.state"
-							class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200 appearance-none bg-white bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]"
+							class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200 appearance-none bg-white bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]" style="border-radius: 5px; padding: 12px 16px;"
 						>
 							<option value="">Select an option...</option>
 							<option value="AL">Alabama</option>
@@ -153,7 +153,7 @@ const { user } = useAccount()
 					<input
 						type="password"
 						placeholder="Enter new password"
-						class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+						class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 					/>
 				</div>
 				<div>
@@ -161,7 +161,7 @@ const { user } = useAccount()
 					<input
 						type="password"
 						placeholder="Confirm new password"
-						class="border border-gray-200 rounded-lg px-4 py-3 w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200"
+						class="border border-[#D0D1D7] w-full text-sm focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all duration-200" style="border-radius: 5px; padding: 12px 16px;"
 					/>
 				</div>
 			</div>
@@ -169,7 +169,7 @@ const { user } = useAccount()
 
 		<!-- Save button -->
 		<div>
-			<button class="bg-brand-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-blue/90 transition-all duration-200 cursor-pointer">
+			<button class="bg-brand-blue text-white hover:bg-brand-blue/90 transition-all duration-200 cursor-pointer" style="border-radius: 4.5px; padding: 14.85px 22.5px; font-size: 18px; font-weight: 600;">
 				Save Changes
 			</button>
 		</div>

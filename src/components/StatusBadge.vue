@@ -10,24 +10,32 @@ const statusConfig = computed(() => {
 		case 'active':
 		case 'completed':
 			return {
-				classes: 'bg-brand-green/10 text-brand-green border border-brand-green/20',
+				bg: 'rgba(0, 170, 99, 0.05)',
+				color: '#00AA63',
+				border: '1px solid #00AA63',
 				label: props.status.charAt(0).toUpperCase() + props.status.slice(1),
 			}
 		case 'expired':
 		case 'cancelled':
 		case 'failed':
 			return {
-				classes: 'bg-brand-red/10 text-brand-red border border-brand-red/20',
+				bg: 'rgba(223, 42, 74, 0.05)',
+				color: '#DF2A4A',
+				border: '1px solid #DF2A4A',
 				label: props.status.charAt(0).toUpperCase() + props.status.slice(1),
 			}
 		case 'refunded':
 			return {
-				classes: 'bg-gray-100 text-text-muted border border-gray-200',
+				bg: 'rgba(140, 143, 154, 0.05)',
+				color: '#8C8F9A',
+				border: '1px solid #8C8F9A',
 				label: 'Refunded',
 			}
 		case 'pending':
 			return {
-				classes: 'bg-amber-50 text-brand-amber border border-brand-amber/20',
+				bg: 'rgba(241, 130, 0, 0.05)',
+				color: '#F18200',
+				border: '1px solid #F18200',
 				label: 'Pending',
 			}
 	}
@@ -36,8 +44,17 @@ const statusConfig = computed(() => {
 
 <template>
 	<span
-		class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium transition-all duration-200"
-		:class="statusConfig.classes"
+		class="inline-flex items-center"
+		:style="{
+			backgroundColor: statusConfig.bg,
+			color: statusConfig.color,
+			border: statusConfig.border,
+			borderRadius: '5px',
+			padding: '0 7px',
+			fontSize: '16px',
+			fontWeight: '400',
+			lineHeight: '1.6',
+		}"
 	>
 		{{ statusConfig.label }}
 	</span>

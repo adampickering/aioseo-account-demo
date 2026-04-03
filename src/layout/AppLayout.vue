@@ -8,14 +8,13 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 </script>
 
 <template>
-	<div class="min-h-screen flex flex-col bg-white">
+	<div class="min-h-screen flex flex-col bg-white" style="font-family: 'Proxima Nova', system-ui, sans-serif;">
 		<SiteHeader />
 
-		<!-- Welcome Banner — Figma blue gradient with wave -->
+		<!-- Welcome Banner -- Figma blue gradient with wave -->
 		<div class="relative overflow-hidden bg-gradient-to-br from-[#005AE0] to-[#0070F3]">
 			<!-- SVG wave decoration behind text -->
 			<div class="absolute inset-0 opacity-[0.08]">
-				<!-- Decorative circles / bubbles -->
 				<svg class="absolute w-full h-full" viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="200" cy="60" r="120" fill="white" opacity="0.3"/>
 					<circle cx="1240" cy="80" r="90" fill="white" opacity="0.25"/>
@@ -32,17 +31,17 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 			</div>
 
 			<!-- Content -->
-			<div class="relative z-10 text-center pt-[68px] pb-[88px]">
-				<h1 class="font-heading text-[36px] leading-[43.2px] font-semibold text-white tracking-[-0.54px]">
+			<div class="relative z-10 text-center" style="padding: 48px 0;">
+				<h1 style="font-family: 'Proxima Nova', system-ui, sans-serif; font-size: 36px; font-weight: 600; color: #FFFFFF; text-align: center; line-height: normal;">
 					Welcome to Your AIOSEO Account
 				</h1>
-				<p class="font-heading text-[18px] leading-[27px] text-white/60 mt-6">
+				<p style="font-size: 18px; color: rgba(255, 255, 255, 0.6); margin-top: 16px;">
 					Improve Your Website Search Rankings
 				</p>
 			</div>
 		</div>
 
-		<div class="max-w-[1110px] w-full mx-auto px-6">
+		<div style="max-width: 1110px; width: 100%; margin: 0 auto;">
 			<TabNavigation />
 			<main class="py-8">
 				<RouterView />

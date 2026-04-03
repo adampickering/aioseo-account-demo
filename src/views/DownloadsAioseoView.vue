@@ -57,7 +57,7 @@ const showUpgradeOptions = ref(false)
 			</button>
 
 			<div v-show="showUpgradeOptions" class="mt-4">
-				<div class="bg-white rounded-xl shadow-card p-6">
+				<div class="bg-white" style="border: 1px solid #E6EEFC; border-radius: 5px; box-shadow: 0px 5px 10px 0px rgba(0, 90, 224, 0.06); padding: 40px;">
 					<div class="flex items-center gap-3 mb-3">
 						<div class="w-10 h-10 rounded-full bg-brand-blue-10 flex items-center justify-center shrink-0">
 							<svg class="w-5 h-5 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -73,7 +73,7 @@ const showUpgradeOptions = ref(false)
 						<div
 							v-for="tier in ['Plus', 'Pro', 'Elite']"
 							:key="tier"
-							class="border border-gray-100 rounded-lg p-4 text-center hover:border-brand-blue-25 transition-all duration-200"
+							class="border border-[#E6EEFC] p-4 text-center hover:border-brand-blue-25 transition-all duration-200" style="border-radius: 5px;"
 						>
 							<p class="font-heading font-semibold text-text-primary mb-1">{{ tier }}</p>
 							<a href="#" class="text-sm text-brand-blue hover:underline">View Details</a>

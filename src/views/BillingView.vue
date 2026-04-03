@@ -37,7 +37,7 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 		<section>
 			<div class="flex justify-between items-center mb-5">
 				<h2 class="text-xl font-heading font-semibold text-text-primary">Saved Payment Methods</h2>
-				<button class="border border-brand-blue text-brand-blue rounded-lg px-4 py-2 text-sm font-medium hover:bg-brand-blue/5 transition-all duration-200 cursor-pointer">
+				<button class="border border-brand-blue text-brand-blue hover:bg-brand-blue/5 transition-all duration-200 cursor-pointer" style="border-radius: 4px; padding: 13.2px 20px; font-size: 16px; font-weight: 600;">
 					Add Payment Method
 				</button>
 			</div>
@@ -45,7 +45,7 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 			<!-- Empty state -->
 			<div
 				v-if="paymentMethods.length === 0"
-				class="bg-brand-blue/5 rounded-lg p-6 text-center"
+				class="bg-brand-blue/5 text-center" style="border-radius: 5px; padding: 24px;"
 			>
 				<p class="text-text-muted text-sm">No saved payment methods. Add one to make renewals easier.</p>
 			</div>
