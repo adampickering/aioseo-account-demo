@@ -100,8 +100,15 @@ export const paymentMethods: PaymentMethod[] = [
 		id: 'pm-001',
 		brand: 'visa',
 		last4: '4242',
-		expiresAt: '2028-12-01T00:00:00Z',
+		expiresAt: '06/2028',
 		isDefault: true,
+	},
+	{
+		id: 'pm-002',
+		brand: 'mastercard',
+		last4: '8891',
+		expiresAt: '03/2027',
+		isDefault: false,
 	},
 ]
 
