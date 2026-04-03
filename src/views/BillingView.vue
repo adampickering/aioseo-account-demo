@@ -21,10 +21,10 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 				<table class="w-full min-w-[600px]">
 					<thead>
 						<tr class="border-t border-border">
-							<th class="px-10 py-3 text-left text-sm font-normal text-brand-navy-40">Date</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Product</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Status</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Actions</th>
+							<th class="px-10 py-3 text-left text-base font-normal text-text-muted">Date</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Product</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Status</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -98,11 +98,11 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 				<table class="w-full min-w-[700px]">
 					<thead>
 						<tr class="border-t border-border">
-							<th class="px-10 py-3 text-left text-sm font-normal text-brand-navy-40">Date</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Product</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Amount</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Status</th>
-							<th class="py-3 text-left text-sm font-normal text-brand-navy-40">Actions</th>
+							<th class="px-10 py-3 text-left text-base font-normal text-text-muted">Date</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Product</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Amount</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Status</th>
+							<th class="py-3 text-left text-base font-normal text-text-muted">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
