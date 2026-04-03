@@ -348,8 +348,8 @@
     overflow: hidden;
   }
   .aio-addon-icon img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
   }
 }

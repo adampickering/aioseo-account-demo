@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-	<div class="aio-card-sm flex items-center gap-4 hover:-translate-y-0.5 transition-all duration-200 group">
+	<div class="aio-card-sm flex items-center gap-4 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 group">
 		<!-- Icon -->
 		<div
 			class="w-12 h-12 rounded-full flex items-center justify-center shrink-0"

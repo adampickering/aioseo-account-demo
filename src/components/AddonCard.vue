@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-	<div class="aio-card-sm flex items-center gap-3 hover:-translate-y-0.5 transition-all duration-200 group">
+	<div class="aio-card-sm flex items-center gap-3 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 group">
 		<div class="aio-addon-icon">
 			<img
 				v-if="addon.iconUrl && addon.iconUrl !== '#'"

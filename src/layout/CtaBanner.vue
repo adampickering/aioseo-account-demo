@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
 	<section class="bg-[linear-gradient(white_50%,var(--color-bg-light)_50%)] py-10 pb-6">
 		<div class="aio-container">

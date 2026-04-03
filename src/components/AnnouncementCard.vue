@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-	<div class="bg-white overflow-hidden hover:-translate-y-0.5 transition-all duration-200 group border border-border rounded-card shadow-card">
+	<div class="bg-white overflow-hidden hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200 group border border-border rounded-card shadow-card">
 		<!-- Image -->
 		<div class="aspect-video overflow-hidden bg-bg-light">
 			<img

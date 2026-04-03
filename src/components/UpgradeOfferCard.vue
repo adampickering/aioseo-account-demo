@@ -33,7 +33,7 @@ const badgeColor = computed(() => {
 </script>
 
 <template>
-	<div class="relative bg-white border-t-4 overflow-hidden transition-all duration-200 rounded-card shadow-card border-r border-b border-l border-border" :class="borderColor">
+	<div class="relative bg-white border-t-4 overflow-hidden transition-all duration-200 rounded-card shadow-card border-r border-b border-l border-border hover:shadow-lg" :class="borderColor">
 		<!-- Badge -->
 		<div class="absolute top-4 right-4">
 			<span class="text-[11px] font-semibold px-2.5 py-1 rounded-full" :class="badgeColor">

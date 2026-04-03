@@ -68,11 +68,11 @@ const mobileMenuOpen = ref(false)
 		>
 			<div v-if="mobileMenuOpen" class="md:hidden absolute top-[88px] left-0 right-0 bg-white border-b border-border shadow-card z-50">
 				<nav class="flex flex-col py-4 px-5 gap-1" aria-label="Mobile navigation">
-					<a href="https://aioseo.com/features/" class="py-3 text-[15px] text-brand-navy no-underline" @click="mobileMenuOpen = false">Features</a>
-					<a href="https://aioseo.com/pricing/" class="py-3 text-[15px] text-brand-navy no-underline" @click="mobileMenuOpen = false">Pricing</a>
-					<a href="https://aioseo.com/testimonials/" class="py-3 text-[15px] text-brand-navy no-underline" @click="mobileMenuOpen = false">Testimonials</a>
-					<a href="https://aioseo.com/docs/" class="py-3 text-[15px] text-brand-navy no-underline" @click="mobileMenuOpen = false">Resources</a>
-					<a href="https://aioseo.com/account/" class="py-3 text-[15px] text-brand-blue font-semibold no-underline border-t border-border mt-2 pt-4" @click="mobileMenuOpen = false">My Account</a>
+					<a href="https://aioseo.com/features/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Features</a>
+					<a href="https://aioseo.com/pricing/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Pricing</a>
+					<a href="https://aioseo.com/testimonials/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Testimonials</a>
+					<a href="https://aioseo.com/docs/" class="py-3 text-[15px] text-brand-navy no-underline hover:text-brand-blue transition-colors duration-200" @click="mobileMenuOpen = false">Resources</a>
+					<a href="https://aioseo.com/account/" class="py-3 text-[15px] text-brand-blue font-semibold no-underline border-t border-border mt-2 pt-4 hover:opacity-80 transition-opacity duration-200" @click="mobileMenuOpen = false">My Account</a>
 				</nav>
 			</div>
 		</Transition>
