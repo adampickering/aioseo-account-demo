@@ -6,7 +6,7 @@ export const user: User = {
 	firstName: 'Arnaud',
 	lastName: 'Broes',
 	email: 'abroes@awesomemotive.com',
-	avatarUrl: import.meta.env.BASE_URL + 'assets/images/avatar-arnaud.jpg',
+	avatarUrl: import.meta.env.BASE_URL + 'assets/images/avatar-arnaud.png',
 	billingAddress: {
 		line1: '1209 Orange Street',
 		line2: '',
