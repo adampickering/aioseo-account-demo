@@ -50,18 +50,18 @@ const showChat = ref(true)
 				<!-- Avatar group -->
 				<div class="flex items-center justify-center -space-x-3">
 					<img
-						src="https://ui-avatars.com/api/?name=Sarah+M&background=005AE0&color=fff&rounded=true&size=48"
-						alt="Support agent"
-						class="w-12 h-12 rounded-full ring-2 ring-white"
+						src="/assets/images/support-avatar-1.jpg"
+						alt="Support team member"
+						class="w-12 h-12 rounded-full ring-2 ring-white object-cover"
 					/>
 					<img
-						src="https://ui-avatars.com/api/?name=James+K&background=00AA63&color=fff&rounded=true&size=48"
-						alt="Support agent"
-						class="w-12 h-12 rounded-full ring-2 ring-white"
+						src="/assets/images/support-avatar-2.jpg"
+						alt="Support team member"
+						class="w-12 h-12 rounded-full ring-2 ring-white object-cover"
 					/>
 					<img
-						src="https://ui-avatars.com/api/?name=Priya+D&background=F18200&color=fff&rounded=true&size=48"
-						alt="Support agent"
+						src="/assets/images/support-avatar-3.jpg"
+						alt="Support team member"
 						class="w-12 h-12 rounded-full ring-2 ring-white"
 					/>
 				</div>

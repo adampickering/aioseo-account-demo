@@ -284,7 +284,7 @@
     line-height: 32.25px;
     transition: color 0.2s;
   }
-  .aio-footer-link:hover { color: var(--color-brand-blue); }
+  .aio-footer-link:hover { color: var(--color-brand-blue); text-decoration: underline; }
 
   /* Footer heading */
   .aio-footer-heading {

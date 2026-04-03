@@ -30,7 +30,7 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 
 			<!-- Content -->
 			<div class="relative z-10 text-center py-8 md:py-12">
-				<h1 class="font-heading text-[24px] md:text-display-sm md:leading-display-sm font-semibold text-brand-navy text-center leading-normal">
+				<h1 class="font-heading text-[24px] md:text-[36px] font-semibold text-brand-navy text-center leading-normal">
 					Welcome to Your AIOSEO Account
 				</h1>
 				<p class="text-lg text-brand-navy-40 mt-2">

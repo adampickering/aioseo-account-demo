@@ -74,14 +74,14 @@ function formatDate(iso: string): string {
 					<div class="border-t border-gray-100 my-6"></div>
 
 					<!-- Quick Links -->
-					<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-4">Quick Links</h3>
+					<h3 class="text-h3 font-heading font-semibold text-brand-navy mb-4">Quick Links</h3>
 					<QuickLinks :links="quickLinks" />
 
 					<!-- Divider -->
 					<div class="border-t border-gray-100 my-6"></div>
 
 					<!-- Subscriptions -->
-					<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-4">Subscriptions</h3>
+					<h3 class="text-h3 font-heading font-semibold text-brand-navy mb-4">Subscriptions</h3>
 
 					<!-- Column headers -->
 					<div class="flex items-center justify-between mb-2">
@@ -117,7 +117,7 @@ function formatDate(iso: string): string {
 
 					<!-- AI Credits -->
 					<template v-if="hasCredits">
-						<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-4">AI Credits</h3>
+						<h3 class="text-h3 font-heading font-semibold text-brand-navy mb-4">AI Credits</h3>
 
 						<div class="flex items-center gap-3 mb-4">
 							<!-- AI sparkle icon -->
@@ -173,7 +173,7 @@ function formatDate(iso: string): string {
 
 		<!-- Announcements (full width) -->
 		<div>
-			<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
+			<h3 class="text-h3 font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<AnnouncementCard
 					v-for="item in announcements"
@@ -185,7 +185,7 @@ function formatDate(iso: string): string {
 
 		<!-- Need Help (full width) -->
 		<div>
-			<h3 class="text-h3 leading-h3 font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
+			<h3 class="text-h3 font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
 			<HelpSearchSection />
 		</div>
 	</div>

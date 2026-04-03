@@ -46,7 +46,7 @@ const formattedExpiry = computed(() => {
 <template>
 	<div class="bg-white flex items-center gap-4 transition-all duration-200 border border-border rounded-card p-4">
 		<!-- Brand badge -->
-		<div class="w-14 h-9 rounded-btn flex items-center justify-center text-[11px] font-bold tracking-wide shrink-0" :class="brandColors">
+		<div class="w-14 h-9 rounded-btn flex items-center justify-center text-xs font-bold tracking-wide shrink-0" :class="brandColors">
 			{{ brandLabel }}
 		</div>
 
