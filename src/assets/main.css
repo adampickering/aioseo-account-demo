@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-brand-blue: #005AE0;
+  --color-brand-blue-5: #F2F7FD;
+  --color-brand-blue-10: #E6EEFC;
+  --color-brand-blue-25: #BFD6F7;
+  --color-brand-navy: #141B38;
+  --color-brand-navy-60: #434960;
+  --color-brand-navy-40: #8C8F9A;
+  --color-brand-green: #00AA63;
+  --color-brand-red: #DF2A4A;
+  --color-brand-amber: #F18200;
+  --color-text-primary: #181d27;
+  --color-text-secondary: #434960;
+  --color-text-muted: #717680;
+  --color-text-light: #8C8F9A;
+  --color-bg-primary: #ffffff;
+  --color-bg-light: #F2F7FD;
+  --color-bg-info: #E6EEFC;
+  --color-shadow-xs: #0a0d120d;
+  --color-shadow-inner: #0a0d122e;
+
+  /* Font families */
+  --font-heading: "Proxima Nova", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 60px;
+  --text-display-sm: 30px;
+  --text-display-sm--line-height: 38px;
+  --text-h3: 23px;
+  --text-h3--line-height: 1.25;
+  --text-xl: 20px;
+  --text-xl--line-height: 30px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px var(--color-shadow-xs);
+  --shadow-card: 0 1px 2px var(--color-shadow-xs), inset 0 -2px 0 var(--color-shadow-xs), inset 0 0 0 1px var(--color-shadow-inner);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
