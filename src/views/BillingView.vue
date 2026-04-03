@@ -9,10 +9,10 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 
 <template>
 	<div class="space-y-10">
-		<!-- Section 1: Auto-Renewal Subscriptions -->
-		<section>
-			<h2 class="text-xl font-heading font-semibold text-text-primary mb-5">Auto-Renewal Subscriptions</h2>
-			<div class="overflow-x-auto -mx-5 px-5 md:mx-0 md:px-0">
+		<!-- Section 1: Auto-Renewal Subscriptions — in a card -->
+		<div class="aio-card">
+			<h2 class="text-h3 font-heading font-semibold text-brand-navy mb-5">Auto-Renewal Subscriptions</h2>
+			<div class="overflow-x-auto -mx-10 px-10">
 				<table class="w-full min-w-[600px]">
 					<thead>
 						<tr class="border-b border-gray-200">
@@ -31,12 +31,12 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 					</tbody>
 				</table>
 			</div>
-		</section>
+		</div>
 
-		<!-- Section 2: Saved Payment Methods -->
-		<section>
+		<!-- Section 2: Saved Payment Methods — in a card -->
+		<div class="aio-card">
 			<div class="flex justify-between items-center mb-5">
-				<h2 class="text-xl font-heading font-semibold text-text-primary">Saved Payment Methods</h2>
+				<h2 class="text-h3 font-heading font-semibold text-brand-navy">Saved Payments Method</h2>
 				<button class="aio-btn-outline-blue cursor-pointer">
 					Add Payment Method
 				</button>
@@ -58,12 +58,12 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 					:method="method"
 				/>
 			</div>
-		</section>
+		</div>
 
-		<!-- Section 3: Past Orders -->
-		<section>
-			<h2 class="text-xl font-heading font-semibold text-text-primary mb-5">Past Orders</h2>
-			<div class="overflow-x-auto -mx-5 px-5 md:mx-0 md:px-0">
+		<!-- Section 3: Past Orders — in a card -->
+		<div class="aio-card">
+			<h2 class="text-h3 font-heading font-semibold text-brand-navy mb-5">Past Orders</h2>
+			<div class="overflow-x-auto -mx-10 px-10">
 				<table class="w-full min-w-[700px]">
 					<thead>
 						<tr class="border-b border-gray-200">
@@ -83,6 +83,6 @@ const { subscriptions, paymentMethods, orders } = useSubscriptions()
 					</tbody>
 				</table>
 			</div>
-		</section>
+		</div>
 	</div>
 </template>

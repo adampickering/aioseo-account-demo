@@ -5,7 +5,7 @@ const { user } = useAccount()
 </script>
 
 <template>
-	<div class="space-y-10 max-w-3xl">
+	<div class="space-y-10 max-w-2xl mx-auto">
 		<!-- Personal Information -->
 		<section>
 			<h2 class="text-xl font-heading font-semibold text-text-primary mb-6">Personal Information</h2>

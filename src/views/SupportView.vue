@@ -8,7 +8,7 @@ const showChat = ref(true)
 <template>
 	<div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
 		<!-- Left column -->
-		<div class="lg:col-span-3 space-y-4">
+		<div class="lg:col-span-3 space-y-4 aio-card">
 			<!-- Chat state -->
 			<template v-if="showChat">
 				<IframeEmbed

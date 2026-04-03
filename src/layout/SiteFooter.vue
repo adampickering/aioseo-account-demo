@@ -174,19 +174,10 @@ const legalLinks = [
 		<!-- Bottom bar -->
 		<div class="aio-container py-8">
 			<div class="flex flex-col md:flex-row items-start justify-between gap-6">
-				<!-- Copyright + Logo -->
-				<div>
-					<div class="mb-3">
-						<img
-							src="/assets/icons/aioseo-logo.svg"
-							alt="AIOSEO"
-							class="h-5 w-auto opacity-60"
-						/>
-					</div>
-					<div class="text-body leading-[22.5px] text-brand-navy-60">
-						<p class="m-0">Copyright &copy; 2013-2026 All-in-One SEO Pack, LLC.</p>
-						<p class="m-0">All-in-One SEO Pack&reg; is a registered trademark Awesome Motive Inc.</p>
-					</div>
+				<!-- Copyright -->
+				<div class="text-body leading-[22.5px] text-brand-navy-60">
+					<p class="m-0">Copyright &copy; 2013-2026 All-in-One SEO Pack, LLC.</p>
+					<p class="m-0">All-in-One SEO Pack&reg; is a registered trademark Awesome Motive Inc.</p>
 				</div>
 
 				<!-- Legal links -->
@@ -202,29 +193,26 @@ const legalLinks = [
 				</nav>
 			</div>
 
-			<!-- Badges — positioned to match aioseo.com (right-aligned with legal links) -->
-			<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mt-6">
-				<div></div>
-				<div class="flex items-center gap-5">
-					<img
-						src="/assets/images/norton-secure-1.svg"
-						alt="Norton Secured"
-						class="h-[46px] w-auto"
-						loading="lazy"
-					/>
-					<img
-						src="/assets/images/PPbadgetp.png"
-						alt="PayPal Verified"
-						class="h-[46px] w-auto"
-						loading="lazy"
-					/>
-					<img
-						src="/assets/images/wpbeginner-badge-dark.svg"
-						alt="WPBeginner Verified"
-						class="h-[46px] w-auto"
-						loading="lazy"
-					/>
-				</div>
+			<!-- Badges — right-aligned matching Figma -->
+			<div class="flex items-center justify-end gap-4 mt-6">
+				<img
+					src="/assets/images/norton-secure-1.svg"
+					alt="Norton Secured"
+					class="h-[32px] w-auto"
+					loading="lazy"
+				/>
+				<img
+					src="/assets/images/PPbadgetp.png"
+					alt="PayPal Verified"
+					class="h-[32px] w-auto"
+					loading="lazy"
+				/>
+				<img
+					src="/assets/images/wpbeginner-badge-dark.svg"
+					alt="WPBeginner Verified"
+					class="h-[32px] w-auto"
+					loading="lazy"
+				/>
 			</div>
 		</div>
 	</footer>
