@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 const route = useRoute()
-const router = useRouter()
 const moreOpen = ref(false)
 const moreRef = ref<HTMLElement | null>(null)
 
@@ -11,14 +10,15 @@ const primaryTabs = [
 	{ label: 'Overview', routeName: 'overview', matchPrefix: 'overview' },
 	{ label: 'Downloads', routeName: 'downloads', matchPrefix: 'downloads' },
 	{ label: 'Billing', routeName: 'billing', matchPrefix: 'billing' },
+	{ label: 'Profile', routeName: 'profile', matchPrefix: 'profile' },
 	{ label: 'Support', routeName: 'support', matchPrefix: 'support' },
+	{ label: 'Suggest a Feature', routeName: 'suggest-a-feature', matchPrefix: 'suggest-a-feature' },
+	{ label: 'Giveaway', routeName: 'giveaway', matchPrefix: 'giveaway' },
 ]
 
 const moreItems = [
 	{ label: 'Services', routeName: 'services' },
-	{ label: 'Profile', routeName: 'profile' },
-	{ label: 'Suggest a Feature', routeName: 'suggest-a-feature' },
-	{ label: 'Giveaway', routeName: 'giveaway' },
+	{ label: 'Log Out', routeName: null, href: 'https://aioseo.com/account/logout/' },
 ]
 
 function isTabActive(tab: { matchPrefix?: string; routeName: string }) {
@@ -31,10 +31,11 @@ function isTabActive(tab: { matchPrefix?: string; routeName: string }) {
 
 const isMoreActive = computed(() => {
 	const name = route.name as string
-	return moreItems.some(item => name === item.routeName)
+	return moreItems.some(item => item.routeName && name === item.routeName)
 })
 
-function isMoreItemActive(item: { routeName: string }) {
+function isMoreItemActive(item: { routeName: string | null }) {
+	if (!item.routeName) return false
 	return (route.name as string) === item.routeName
 }
 
@@ -48,7 +49,6 @@ function handleClickOutside(e: MouseEvent) {
 	}
 }
 
-// Close dropdown on navigation
 watch(() => route.name, () => {
 	moreOpen.value = false
 })
@@ -63,33 +63,39 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-	<nav class="border-b border-gray-200 -mx-6 px-6">
-		<div class="flex items-center">
+	<nav class="border-b border-[#E6EEFC]">
+		<div class="flex items-end gap-0">
 			<!-- Primary tabs -->
 			<RouterLink
 				v-for="tab in primaryTabs"
 				:key="tab.routeName"
 				:to="{ name: tab.routeName }"
-				class="relative px-1 py-4 text-[15px] font-body transition-colors duration-200 mr-6 -mb-px"
-				:class="isTabActive(tab)
-					? 'text-brand-blue font-semibold border-b-[3px] border-brand-blue'
-					: 'text-brand-navy-60 hover:text-brand-navy border-b-[3px] border-transparent'"
+				class="relative font-heading text-[18px] leading-[24px] pb-[10px] transition-colors duration-200 whitespace-nowrap -mb-px"
+				:class="[
+					isTabActive(tab)
+						? 'text-brand-blue font-bold border-b-[3px] border-brand-blue'
+						: 'text-brand-navy font-semibold border-b-[3px] border-transparent hover:text-brand-blue',
+					tab.label === 'Overview' ? 'pr-6' : 'px-6'
+				]"
 			>
 				{{ tab.label }}
 			</RouterLink>
+
+			<!-- Spacer pushes Log Out / More to the right -->
+			<div class="flex-1"></div>
 
 			<!-- More dropdown -->
 			<div ref="moreRef" class="relative">
 				<button
 					@click="toggleMore"
-					class="flex items-center gap-1.5 px-1 py-4 text-[15px] font-body transition-colors duration-200 -mb-px cursor-pointer"
+					class="flex items-center gap-1.5 font-heading text-[18px] leading-[24px] pb-[10px] transition-colors duration-200 -mb-px cursor-pointer whitespace-nowrap pl-6"
 					:class="isMoreActive || moreOpen
-						? 'text-brand-blue font-semibold border-b-[3px] border-brand-blue'
-						: 'text-brand-navy-60 hover:text-brand-navy border-b-[3px] border-transparent'"
+						? 'text-brand-blue font-bold border-b-[3px] border-brand-blue'
+						: 'text-brand-navy font-semibold border-b-[3px] border-transparent hover:text-brand-blue'"
 				>
 					More
 					<svg
-						class="w-3.5 h-3.5 transition-transform duration-200"
+						class="w-3 h-3 transition-transform duration-200"
 						:class="{ 'rotate-180': moreOpen }"
 						viewBox="0 0 12 12"
 						fill="none"
@@ -108,19 +114,27 @@ onBeforeUnmount(() => {
 				>
 					<div
 						v-if="moreOpen"
-						class="absolute left-0 top-full mt-0 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50"
+						class="absolute right-0 top-full mt-0 w-52 bg-white rounded-lg shadow-lg border border-[#E6EEFC] py-1 z-50"
 					>
-						<RouterLink
-							v-for="item in moreItems"
-							:key="item.routeName"
-							:to="{ name: item.routeName }"
-							class="block px-4 py-2.5 text-sm transition-colors duration-150"
-							:class="isMoreItemActive(item)
-								? 'text-brand-blue bg-brand-blue-5 font-medium'
-								: 'text-text-secondary hover:bg-gray-50 hover:text-text-primary'"
-						>
-							{{ item.label }}
-						</RouterLink>
+						<template v-for="item in moreItems" :key="item.label">
+							<RouterLink
+								v-if="item.routeName"
+								:to="{ name: item.routeName }"
+								class="block px-4 py-2.5 font-heading text-[15px] transition-colors duration-150"
+								:class="isMoreItemActive(item)
+									? 'text-brand-blue bg-brand-blue-5 font-medium'
+									: 'text-brand-navy-60 hover:bg-brand-blue-5 hover:text-brand-navy'"
+							>
+								{{ item.label }}
+							</RouterLink>
+							<a
+								v-else
+								:href="item.href"
+								class="block px-4 py-2.5 font-heading text-[15px] text-brand-navy-60 hover:bg-brand-blue-5 hover:text-brand-navy transition-colors duration-150"
+							>
+								{{ item.label }}
+							</a>
+						</template>
 					</div>
 				</Transition>
 			</div>
