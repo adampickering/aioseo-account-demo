@@ -117,15 +117,17 @@ export interface Reason {
 }
 
 export interface LossItem {
-  icon: string
   title: string
-  description: string
+  body: string
+}
+
+export interface CompetitorAdvantage {
+  feature: string
+  detail: string
 }
 
 export interface Competitor {
-  name: string
-  pricing: string
-  features: Record<string, boolean | string>
+  advantages: CompetitorAdvantage[]
 }
 
 export interface CancellationMockUser {
