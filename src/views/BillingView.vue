@@ -122,8 +122,7 @@ function openManageSub(sub: Subscription) {
 						<div class="flex-1 min-w-0">
 							<div class="flex items-center gap-2">
 								<p class="text-body font-medium text-brand-navy">{{ brandName(method.brand) }} ending in {{ method.last4 }}</p>
-								<span v-if="method.isDefault" class="inline-flex items-center gap-1 text-xs font-medium text-brand-green bg-brand-green/10 px-2 py-0.5 rounded-full">
-									<svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+								<span v-if="method.isDefault" class="text-xs font-medium text-brand-green bg-brand-green/10 px-2.5 py-1 rounded-full">
 									Default
 								</span>
 							</div>
