@@ -55,14 +55,14 @@ const btnGreen = 'px-6 py-2.5 text-sm font-semibold text-white bg-brand-green ro
 				<!-- License info as table -->
 				<table class="w-full">
 					<thead>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<th class="px-10 py-3 text-left text-base font-normal text-text-muted">Plan Level</th>
 							<th class="py-3 text-left text-base font-normal text-text-muted">License</th>
 							<th class="py-3 text-left text-base font-normal text-text-muted">Expires</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<td class="px-10 py-4 text-body text-brand-navy">{{ lic.tierLabel }}</td>
 							<td class="py-4 text-body text-brand-navy font-mono">
 								{{ lic.licenseKey }}
@@ -77,13 +77,13 @@ const btnGreen = 'px-6 py-2.5 text-sm font-semibold text-white bg-brand-green ro
 				</table>
 				<table class="w-full">
 					<thead>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<th class="px-10 py-3 text-left text-base font-normal text-text-muted">Site Activations</th>
 							<th v-if="lic.links" class="py-3 text-left text-base font-normal text-text-muted">Links</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<td class="px-10 py-4 text-body text-brand-navy">{{ lic.siteActivations.used }} / {{ lic.siteActivations.total }} <a href="#" class="aio-link underline ml-1">Manage Sites</a></td>
 							<td v-if="lic.links" class="py-4 text-body text-brand-navy">{{ formatNumber(lic.links.remaining || 0) }} / {{ formatNumber(lic.links.total || 0) }} Links Remaining</td>
 						</tr>
@@ -103,13 +103,13 @@ const btnGreen = 'px-6 py-2.5 text-sm font-semibold text-white bg-brand-green ro
 			</div>
 			<table class="w-full">
 				<thead>
-					<tr class="border-t border-border">
+					<tr class="aio-table-row">
 						<th class="px-10 py-3 text-left text-base font-normal text-text-muted">AI Credits</th>
 						<th class="py-3 text-left text-base font-normal text-text-muted">Expires</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="border-t border-border">
+					<tr class="aio-table-row">
 						<td class="px-10 py-4 text-body text-brand-navy">{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining <a href="#" class="aio-link underline ml-1">Purchase Credits</a></td>
 						<td class="py-4 text-body text-brand-navy">{{ formatDate(credits.expiresAt) }}</td>
 					</tr>
@@ -135,14 +135,14 @@ const btnGreen = 'px-6 py-2.5 text-sm font-semibold text-white bg-brand-green ro
 				<!-- License info as table -->
 				<table class="w-full">
 					<thead>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<th class="px-10 py-3 text-left text-base font-normal text-text-muted">Plan Level</th>
 							<th class="py-3 text-left text-base font-normal text-text-muted">License</th>
 							<th class="py-3 text-left text-base font-normal text-text-muted">Expires</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<td class="px-10 py-4 text-body text-brand-navy">{{ lic.tierLabel }}</td>
 							<td class="py-4 text-body text-brand-navy font-mono">
 								{{ lic.licenseKey }}
@@ -157,13 +157,13 @@ const btnGreen = 'px-6 py-2.5 text-sm font-semibold text-white bg-brand-green ro
 				</table>
 				<table class="w-full">
 					<thead>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<th class="px-10 py-3 text-left text-base font-normal text-text-muted">Site Activations</th>
 							<th v-if="lic.aiCredits" class="py-3 text-left text-base font-normal text-text-muted">AI Credits</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="border-t border-border">
+						<tr class="aio-table-row">
 							<td class="px-10 py-4 text-body text-brand-navy">{{ lic.siteActivations.used }} / {{ lic.siteActivations.total }} <a href="#" class="aio-link underline ml-1">Manage Sites</a></td>
 							<td v-if="lic.aiCredits" class="py-4 text-body text-brand-navy">{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining <span class="text-brand-navy-40 mx-1">·</span> Running Low? <a href="#" class="aio-link underline">Add More</a></td>
 						</tr>
