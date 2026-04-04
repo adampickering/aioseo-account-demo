@@ -19,9 +19,9 @@ defineEmits<{
 			leave-from-class="opacity-100"
 			leave-to-class="opacity-0"
 		>
-			<div v-if="show" class="fixed inset-0 z-[200] flex items-center justify-center p-4" @click.self="$emit('close')">
-				<!-- Backdrop -->
-				<div class="absolute inset-0 bg-brand-navy/40"></div>
+			<div v-if="show" class="fixed inset-0 z-[200] flex items-center justify-center p-4">
+				<!-- Backdrop — click to close -->
+				<div class="absolute inset-0 bg-brand-navy/40" @click="$emit('close')"></div>
 
 				<!-- Modal panel -->
 				<Transition
@@ -32,9 +32,9 @@ defineEmits<{
 					leave-from-class="opacity-100 scale-100 translate-y-0"
 					leave-to-class="opacity-0 scale-95 translate-y-2"
 				>
-					<div v-if="show" class="relative bg-white rounded-card shadow-xl w-full max-w-lg z-10" role="dialog" :aria-label="title">
+					<div v-if="show" class="relative bg-white rounded-card shadow-xl w-full max-w-lg z-10 max-h-[90vh] overflow-y-auto" role="dialog" :aria-label="title">
 						<!-- Header -->
-						<div class="flex items-center justify-between px-8 pt-8 pb-4">
+						<div class="flex items-center justify-between px-8 pt-8 pb-4 sticky top-0 bg-white z-10">
 							<h2 class="text-h3 font-heading font-semibold text-brand-navy">{{ title }}</h2>
 							<button
 								@click="$emit('close')"

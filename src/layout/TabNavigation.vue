@@ -65,7 +65,7 @@ onBeforeUnmount(() => {
 <template>
 	<nav aria-label="Account navigation" class="border-b border-border">
 		<ul
-			class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px] overflow-x-auto scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0"
+			class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px] overflow-x-auto md:overflow-visible scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0"
 		>
 			<!-- Primary tabs -->
 			<li
