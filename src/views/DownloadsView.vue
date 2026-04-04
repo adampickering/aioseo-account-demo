@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import { useLicenses } from '@/composables/useLicenses'
 import { useAiCredits } from '@/composables/useAiCredits'
 import AddonCard from '@/components/AddonCard.vue'
+import ProductIcon from '@/components/ProductIcon.vue'
 
 const { licenses } = useLicenses()
 const { credits, remaining } = useAiCredits()
@@ -31,11 +32,7 @@ function formatDate(iso: string): string {
 			<div class="aio-card !p-0">
 				<!-- Header: BLC icon + name + buttons -->
 				<div class="px-10 pt-6 pb-4 flex items-center gap-3">
-					<div class="w-10 h-10 rounded-full bg-brand-navy flex items-center justify-center shrink-0">
-						<svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.07-9.07a4.5 4.5 0 00-6.364 0l-4.5 4.5a4.5 4.5 0 006.364 6.364l1.757-1.757" />
-						</svg>
-					</div>
+					<ProductIcon product="blc" :size="40" />
 					<h2 class="text-lg font-heading font-bold text-brand-navy">Broken Link Checker</h2>
 					<div class="ml-auto flex items-center gap-2">
 						<a href="#" class="px-5 py-2.5 text-sm font-semibold text-white bg-brand-blue rounded-btn hover:opacity-90 transition-all duration-200 no-underline">Upgrade License</a>
@@ -81,13 +78,7 @@ function formatDate(iso: string): string {
 		<!-- AI Credits -->
 		<div v-if="hasCredits" class="aio-card !p-0">
 			<div class="px-10 pt-6 pb-4 flex items-center gap-3">
-				<div class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shrink-0">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-						<path d="M0 9.07738V7.2619H6.35417V9.07738H0ZM0 5.44643V3.63095H9.98512V5.44643H0ZM0 1.81548V0H9.98512V1.81548H0Z" fill="white"/>
-						<path d="M13.6909 2.59016C13.7875 2.32897 14.157 2.32897 14.2536 2.59016L14.6221 3.58603C14.6525 3.66815 14.7172 3.73289 14.7994 3.76328L15.7952 4.13178C16.0564 4.22843 16.0564 4.59785 15.7952 4.69449L14.7994 5.063C14.7172 5.09339 14.6525 5.15813 14.6221 5.24025L14.2536 6.23612C14.157 6.49731 13.7875 6.49731 13.6909 6.23612L13.3224 5.24025C13.292 5.15813 13.2273 5.09339 13.1451 5.063L12.1493 4.69449C11.8881 4.59785 11.8881 4.22843 12.1493 4.13178L13.1451 3.76328C13.2273 3.73289 13.292 3.66815 13.3224 3.58603L13.6909 2.59016Z" fill="white"/>
-						<path d="M11.2698 7.52326C11.3873 7.20587 11.8362 7.20587 11.9536 7.52326L12.609 9.2945C12.806 9.8267 13.2256 10.2463 13.7578 10.4432L15.529 11.0987C15.8464 11.2161 15.8464 11.665 15.529 11.7825L13.7578 12.4379C13.2256 12.6348 12.806 13.0544 12.609 13.5866L11.9536 15.3578C11.8362 15.6752 11.3873 15.6752 11.2698 15.3578L10.6144 13.5866C10.4175 13.0544 9.99786 12.6348 9.46566 12.4379L7.69442 11.7825C7.37703 11.665 7.37703 11.2161 7.69442 11.0987L9.46566 10.4432C9.99786 10.2463 10.4175 9.8267 10.6144 9.2945L11.2698 7.52326Z" fill="white"/>
-					</svg>
-				</div>
+				<ProductIcon product="ai-credits" :size="40" />
 				<h2 class="text-lg font-heading font-bold text-brand-navy">AI Credits</h2>
 				<div class="ml-auto">
 					<a href="#" class="px-5 py-2.5 text-sm font-semibold text-white bg-brand-green rounded-btn hover:opacity-90 transition-all duration-200 no-underline">Purchase Credits</a>
@@ -111,7 +102,7 @@ function formatDate(iso: string): string {
 			<div class="aio-card !p-0">
 				<!-- Header: AIOSEO logo + buttons -->
 				<div class="px-10 pt-6 pb-4 flex items-center gap-3">
-					<img src="/assets/icons/aioseo-logo.svg" alt="AIOSEO" class="w-8 h-8 rounded-full" />
+					<ProductIcon product="aioseo" :size="40" />
 					<h2 class="text-lg font-heading font-bold text-brand-navy">AIOSEO</h2>
 					<div class="ml-auto flex items-center gap-2">
 						<a v-if="lic.tier !== 'elite'" href="#" class="px-5 py-2.5 text-sm font-semibold text-white bg-brand-blue rounded-btn hover:opacity-90 transition-all duration-200 no-underline">Upgrade License</a>
