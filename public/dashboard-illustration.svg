@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="471" height="300" fill="none" viewBox="0 0 471 300">
+<style>
+  @keyframes barGrow1 { 0%,20% { transform: scaleY(0); } 40% { transform: scaleY(1); } }
+  @keyframes barGrow2 { 0%,25% { transform: scaleY(0); } 45% { transform: scaleY(1); } }
+  @keyframes barGrow3 { 0%,30% { transform: scaleY(0); } 50% { transform: scaleY(1); } }
+  @keyframes barGrow4 { 0%,35% { transform: scaleY(0); } 55% { transform: scaleY(1); } }
+  @keyframes barGrow5 { 0%,40% { transform: scaleY(0); } 60% { transform: scaleY(1); } }
+  @keyframes lineDraw { 0%,45% { stroke-dashoffset: 300; } 80% { stroke-dashoffset: 0; } }
+  @keyframes fillFade { 0%,50% { opacity: 0; } 85% { opacity: 1; } }
+  @keyframes scoreCount { 0%,30% { opacity: 0; transform: translateY(6px); } 55% { opacity: 1; transform: translateY(0); } }
+  @keyframes cardSlide1 { 0%,55% { opacity: 0; transform: translateY(10px); } 70% { opacity: 1; transform: translateY(0); } }
+  @keyframes cardSlide2 { 0%,60% { opacity: 0; transform: translateY(10px); } 75% { opacity: 1; transform: translateY(0); } }
+  @keyframes cardSlide3 { 0%,65% { opacity: 0; transform: translateY(10px); } 80% { opacity: 1; transform: translateY(0); } }
+
+  .bar-1 { transform-origin: 52px 90px; animation: barGrow1 2.5s ease-out forwards; }
+  .bar-2 { transform-origin: 68px 90px; animation: barGrow2 2.5s ease-out forwards; }
+  .bar-3 { transform-origin: 84px 90px; animation: barGrow3 2.5s ease-out forwards; }
+  .bar-4 { transform-origin: 100px 90px; animation: barGrow4 2.5s ease-out forwards; }
+  .bar-5 { transform-origin: 116px 90px; animation: barGrow5 2.5s ease-out forwards; }
+
+  .line-chart { stroke-dasharray: 300; animation: lineDraw 2.5s ease-out forwards; }
+  .line-fill { animation: fillFade 2.5s ease-out forwards; }
+  .score-ring { animation: scoreCount 2.5s ease-out forwards; }
+  .metric-1 { animation: cardSlide1 2.5s ease-out forwards; }
+  .metric-2 { animation: cardSlide2 2.5s ease-out forwards; }
+  .metric-3 { animation: cardSlide3 2.5s ease-out forwards; }
+
+  .tick-number { font-family: system-ui, -apple-system, sans-serif; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bar-1,.bar-2,.bar-3,.bar-4,.bar-5,.line-chart,.line-fill,.score-ring,.metric-1,.metric-2,.metric-3 {
+      animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important;
+    }
+  }
+</style>
+<script><![CDATA[
+  document.addEventListener('DOMContentLoaded', function() {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function tickUp(id, target, prefix, suffix, duration, delay) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (reducedMotion) { el.textContent = prefix + target + suffix; return; }
+      el.textContent = prefix + '0' + suffix;
+      setTimeout(function() {
+        var start = performance.now();
+        function step(now) {
+          var progress = Math.min((now - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.round(eased * target);
+          el.textContent = prefix + current + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }, delay);
+    }
+
+    tickUp('score-num', 84, '', '', 1200, 800);
+    tickUp('metric-traffic', 247, '+', '%', 1000, 1500);
+    tickUp('metric-rank', 1, '#', '', 300, 1700);
+    tickUp('metric-seo', 98, '', '', 800, 1900);
+  });
+]]></script>
+<g clip-path="url(#a)">
+<!-- Background panel -->
+<path fill="#f0f5ff" stroke="#e6eefc" stroke-width="2.245" d="M46.7 18.123h377.6c9.092 0 16.577 7.85 16.577 17.677v244.4c0 9.828-7.485 17.677-16.577 17.677H46.7c-9.092 0-16.577-7.849-16.577-17.677V35.8c0-9.828 7.485-17.677 16.577-17.677Z"/>
+
+<!-- Browser chrome bar (flat bottom, rounded top only) -->
+<path d="M41 15h390c6.075 0 11 4.925 11 11v31H30V26c0-6.075 4.925-11 11-11z" fill="#2e3758"/>
+<ellipse cx="56.854" cy="36" fill="#df2a4a" rx="5.249" ry="5.086"/>
+<ellipse cx="73.802" cy="36" fill="#f18200" rx="5.249" ry="5.086"/>
+<ellipse cx="90.749" cy="36" fill="#00aa63" rx="5.249" ry="5.086"/>
+<rect width="244.568" height="24.866" x="115.777" y="23.567" fill="#fff" rx="2.261"/>
+<!-- Padlock icon -->
+<path fill="#d0d1d7" d="M134.524 34.116h-.486v-.942c0-1.3-1.089-2.354-2.43-2.354s-2.43 1.055-2.43 2.354v.942h-.486c-.535 0-.972.424-.972.942v4.71c0 .518.437.941.972.941h5.832c.534 0 .972-.423.972-.941v-4.71c0-.518-.438-.942-.972-.942m-2.916 4.239c-.535 0-.972-.424-.972-.942s.437-.942.972-.942.972.424.972.942-.438.942-.972.942m1.506-4.239h-3.013v-.942c0-.805.676-1.46 1.507-1.46s1.506.655 1.506 1.46z"/>
+<rect width="204" height="10" x="144.223" y="31" fill="#dcdde1" rx="2.642"/>
+<!-- AIOSEO logo in browser bar -->
+<circle cx="395.53" cy="36.063" r="10.895" fill="#fff"/>
+<path fill="#005ae0" fill-rule="evenodd" d="M395.521 48.566c6.943 0 12.571-5.629 12.571-12.571s-5.628-12.571-12.571-12.571-12.571 5.628-12.571 12.57 5.628 12.572 12.571 12.572m-2.002-20.541a.665.665 0 0 0-.775-.279 9 9 0 0 0-.964.41.69.69 0 0 0-.353.757l.216 1.091a.78.78 0 0 1-.277.747c-.343.286-.661.61-.945.967a.75.75 0 0 1-.731.285l-1.069-.216a.67.67 0 0 0-.742.363 10 10 0 0 0-.397.985c-.1.295.02.617.275.79l.908.616a.78.78 0 0 1 .322.727q-.067.69.003 1.366a.78.78 0 0 1-.319.73l-.907.618a.694.694 0 0 0-.273.791q.171.505.402.984c.135.28.442.422.742.36l1.069-.22a.75.75 0 0 1 .732.282c.28.35.597.675.948.965.218.18.334.465.279.746l-.211 1.09c-.06.307.079.62.355.757a8 8 0 0 0 .965.406c.479.168 1.149-.432 1.644-.875.245-.22.395-.529.397-.86v-1.83l.002-.057c-1.463-.357-2.551-1.7-2.551-3.303v-1.937c0-.148.117-.267.261-.267h.907v-1.906c0-.264.209-.477.467-.477s.467.213.467.477v1.906h2.452v-1.906c0-.264.209-.477.467-.477s.467.213.467.477v1.906h.906c.144 0 .261.12.261.267v1.937c0 1.653-1.157 3.03-2.69 3.334v1.843c0 .338.155.653.407.872.504.44 1.186 1.034 1.662.866q.494-.174.964-.41a.69.69 0 0 0 .353-.757l-.216-1.09a.78.78 0 0 1 .277-.748c.343-.286.661-.61.945-.967a.75.75 0 0 1 .731-.285l1.069.216a.67.67 0 0 0 .742-.362 10 10 0 0 0 .397-.985.69.69 0 0 0-.275-.79l-.908-.616a.78.78 0 0 1-.322-.728 7 7 0 0 0-.003-1.366.78.78 0 0 1 .319-.729l.907-.619a.694.694 0 0 0 .273-.79 9 9 0 0 0-.402-.985.67.67 0 0 0-.742-.36l-1.069.22a.75.75 0 0 1-.732-.282 6.6 6.6 0 0 0-.948-.965.78.78 0 0 1-.279-.745l.211-1.091a.69.69 0 0 0-.355-.757 8 8 0 0 0-.965-.406.666.666 0 0 0-.775.281l-.603.927a.75.75 0 0 1-.713.329 6.4 6.4 0 0 0-1.339.002.75.75 0 0 1-.714-.325z" clip-rule="evenodd"/>
+
+<!-- Left panel (SEO Score) -->
+<path fill="#fff" stroke="#e6eefc" stroke-width="1.497" d="M223.85 75H70.775C64.272 75 59 80.361 59 86.975v80.831c0 6.614 5.272 11.975 11.775 11.975H223.85c6.503 0 11.775-5.361 11.775-11.975V86.975c0-6.614-5.272-11.975-11.775-11.975Z"/>
+
+<!-- Right panel (Line chart) -->
+<path fill="#fff" stroke="#e6eefc" stroke-width="1.497" d="M400.412 75H276.775C270.272 75 265 80.361 265 86.975v80.831c0 6.614 5.272 11.975 11.775 11.975h123.637c6.504 0 11.776-5.361 11.776-11.975V86.975c0-6.614-5.272-11.975-11.776-11.975Z"/>
+
+<!-- Line chart -->
+<g clip-path="url(#b)">
+<path class="line-fill" fill="url(#c)" d="m258.413 155.089-14.85 6.198h177.555V92.163l-12.135 5.561-9.9 9.694-13.412 4.608-10.698 9.693-30.657 9.376-22.035 7.468-16.286 13.825-10.379 2.701-7.983 3.655-6.707-6.356-9.899 6.356z"/>
+<path class="line-chart" stroke="#00aa63" stroke-width="4.066" d="m243 161.56 14.871-6.237 12.633 3.678 9.914-6.396 6.716 6.396 7.996-3.678 10.394-2.718 16.31-13.912 22.068-7.516 30.702-9.434 10.714-9.755 13.432-4.637 9.914-9.754L420.817 92"/>
+</g>
+
+<!-- SEO Score ring -->
+<g class="score-ring">
+<path fill="#d0d1d7" d="M179 127.5c0 17.397-14.103 31.5-31.5 31.5S116 144.897 116 127.5 130.103 96 147.5 96s31.5 14.103 31.5 31.5m-58.202 0c0 14.747 11.955 26.703 26.702 26.703s26.702-11.956 26.702-26.703-11.955-26.703-26.702-26.703-26.702 11.956-26.702 26.703"/>
+<path fill="#00aa63" d="M147.5 96a31.498 31.498 0 0 1 26.858 47.959 31.5 31.5 0 0 1-38.913 12.643 31.5 31.5 0 0 1-18.575-36.456 31.5 31.5 0 0 1 12.115-18.13l2.82 3.881a26.706 26.706 0 0 0-8.097 33.726 26.7 26.7 0 0 0 32.043 13.273 26.706 26.706 0 0 0 18.123-29.573 26.71 26.71 0 0 0-26.374-22.526z"/>
+<!-- Score number as text for tick-up -->
+<text id="score-num" class="tick-number" x="147.5" y="135" text-anchor="middle" font-size="26" font-weight="700" fill="#00aa63">84</text>
+</g>
+
+<!-- Right panel placeholder -->
+<path fill="#141b38" d="M337.059 92.869h-50.043c-2.439 0-4.416 2.01-4.416 4.49s1.977 4.491 4.416 4.491h50.043c2.439 0 4.416-2.01 4.416-4.49s-1.977-4.491-4.416-4.491" opacity=".12"/>
+
+<!-- Bottom metric card 1: Traffic -->
+<g class="metric-1">
+<path fill="#fff" stroke="#e6eefc" stroke-width="1.497" d="M157.491 194.688H70.65c-6.503 0-11.775 5.361-11.775 11.975v58.378c0 6.613 5.272 11.975 11.775 11.975h86.841c6.503 0 11.775-5.362 11.775-11.975v-58.378c0-6.614-5.272-11.975-11.775-11.975Z"/>
+<text id="metric-traffic" class="tick-number" x="114" y="237" text-anchor="middle" font-size="22" font-weight="700" fill="#005ae0">+247%</text>
+<text class="tick-number" x="114" y="256" text-anchor="middle" font-size="12" fill="#747474">Traffic</text>
+</g>
+
+<!-- Bottom metric card 2: Rankings -->
+<g class="metric-2">
+<path fill="#fff" stroke="#e6eefc" stroke-width="1.497" d="M282.6 197.141h-86.841c-6.503 0-11.775 5.361-11.775 11.975v58.378c0 6.613 5.272 11.975 11.775 11.975H282.6c6.503 0 11.775-5.362 11.775-11.975v-58.378c0-6.614-5.272-11.975-11.775-11.975Z"/>
+<text id="metric-rank" class="tick-number" x="239" y="237" text-anchor="middle" font-size="22" font-weight="700" fill="#15955f">#1</text>
+<text class="tick-number" x="239" y="256" text-anchor="middle" font-size="12" fill="#747474">Rankings</text>
+</g>
+
+<!-- Bottom metric card 3: SEO Score -->
+<g class="metric-3">
+<path fill="#fff" stroke="#e6eefc" stroke-width="1.497" d="M400.35 194.688h-79.481c-6.503 0-11.775 5.361-11.775 11.975v58.378c0 6.613 5.272 11.975 11.775 11.975h79.481c6.503 0 11.775-5.362 11.775-11.975v-58.378c0-6.614-5.272-11.975-11.775-11.975Z"/>
+<text id="metric-seo" class="tick-number" x="361" y="237" text-anchor="middle" font-size="22" font-weight="700" fill="#141b38">98</text>
+<text class="tick-number" x="361" y="256" text-anchor="middle" font-size="12" fill="#747474">SEO Score</text>
+</g>
+</g>
+<defs>
+<clipPath id="a"><path fill="#fff" d="M0 0h471v299.375H0z"/></clipPath>
+<clipPath id="b"><path fill="#fff" d="M281 92h116v70H281z"/></clipPath>
+<linearGradient id="c" x1="332.341" x2="334.057" y1="92.163" y2="169.133" gradientUnits="userSpaceOnUse"><stop stop-color="#00aa63"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+</svg>
