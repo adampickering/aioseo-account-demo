@@ -2,6 +2,7 @@
 import { ref, reactive } from 'vue'
 import type { Subscription, PaymentMethod } from '@/types'
 import { useSubscriptions } from '@/composables/useSubscriptions'
+import { useRouter } from 'vue-router'
 import BaseModal from '@/components/BaseModal.vue'
 
 const { subscriptions, paymentMethods, orders } = useSubscriptions()
@@ -20,6 +21,13 @@ const deleteConfirmed = ref(false)
 const defaultConfirmed = ref(false)
 
 const baseUrl = import.meta.env.BASE_URL
+
+const router = useRouter()
+
+function openCancellationFlow() {
+	showManageSub.value = false
+	router.push({ name: 'cancel-support' })
+}
 
 function formatDate(iso: string): string {
 	return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
@@ -282,7 +290,7 @@ function openManageSub(sub: Subscription) {
 								<p class="text-sm text-brand-navy-40">Change the card used for this subscription</p>
 							</div>
 						</button>
-						<button class="w-full flex items-center gap-4 p-4 border border-border rounded-card hover:border-brand-red hover:bg-brand-red/5 transition-all duration-200 cursor-pointer bg-white text-left group">
+						<button @click="openCancellationFlow" class="w-full flex items-center gap-4 p-4 border border-border rounded-card hover:border-brand-red hover:bg-brand-red/5 transition-all duration-200 cursor-pointer bg-white text-left group">
 							<div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center shrink-0 group-hover:bg-brand-red/20 transition-colors duration-200">
 								<svg class="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
 							</div>
