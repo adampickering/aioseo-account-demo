@@ -13,7 +13,7 @@ function keepPlan() {
 <template>
 	<div class="plan-sidebar-pitch">
 		<div class="pitch-illustration">
-			<object type="image/svg+xml" data="/dashboard-illustration.svg" aria-label="AIOSEO Dashboard showing SEO score, traffic growth, and rankings" style="pointer-events: none;"></object>
+			<img src="/dashboard-illustration.svg" alt="AIOSEO Dashboard showing SEO score, traffic growth, and rankings" />
 		</div>
 
 		<p class="pitch-headline">
