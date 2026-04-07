@@ -35,6 +35,13 @@ export const licenses: License[] = [
 		version: '4.9.4',
 		changelogUrl: 'https://aioseo.com/changelog/',
 		addons: Object.values(allAddons),
+		aiCredits: {
+			used: 10000,
+			total: 200000,
+			includedInSubscription: 200000,
+			paidCredits: 0,
+			expiresAt: '2027-04-01T00:00:00Z',
+		},
 	},
 	{
 		id: 'lic-blc-001',

@@ -42,6 +42,13 @@ export const licenses: License[] = [
 			allAddons['link-assistant']!,
 			allAddons['index-now']!,
 		],
+		aiCredits: {
+			used: 25000,
+			total: 50000,
+			includedInSubscription: 50000,
+			paidCredits: 0,
+			expiresAt: '2027-04-01T00:00:00Z',
+		},
 	},
 	{
 		id: 'lic-blc-001',

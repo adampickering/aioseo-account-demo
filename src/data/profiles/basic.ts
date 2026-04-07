@@ -40,6 +40,13 @@ export const licenses: License[] = [
 			allAddons['local-business']!,
 			allAddons['news-sitemap']!,
 		],
+		aiCredits: {
+			used: 190000,
+			total: 200000,
+			includedInSubscription: 200000,
+			paidCredits: 0,
+			expiresAt: '2027-04-01T00:00:00Z',
+		},
 	},
 ]
 

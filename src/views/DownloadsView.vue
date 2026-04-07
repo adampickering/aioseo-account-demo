@@ -123,8 +123,8 @@ async function copyKey(key: string) {
 			</div>
 
 			<!-- Body: AI Credits + Expires -->
-			<div class="flex items-start gap-[170px] p-6 border-b border-border rounded-b-card">
-				<div class="flex flex-col gap-1 w-[398px]">
+			<div class="flex items-start p-6 border-b border-border rounded-b-card">
+				<div class="flex flex-col gap-1 flex-1 min-w-0">
 					<p class="text-sm font-semibold text-text-light">AI Credits</p>
 					<div class="flex items-center gap-1.5 text-base text-brand-navy leading-[38px]">
 						<span>{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining</span>
@@ -200,11 +200,11 @@ async function copyKey(key: string) {
 				<!-- Addons section -->
 				<div v-if="lic.addons.length > 0" class="bg-bg-addons p-6 border-b border-border">
 					<p class="text-sm font-semibold text-text-light mb-2">AIOSEO Addons</p>
-					<div class="flex flex-wrap gap-y-6">
+					<div class="flex flex-wrap gap-x-[3px] gap-y-6">
 						<div
 							v-for="addon in lic.addons"
 							:key="addon.id"
-							class="flex items-center gap-4 w-[255.5px]"
+							class="flex items-center gap-4 w-[calc(25%-3px)]"
 						>
 							<!-- Icon box -->
 							<div class="aio-addon-box">
@@ -225,8 +225,9 @@ async function copyKey(key: string) {
 					</div>
 				</div>
 
-				<!-- See/Hide Upgrade Options toggle -->
+				<!-- See/Hide Upgrade Options toggle (hidden for Elite) -->
 				<div
+					v-if="lic.tier !== 'elite'"
 					class="bg-bg-upgrade flex items-center justify-center p-4 cursor-pointer"
 					:class="showUpgradeOptions ? 'rounded-none' : 'rounded-b-card'"
 					@click="showUpgradeOptions = !showUpgradeOptions"
