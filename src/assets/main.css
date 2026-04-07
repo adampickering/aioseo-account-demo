@@ -51,6 +51,11 @@
   --color-border: #E6EEFC;
   --color-border-input: #D0D1D7;
 
+  /* Downloads-specific backgrounds */
+  --color-bg-addons: #f8fafe;
+  --color-bg-upgrade: #eaf1fc;
+  --color-border-upgrade: #d5e4ff;
+
   /* Font families */
   --font-heading: "Proxima Nova", system-ui, sans-serif;
   --font-body: "Proxima Nova", system-ui, sans-serif;
@@ -366,6 +371,73 @@
   }
   .aio-addon-icon svg path {
     fill: white;
+  }
+
+  /* Addon icon — bordered box containing blue circle avatar */
+  .aio-addon-box {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 12px;
+    background: white;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .aio-addon-box .aio-addon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background-color: var(--color-brand-blue);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .aio-addon-box .aio-addon-circle svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+  .aio-addon-box .aio-addon-circle svg path {
+    fill: white;
+  }
+
+  /* "NEW" badge below addon icon */
+  .aio-addon-new-badge {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-brand-green);
+    color: white;
+    font-size: 9.5px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 3px;
+    line-height: 11px;
+    white-space: nowrap;
+    min-width: 42px;
+    text-align: center;
+  }
+
+  /* BLC product icon — skeuomorphic bordered box */
+  .aio-blc-icon-box {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: white;
+    box-shadow:
+      0 1px 2px var(--color-shadow-xs),
+      inset 0 0 0 1px rgba(10, 13, 18, 0.18),
+      inset 0 -2px 0 0 rgba(10, 13, 18, 0.05);
+    flex-shrink: 0;
+  }
+  .aio-blc-icon-box img {
+    width: 30px;
+    height: 30px;
   }
 }
 
