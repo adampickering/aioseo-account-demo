@@ -97,28 +97,30 @@ const btnGreen = 'px-6 py-2.5 text-sm font-semibold text-white bg-brand-green ro
 		</template>
 
 		<!-- AI Credits -->
-		<div v-if="hasCredits" class="aio-card !p-0">
-			<div class="px-10 pt-6 pb-4 flex items-center gap-3">
-				<ProductIcon product="ai-credits" :size="40" />
-				<h2 class="text-lg font-heading font-bold text-brand-navy">AI Credits</h2>
-				<div class="ml-auto">
-					<a href="#" :class="btnGreen">Purchase Credits</a>
+		<div v-if="hasCredits" class="border border-border rounded-card shadow-xs bg-white">
+			<!-- Header -->
+			<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
+				<ProductIcon product="ai-credits" :size="46" />
+				<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">AI Credits</h2>
+				<a href="#" class="bg-brand-green text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
+					Purchase Credits
+				</a>
+			</div>
+
+			<!-- Body: AI Credits + Expires -->
+			<div class="flex items-start gap-[170px] p-6 border-b border-border rounded-b-card">
+				<div class="flex flex-col gap-1 w-[398px]">
+					<p class="text-sm font-semibold text-text-light">AI Credits</p>
+					<div class="flex items-center gap-1.5 text-base text-brand-navy leading-[38px]">
+						<span>{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining</span>
+						<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Purchase Credits</a>
+					</div>
+				</div>
+				<div class="flex-1 flex flex-col gap-1 min-w-0">
+					<p class="text-sm font-semibold text-text-light">Expires</p>
+					<p class="text-base text-brand-navy leading-[38px]">{{ formatDate(credits.expiresAt) }}</p>
 				</div>
 			</div>
-			<table class="w-full">
-				<thead>
-					<tr class="aio-table-row">
-						<th class="px-10 py-3 text-left text-base font-normal text-text-muted">AI Credits</th>
-						<th class="py-3 text-left text-base font-normal text-text-muted">Expires</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr class="aio-table-row">
-						<td class="px-10 py-4 text-body text-brand-navy">{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining <a href="#" class="aio-link underline ml-1">Purchase Credits</a></td>
-						<td class="py-4 text-body text-brand-navy">{{ formatDate(credits.expiresAt) }}</td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
 
 		<!-- AIOSEO licenses -->
