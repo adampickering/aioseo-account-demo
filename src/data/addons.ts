@@ -9,6 +9,7 @@ export const allAddons: Record<string, Addon> = {
 		helpUrl: 'https://aioseo.com/docs/using-the-image-seo-features-in-all-in-one-seo/',
 		changelogUrl: 'https://aioseo.com/changelog/image-seo',
 		version: '1.2.3',
+		isNew: true,
 	},
 	'video-sitemap': {
 		id: 'video-sitemap',
@@ -54,6 +55,7 @@ export const allAddons: Record<string, Addon> = {
 		helpUrl: 'https://aioseo.com/index-now',
 		changelogUrl: 'https://aioseo.com/changelog/index-now',
 		version: '1.0.13',
+		isNew: true,
 	},
 	'rest-api': {
 		id: 'rest-api',

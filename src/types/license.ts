@@ -12,6 +12,7 @@ export interface Addon {
 	helpUrl: string
 	changelogUrl: string
 	version: string
+	isNew?: boolean
 }
 
 export interface AiCredits {
