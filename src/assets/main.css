@@ -386,10 +386,11 @@
       0 1px 2px 0 rgba(10, 13, 18, 0.05);
   }
 
-  /* Addon icon — bordered box containing blue circle avatar */
+  /* Addon icon — bordered box containing blue circle avatar
+     Uses same skeuomorphic shadow as .aio-icon-box */
   .aio-addon-box {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-card);
+    border: 1px solid #E6EEFC;
+    border-radius: 5px;
     padding: 12px;
     background: white;
     position: relative;
@@ -397,6 +398,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow:
+      0 0 0 1px rgba(10, 13, 18, 0.18) inset,
+      0 -2px 0 0 rgba(10, 13, 18, 0.05) inset,
+      0 1px 2px 0 rgba(10, 13, 18, 0.05);
   }
   .aio-addon-box .aio-addon-circle {
     width: 40px;
@@ -428,7 +433,7 @@
   /* "NEW" badge below addon icon */
   .aio-addon-new-badge {
     position: absolute;
-    bottom: -4px;
+    bottom: -6px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--color-brand-green);

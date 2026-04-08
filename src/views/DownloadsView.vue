@@ -99,7 +99,7 @@ async function copyKey(key: string) {
 		<div class="space-y-8">
 		<!-- BLC licenses -->
 		<template v-if="activeTab === 'blc'" v-for="lic in blcLicenses" :key="lic.id">
-			<div class="border border-border rounded-card shadow-xs bg-white">
+			<div class="border border-border rounded-card shadow-card bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 					<div class="aio-icon-box p-2"><ProductIcon product="blc" :size="30" /></div>
@@ -153,7 +153,7 @@ async function copyKey(key: string) {
 		</template>
 
 		<!-- AI Credits -->
-		<div v-if="activeTab === 'ai-credits' && hasCredits" class="border border-border rounded-card shadow-xs bg-white">
+		<div v-if="activeTab === 'ai-credits' && hasCredits" class="border border-border rounded-card shadow-card bg-white">
 			<!-- Header -->
 			<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 				<div class="aio-icon-box p-2"><ProductIcon product="ai-credits" :size="30" /></div>
@@ -178,7 +178,7 @@ async function copyKey(key: string) {
 
 		<!-- AIOSEO licenses -->
 		<template v-if="activeTab === 'aioseo'" v-for="lic in aioseoLicenses" :key="lic.id">
-			<div class="border border-border rounded-card shadow-xs bg-white">
+			<div class="border border-border rounded-card shadow-card bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 					<div class="aio-icon-box p-2"><ProductIcon product="aioseo" :size="30" /></div>
@@ -255,7 +255,7 @@ async function copyKey(key: string) {
 							<div class="flex flex-col gap-1">
 								<span class="text-base font-semibold text-brand-navy">{{ addon.name }}</span>
 								<a :href="addon.downloadUrl" class="inline-flex items-center gap-1 text-[13px] font-bold text-text-light hover:text-brand-navy transition-colors no-underline">
-									<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+									<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
 									Download
 								</a>
 							</div>
