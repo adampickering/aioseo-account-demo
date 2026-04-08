@@ -205,14 +205,14 @@ function keepPlan() {
 					{{ user.firstName }}, you might already have what you need.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					AIOSEO has a lot of features under the hood. Our team can help you find the right one&mdash;or hear about what's missing.
+					We're sorry for the trouble. Our support team can usually resolve plugin issues within 24 hours, and your plan stays active while we work on it.
 				</p>
 			</div>
 
 			<OfferCard
 				:primary="true"
 				title="Let Us Take a Look"
-				body="Before you cancel, let our support team check if there's a feature or workaround that does what you need. You'd be surprised how often the answer is already built in. It'll take a few minutes—and your plan stays active while we look into it."
+				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
 				cta-text="Yes, Let Me Talk to Someone"
 				@cta-click="handleOffer('talk-to-support')"
 			/>
