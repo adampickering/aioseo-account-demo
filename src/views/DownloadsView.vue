@@ -13,6 +13,23 @@ const { credits, remaining } = useAiCredits()
 const blcLicenses = computed(() => licenses.value.filter(l => l.product === 'broken-link-checker'))
 const aioseoLicenses = computed(() => licenses.value.filter(l => l.product === 'aioseo'))
 const hasCredits = computed(() => credits.value.total > 0)
+const hasBLC = computed(() => blcLicenses.value.length > 0)
+
+type ProductTab = 'aioseo' | 'ai-credits' | 'blc'
+const activeTab = ref<ProductTab>('aioseo')
+
+const productTabs = computed(() => {
+	const tabs: { key: ProductTab; label: string; icon: string }[] = [
+		{ key: 'aioseo', label: 'AIOSEO', icon: 'aioseo' },
+	]
+	if (hasCredits.value) {
+		tabs.push({ key: 'ai-credits', label: 'AI Credits', icon: 'ai-credits' })
+	}
+	if (hasBLC.value) {
+		tabs.push({ key: 'blc', label: 'Broken Link Checker', icon: 'blc' })
+	}
+	return tabs
+})
 
 const showUpgradeOptions = ref(false)
 const copiedKey = ref('')
@@ -53,9 +70,29 @@ async function copyKey(key: string) {
 </script>
 
 <template>
-	<div class="space-y-8">
+	<div>
+		<!-- Product sub-navigation -->
+		<div class="relative mb-8">
+			<div class="flex items-center">
+				<button
+					v-for="tab in productTabs"
+					:key="tab.key"
+					@click="activeTab = tab.key"
+					class="flex items-center gap-2.5 px-6 h-[60px] bg-transparent border-0 cursor-pointer text-lg transition-colors"
+					:class="activeTab === tab.key
+						? 'text-brand-blue font-bold shadow-[0px_2px_0px_0px_#005ae0]'
+						: 'text-brand-navy-60 font-normal hover:text-brand-navy'"
+				>
+					<ProductIcon :product="tab.icon as any" :size="20" />
+					{{ tab.label }}
+				</button>
+			</div>
+			<div class="absolute bottom-0 left-0 right-0 h-px bg-border"></div>
+		</div>
+
+		<div class="space-y-8">
 		<!-- BLC licenses -->
-		<template v-for="lic in blcLicenses" :key="lic.id">
+		<template v-if="activeTab === 'blc'" v-for="lic in blcLicenses" :key="lic.id">
 			<div class="border border-border rounded-card shadow-xs bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
@@ -112,7 +149,7 @@ async function copyKey(key: string) {
 		</template>
 
 		<!-- AI Credits -->
-		<div v-if="hasCredits" class="border border-border rounded-card shadow-xs bg-white">
+		<div v-if="activeTab === 'ai-credits' && hasCredits" class="border border-border rounded-card shadow-xs bg-white">
 			<!-- Header -->
 			<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 				<ProductIcon product="ai-credits" :size="46" />
@@ -139,7 +176,7 @@ async function copyKey(key: string) {
 		</div>
 
 		<!-- AIOSEO licenses -->
-		<template v-for="lic in aioseoLicenses" :key="lic.id">
+		<template v-if="activeTab === 'aioseo'" v-for="lic in aioseoLicenses" :key="lic.id">
 			<div class="border border-border rounded-card shadow-xs bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
@@ -279,5 +316,6 @@ async function copyKey(key: string) {
 				</div>
 			</div>
 		</template>
+		</div>
 	</div>
 </template>
