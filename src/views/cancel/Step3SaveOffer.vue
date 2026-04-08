@@ -117,14 +117,14 @@ function keepPlan() {
 					{{ user.firstName }}, let us fix this before you go.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					We're sorry you're dealing with this. Our senior support team can usually resolve plugin issues within 24 hours&mdash;and your plan stays active while we work on it.
+					We're sorry for the trouble. Our support team can usually resolve plugin issues within 24 hours, and your plan stays active while we work on it.
 				</p>
 			</div>
 
 			<OfferCard
 				:primary="true"
 				title="Priority Technical Support"
-				body="We'll escalate your issue to a senior support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve it—no risk to you."
+				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
 				cta-text="Yes, Fix My Issue First"
 				@cta-click="handleOffer('priority-support')"
 			/>
