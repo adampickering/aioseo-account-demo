@@ -167,10 +167,7 @@ async function copyKey(key: string) {
 			<div class="flex items-start p-6 border-b border-border rounded-b-card">
 				<div class="flex flex-col gap-1 flex-1 min-w-0">
 					<p class="text-sm font-semibold text-text-light">AI Credits</p>
-					<div class="flex items-center gap-1.5 text-base text-brand-navy leading-[38px]">
-						<span>{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining</span>
-						<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Purchase Credits</a>
-					</div>
+					<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining</p>
 				</div>
 				<div class="flex-1 flex flex-col gap-1 min-w-0">
 					<p class="text-sm font-semibold text-text-light">Expires</p>
