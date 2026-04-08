@@ -226,10 +226,8 @@ async function copyKey(key: string) {
 					</div>
 					<div v-if="lic.aiCredits" class="flex flex-col gap-1 w-[352px]">
 						<p class="text-sm font-semibold text-text-light">AI Credits</p>
-						<div class="flex items-center gap-3">
-							<span class="text-base text-brand-navy leading-[38px]">{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining</span>
-							<a v-if="lic.tier !== 'elite'" href="#" class="shrink-0 text-sm font-semibold text-brand-navy bg-white border border-border-input rounded-btn px-3 py-1 no-underline hover:bg-gray-50 transition-colors">Add More Credits</a>
-						</div>
+						<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining</p>
+						<a v-if="lic.tier !== 'elite'" href="#" class="self-start text-sm font-semibold text-brand-navy bg-white border border-border-input rounded-btn px-3 py-1 no-underline hover:bg-gray-50 transition-colors mt-1">Add More Credits</a>
 					</div>
 					<div class="flex-1 min-w-0"></div>
 				</div>
