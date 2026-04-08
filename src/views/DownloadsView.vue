@@ -224,17 +224,10 @@ async function copyKey(key: string) {
 							<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Manage Sites</a>
 						</div>
 					</div>
-					<div v-if="lic.aiCredits" class="flex flex-col gap-1 w-[352px]">
+					<div v-if="lic.aiCredits" class="flex flex-col gap-1 flex-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">AI Credits</p>
-						<div class="flex items-center gap-1.5 text-base text-brand-navy leading-[38px]">
-							<span>{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining</span>
-							<template v-if="lic.tier !== 'elite'">
-								<span class="w-1.5 h-1.5 rounded-full bg-brand-navy inline-block shrink-0"></span>
-								<span>Running Low? <a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Add More</a></span>
-							</template>
-						</div>
+						<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining<template v-if="lic.tier !== 'elite'"> <span class="inline-block w-1 h-1 rounded-full bg-brand-navy mx-1.5 align-middle"></span> Running Low? <a href="#" class="text-brand-navy underline hover:opacity-80 transition-opacity">Add More</a></template></p>
 					</div>
-					<div class="flex-1 min-w-0"></div>
 				</div>
 
 				<!-- Addons section -->
