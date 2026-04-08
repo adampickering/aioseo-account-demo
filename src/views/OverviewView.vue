@@ -5,6 +5,7 @@ import { useSubscriptions } from '@/composables/useSubscriptions'
 import { useAiCredits } from '@/composables/useAiCredits'
 import { useOffers } from '@/composables/useOffers'
 import { useAnnouncements } from '@/composables/useAnnouncements'
+import { useMockProfile } from '@/composables/useMockProfile'
 
 import QuickLinks from '@/components/QuickLinks.vue'
 import StatusBadge from '@/components/StatusBadge.vue'
@@ -18,6 +19,7 @@ const { subscriptions } = useSubscriptions()
 const { credits, remaining } = useAiCredits()
 const { upgradeOffer, promoOffers, showUpgrade, showPromos } = useOffers()
 const { announcements } = useAnnouncements()
+const { isMinimal } = useMockProfile()
 
 const fullName = computed(() => `${user.value.firstName} ${user.value.lastName}`)
 
@@ -175,8 +177,8 @@ function formatDate(iso: string): string {
 			</div>
 		</div>
 
-		<!-- Announcements (full width) -->
-		<div>
+		<!-- Announcements (full width) — hidden in minimal mode -->
+		<div v-if="!isMinimal">
 			<h3 class="text-section font-heading font-semibold text-brand-navy mb-5">Announcements</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<AnnouncementCard
@@ -187,8 +189,8 @@ function formatDate(iso: string): string {
 			</div>
 		</div>
 
-		<!-- Need Help (full width) -->
-		<div>
+		<!-- Need Help (full width) — hidden in minimal mode -->
+		<div v-if="!isMinimal">
 			<h3 class="text-section font-heading font-semibold text-brand-navy mb-5">Need Help?</h3>
 			<HelpSearchSection />
 		</div>
