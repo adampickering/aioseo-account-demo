@@ -31,8 +31,8 @@ function handleSkip() {
 			<h2 class="text-[36px] font-bold text-brand-navy tracking-[-0.54px] leading-[43px] m-0 mb-3">
 				Before You Cancel &mdash; Is It One&nbsp;of&nbsp;These?
 			</h2>
-			<p class="text-[16px] text-text-muted mt-0 mb-8 max-w-[440px] mx-auto">
-				Many customers who start here actually have something we can fix in minutes. If any of these sound familiar, let us take a look.
+			<p class="text-[16px] text-text-muted mt-0 mb-8 max-w-[440px] mx-auto leading-relaxed">
+				Many customers have something we can fix in just a few minutes. If any of these sound like you, let us take a look.
 			</p>
 
 			<div class="flex flex-wrap justify-center gap-3 mb-8">

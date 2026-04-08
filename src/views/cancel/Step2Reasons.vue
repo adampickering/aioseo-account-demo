@@ -120,18 +120,19 @@ function keepPlan() {
 										</svg>
 									</div>
 								</template>
-							</label>
-							<div
-								v-if="selectedReasonId === reason.id && reason.followUp?.type === 'dropdown' && reason.followUp.otherTextField && followUpDropdown === 'Other'"
-								class="ml-9 mt-1 mb-1"
-							>
-								<input
-									v-model="otherCompetitorText"
-									placeholder="Which solution?"
-									aria-label="Which solution?"
-									class="aio-input w-full sm:w-[180px]"
+								<div
+									v-if="selectedReasonId === reason.id && reason.followUp?.type === 'dropdown' && reason.followUp.otherTextField && followUpDropdown === 'Other'"
+									class="w-full ml-7 mt-1"
 								>
-							</div>
+									<input
+										v-model="otherCompetitorText"
+										placeholder="Which solution?"
+										aria-label="Which solution?"
+										class="aio-input w-full sm:w-[180px]"
+										@click.stop
+									>
+								</div>
+							</label>
 						</div>
 					</div>
 				</fieldset>
