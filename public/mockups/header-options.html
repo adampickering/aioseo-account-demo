@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Options — AIOSEO Account</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #f5f6f8; color: #141b38; padding: 40px 20px; }
+  h1 { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 8px; }
+  .subtitle { text-align: center; color: #717680; font-size: 15px; margin-bottom: 48px; }
+  .option-label { font-size: 13px; font-weight: 700; color: #005ae0; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  .option-desc { color: #717680; font-size: 14px; margin-bottom: 16px; }
+  .mockup-wrapper { max-width: 900px; margin: 0 auto 56px; }
+  .mockup-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 2px solid transparent; transition: border-color 0.2s; }
+  .mockup-card:hover { border-color: #005ae0; }
+
+  /* Shared colors */
+  .logo-blue { color: #005ae0; font-weight: 700; font-size: 22px; letter-spacing: -0.5px; }
+  .nav-link { color: #141b38; font-size: 15px; text-decoration: none; }
+  .nav-link:hover { color: #005ae0; }
+  .nav-link.active { color: #005ae0; font-weight: 600; }
+  .tab { display: inline-block; padding: 14px 20px; font-size: 16px; color: #141b38; text-decoration: none; border-bottom: 3px solid transparent; }
+  .tab.active { color: #005ae0; font-weight: 600; border-bottom-color: #005ae0; }
+  .welcome-banner { background: linear-gradient(180deg, #f2f7fd 0%, white 100%); padding: 32px 40px 0; text-align: center; }
+  .welcome-banner h2 { font-size: 28px; font-weight: 700; color: #141b38; margin-bottom: 4px; }
+  .welcome-banner p { font-size: 15px; color: #717680; }
+  .avatar { width: 32px; height: 32px; border-radius: 50%; background: #005ae0; color: white; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  .content-placeholder { padding: 40px; color: #8c8f9a; font-size: 14px; text-align: center; border-top: 1px solid #e6eefc; }
+
+  /* Footer styles */
+  .footer-full { background: #f8fafe; border-top: 1px solid #e6eefc; padding: 40px; }
+  .footer-full .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-bottom: 24px; }
+  .footer-full h4 { font-size: 14px; font-weight: 600; color: #434960; margin-bottom: 12px; }
+  .footer-full a { display: block; font-size: 13px; color: #717680; text-decoration: none; margin-bottom: 6px; }
+  .footer-min { border-top: 1px solid #e6eefc; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; color: #8c8f9a; font-size: 13px; }
+  .footer-min a { color: #8c8f9a; text-decoration: none; margin-left: 16px; }
+  .footer-links { display: flex; gap: 20px; }
+
+  .vs-badge { display: inline-block; background: #e6eefc; color: #005ae0; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<h1>Minimal Layout Options</h1>
+<p class="subtitle">Which header + footer combination feels right for the standalone prototype?</p>
+
+<!-- OPTION A -->
+<div class="mockup-wrapper">
+  <p class="option-label">Option A — Logo + Tabs Only</p>
+  <p class="option-desc">Removes marketing nav entirely. Clean two-row header: logo top, tabs below. Minimal single-line footer.</p>
+  <div class="mockup-card">
+    <!-- Header -->
+    <div style="padding: 16px 40px; border-bottom: 1px solid #e6eefc; display: flex; align-items: center;">
+      <span class="logo-blue">AIOSEO</span>
+    </div>
+    <!-- Welcome + Tabs -->
+    <div class="welcome-banner">
+      <h2>Welcome to Your AIOSEO Account</h2>
+      <p>Improve Your Website Search Rankings</p>
+      <div style="margin-top: 20px; border-bottom: 1px solid #e6eefc; text-align: left;">
+        <a class="tab active" href="#">Overview</a>
+        <a class="tab" href="#">Downloads</a>
+        <a class="tab" href="#">Billing</a>
+        <a class="tab" href="#">Profile</a>
+        <a class="tab" href="#">Support</a>
+      </div>
+    </div>
+    <div class="content-placeholder">Page content here...</div>
+    <!-- Minimal footer -->
+    <div class="footer-min">
+      <span>&copy; 2013-2026 All-in-One SEO Pack, LLC.</span>
+      <div>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION B -->
+<div class="mockup-wrapper">
+  <p class="option-label">Option B — Logo + Tabs in One Row</p>
+  <p class="option-desc">Single compact header bar. Logo left, tabs right. Saves vertical space. Welcome banner stays.</p>
+  <div class="mockup-card">
+    <!-- Combined header -->
+    <div style="padding: 0 40px; border-bottom: 1px solid #e6eefc; display: flex; align-items: center; justify-content: space-between; height: 56px;">
+      <span class="logo-blue">AIOSEO</span>
+      <div>
+        <a class="tab active" href="#" style="padding: 16px 14px;">Overview</a>
+        <a class="tab" href="#" style="padding: 16px 14px;">Downloads</a>
+        <a class="tab" href="#" style="padding: 16px 14px;">Billing</a>
+        <a class="tab" href="#" style="padding: 16px 14px;">Profile</a>
+        <a class="tab" href="#" style="padding: 16px 14px;">Support</a>
+      </div>
+    </div>
+    <!-- Welcome -->
+    <div class="welcome-banner">
+      <h2>Welcome to Your AIOSEO Account</h2>
+      <p>Improve Your Website Search Rankings</p>
+    </div>
+    <div class="content-placeholder" style="border-top: none;">Page content here...</div>
+    <!-- Minimal footer -->
+    <div class="footer-min">
+      <span>&copy; 2013-2026 All-in-One SEO Pack, LLC.</span>
+      <div>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION C -->
+<div class="mockup-wrapper">
+  <p class="option-label">Option C — Logo + User Info, Tabs Below</p>
+  <p class="option-desc">Logo left, user avatar + name right. Tabs on separate row. Feels like a real logged-in portal. No external nav links needed.</p>
+  <div class="mockup-card">
+    <!-- Header with user -->
+    <div style="padding: 16px 40px; border-bottom: 1px solid #e6eefc; display: flex; align-items: center; justify-content: space-between;">
+      <span class="logo-blue">AIOSEO</span>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 14px; color: #434960;">Arnaud Broes</span>
+        <div class="avatar">AB</div>
+      </div>
+    </div>
+    <!-- Welcome + Tabs -->
+    <div class="welcome-banner">
+      <h2>Welcome to Your AIOSEO Account</h2>
+      <p>Improve Your Website Search Rankings</p>
+      <div style="margin-top: 20px; border-bottom: 1px solid #e6eefc; text-align: left;">
+        <a class="tab active" href="#">Overview</a>
+        <a class="tab" href="#">Downloads</a>
+        <a class="tab" href="#">Billing</a>
+        <a class="tab" href="#">Profile</a>
+        <a class="tab" href="#">Support</a>
+      </div>
+    </div>
+    <div class="content-placeholder">Page content here...</div>
+    <!-- Minimal footer -->
+    <div class="footer-min">
+      <span>&copy; 2013-2026 All-in-One SEO Pack, LLC.</span>
+      <div>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

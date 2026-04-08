@@ -5,8 +5,6 @@ import { useAiCredits } from '@/composables/useAiCredits'
 import AddonIcon from '@/components/AddonIcon.vue'
 import ProductIcon from '@/components/ProductIcon.vue'
 
-const baseUrl = import.meta.env.BASE_URL
-
 const { licenses } = useLicenses()
 const { credits, remaining } = useAiCredits()
 
@@ -96,9 +94,7 @@ async function copyKey(key: string) {
 			<div class="border border-border rounded-card shadow-xs bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
-					<div class="aio-blc-icon-box">
-						<img :src="baseUrl + 'assets/icons/product-blc-card.svg'" alt="Broken Link Checker" />
-					</div>
+					<ProductIcon product="blc" :size="46" />
 					<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">Broken Link Checker</h2>
 					<a href="#" class="bg-brand-blue text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
 						Upgrade License

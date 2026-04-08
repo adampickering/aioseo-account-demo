@@ -421,24 +421,6 @@
     text-align: center;
   }
 
-  /* BLC product icon — skeuomorphic bordered box */
-  .aio-blc-icon-box {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-card);
-    background: white;
-    box-shadow:
-      0 1px 2px var(--color-shadow-xs),
-      inset 0 0 0 1px rgba(10, 13, 18, 0.18),
-      inset 0 -2px 0 0 rgba(10, 13, 18, 0.05);
-    flex-shrink: 0;
-  }
-  .aio-blc-icon-box img {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 
