@@ -395,10 +395,10 @@
   .aio-addon-box .aio-addon-circle svg {
     width: 24px;
     height: 24px;
-    fill: white;
+    fill: white !important;
   }
   .aio-addon-box .aio-addon-circle svg path {
-    fill: white;
+    fill: white !important;
   }
 
   /* "NEW" badge below addon icon */

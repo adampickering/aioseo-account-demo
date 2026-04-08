@@ -30,7 +30,6 @@ const iconComponent = iconMap[props.addonId] || null
 	<component
 		v-if="iconComponent"
 		:is="iconComponent"
-		class="w-7 h-7"
 	/>
 	<span v-else class="text-sm font-bold text-brand-blue">?</span>
 </template>
