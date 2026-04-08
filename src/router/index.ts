@@ -35,8 +35,58 @@ const router = createRouter({
 					component: () => import('@/views/cancel/Step2Reasons.vue'),
 				},
 				{
-					path: 'offer',
-					name: 'cancel-offer',
+					path: 'offer/too-expensive',
+					name: 'cancel-offer-expensive',
+					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
+					beforeEnter: (_to, _from, next) => {
+						const store = useCancellationStore()
+						if (!store.selectedReason) return next({ name: 'cancel-reason' })
+						next()
+					},
+				},
+				{
+					path: 'offer/billing',
+					name: 'cancel-offer-billing',
+					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
+					beforeEnter: (_to, _from, next) => {
+						const store = useCancellationStore()
+						if (!store.selectedReason) return next({ name: 'cancel-reason' })
+						next()
+					},
+				},
+				{
+					path: 'offer/technical',
+					name: 'cancel-offer-technical',
+					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
+					beforeEnter: (_to, _from, next) => {
+						const store = useCancellationStore()
+						if (!store.selectedReason) return next({ name: 'cancel-reason' })
+						next()
+					},
+				},
+				{
+					path: 'offer/switching/:competitor',
+					name: 'cancel-offer-switching',
+					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
+					beforeEnter: (_to, _from, next) => {
+						const store = useCancellationStore()
+						if (!store.selectedReason) return next({ name: 'cancel-reason' })
+						next()
+					},
+				},
+				{
+					path: 'offer/features',
+					name: 'cancel-offer-features',
+					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
+					beforeEnter: (_to, _from, next) => {
+						const store = useCancellationStore()
+						if (!store.selectedReason) return next({ name: 'cancel-reason' })
+						next()
+					},
+				},
+				{
+					path: 'offer/closing',
+					name: 'cancel-offer-closing',
 					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
 					beforeEnter: (_to, _from, next) => {
 						const store = useCancellationStore()
@@ -48,6 +98,16 @@ const router = createRouter({
 					path: 'offer/not-using',
 					name: 'cancel-offer-not-using',
 					component: () => import('@/views/cancel/Step3VariantG.vue'),
+					beforeEnter: (_to, _from, next) => {
+						const store = useCancellationStore()
+						if (!store.selectedReason) return next({ name: 'cancel-reason' })
+						next()
+					},
+				},
+				{
+					path: 'offer/other',
+					name: 'cancel-offer-other',
+					component: () => import('@/views/cancel/Step3SaveOffer.vue'),
 					beforeEnter: (_to, _from, next) => {
 						const store = useCancellationStore()
 						if (!store.selectedReason) return next({ name: 'cancel-reason' })
