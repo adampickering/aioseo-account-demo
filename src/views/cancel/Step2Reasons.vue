@@ -60,7 +60,7 @@ function keepPlan() {
 				{{ user.firstName }}, we're sorry to see you go.
 			</h2>
 			<p class="text-body-lg mt-3 mb-0 max-w-[520px] mx-auto">
-				Before you cancel, please let us know why so we can try to help.
+				We appreciate you letting us know. Your feedback helps us improve.
 			</p>
 		</div>
 
@@ -91,47 +91,42 @@ function keepPlan() {
 									{{ reason.label }}
 								</span>
 								<template v-if="selectedReasonId === reason.id && reason.followUp">
-									<input
-										v-if="reason.followUp.type === 'text'"
-										v-model="followUpText"
-										:placeholder="reason.followUp.placeholder"
-										aria-label="Additional details"
-										class="follow-up-field aio-input w-full ml-7"
-										@click.stop
-									>
-									<div v-if="reason.followUp.type === 'dropdown'" class="relative w-full ml-7">
-										<select
-											v-model="followUpDropdown"
-											aria-label="Select an option"
-											class="follow-up-field aio-select"
-											@click.stop
+									<div class="w-full pl-[30px] mt-1" @click.stop>
+										<input
+											v-if="reason.followUp.type === 'text'"
+											v-model="followUpText"
+											:placeholder="reason.followUp.placeholder"
+											aria-label="Additional details"
+											class="follow-up-field aio-input w-full"
 										>
-											<option value="" disabled>{{ reason.followUp.placeholder }}</option>
-											<option
-												v-for="opt in reason.followUp.options"
-												:key="opt"
-												:value="opt"
+										<div v-if="reason.followUp.type === 'dropdown'" class="relative">
+											<select
+												v-model="followUpDropdown"
+												aria-label="Select an option"
+												class="follow-up-field aio-select"
 											>
-												{{ opt }}
-											</option>
-										</select>
-										<svg class="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-text-muted" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
+												<option value="" disabled>{{ reason.followUp.placeholder }}</option>
+												<option
+													v-for="opt in reason.followUp.options"
+													:key="opt"
+													:value="opt"
+												>
+													{{ opt }}
+												</option>
+											</select>
+											<svg class="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-text-muted" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</div>
+										<input
+											v-if="reason.followUp.type === 'dropdown' && reason.followUp.otherTextField && followUpDropdown === 'Other'"
+											v-model="otherCompetitorText"
+											placeholder="Which solution?"
+											aria-label="Which solution?"
+											class="aio-input w-full sm:w-[180px] mt-2"
+										>
 									</div>
 								</template>
-								<div
-									v-if="selectedReasonId === reason.id && reason.followUp?.type === 'dropdown' && reason.followUp.otherTextField && followUpDropdown === 'Other'"
-									class="w-full ml-7 mt-1"
-								>
-									<input
-										v-model="otherCompetitorText"
-										placeholder="Which solution?"
-										aria-label="Which solution?"
-										class="aio-input w-full sm:w-[180px]"
-										@click.stop
-									>
-								</div>
 							</label>
 						</div>
 					</div>
