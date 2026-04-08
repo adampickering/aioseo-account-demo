@@ -5,6 +5,9 @@ import TabNavigation from './TabNavigation.vue'
 import CtaBanner from './CtaBanner.vue'
 import SiteFooter from './SiteFooter.vue'
 import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
+import { useMockProfile } from '@/composables/useMockProfile'
+
+const { isMinimal } = useMockProfile()
 </script>
 
 <template>
@@ -51,7 +54,7 @@ import ProfileSwitcher from '@/components/ProfileSwitcher.vue'
 		</div>
 
 		<div class="mt-auto">
-			<CtaBanner />
+			<CtaBanner v-if="!isMinimal" />
 			<SiteFooter />
 		</div>
 

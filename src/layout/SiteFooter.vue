@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useMockProfile } from '@/composables/useMockProfile'
+
+const { isMinimal } = useMockProfile()
+
 const companyLinks = [
 	{ label: 'About', href: 'https://aioseo.com/about/' },
 	{ label: 'Press', href: 'https://aioseo.com/press/' },
@@ -62,7 +66,20 @@ const legalLinks = [
 </script>
 
 <template>
-	<footer class="bg-bg-light text-brand-navy-60 text-lg leading-[27px] font-body">
+	<!-- Minimal footer -->
+	<footer v-if="isMinimal" class="border-t border-border bg-white py-4">
+		<div class="aio-container flex flex-wrap gap-2 items-center justify-between text-sm text-text-muted">
+			<span>&copy; 2013-2026 All-in-One SEO Pack, LLC.</span>
+			<div class="flex gap-5">
+				<a href="#" class="text-text-muted no-underline hover:text-brand-blue transition-colors">Terms</a>
+				<a href="#" class="text-text-muted no-underline hover:text-brand-blue transition-colors">Privacy</a>
+				<a href="#" class="text-text-muted no-underline hover:text-brand-blue transition-colors">Support</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Full footer (existing content unchanged) -->
+	<footer v-else class="bg-bg-light text-brand-navy-60 text-lg leading-[27px] font-body">
 		<!-- Footer link columns -->
 		<div
 			class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 aio-container gap-6 py-10 text-body leading-[22.5px]"
