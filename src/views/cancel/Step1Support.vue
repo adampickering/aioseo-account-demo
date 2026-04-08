@@ -29,7 +29,7 @@ function handleSkip() {
 	<div class="max-w-[560px] mx-auto">
 		<div class="aio-card text-center py-8 px-5 sm:py-10 sm:px-8">
 			<h2 class="text-[36px] font-bold text-brand-navy tracking-[-0.54px] leading-[43px] m-0 mb-3">
-				Before you cancel&mdash;can&nbsp;we&nbsp;help?
+				Before You Cancel &mdash; Is It One&nbsp;of&nbsp;These?
 			</h2>
 			<p class="text-[16px] text-text-muted mt-0 mb-8 max-w-[440px] mx-auto">
 				Many customers who start here actually have something we can fix in minutes. If any of these sound familiar, let us take a look.
