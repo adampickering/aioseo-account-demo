@@ -146,7 +146,7 @@ function keepPlan() {
 					{{ user.firstName }}, before you switch&mdash;here's what you'd be giving up.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					We want to make sure you have the full picture. Here are a few things AIOSEO offers that {{ competitorName }} doesn't&mdash;or charges extra for.
+					We're sorry for the trouble. Our support team can usually resolve plugin issues within 24 hours, and your plan stays active while we work on it.
 				</p>
 			</div>
 
