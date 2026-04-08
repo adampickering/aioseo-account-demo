@@ -136,18 +136,19 @@ async function copyKey(key: string) {
 				</div>
 
 				<!-- Body row 2: Site Activations / Links -->
-				<div class="flex items-start p-6 border-b border-border rounded-b-card">
-					<div class="flex flex-col gap-1 w-[355px]">
+				<div class="flex items-start justify-between p-6 border-b border-border rounded-b-card gap-6">
+					<div class="flex-1 flex flex-col gap-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">Site Activations</p>
 						<div class="flex items-center gap-2 text-base text-brand-navy leading-[38px]">
 							<span>{{ lic.siteActivations.used }} / {{ lic.siteActivations.total }}</span>
 							<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Manage Sites</a>
 						</div>
 					</div>
-					<div v-if="lic.links" class="flex flex-col gap-1">
+					<div v-if="lic.links" class="flex flex-col gap-1 w-[352px]">
 						<p class="text-sm font-semibold text-text-light">Links</p>
 						<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(lic.links.remaining || 0) }} / {{ formatNumber(lic.links.total || 0) }} Links Remaining</p>
 					</div>
+					<div class="flex-1 min-w-0"></div>
 				</div>
 			</div>
 		</template>
@@ -215,15 +216,15 @@ async function copyKey(key: string) {
 				</div>
 
 				<!-- Body row 2: Site Activations / AI Credits -->
-				<div class="flex items-start p-6 border-b border-border">
-					<div class="flex flex-col gap-1 w-[355px]">
+				<div class="flex items-start justify-between p-6 border-b border-border gap-6">
+					<div class="flex-1 flex flex-col gap-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">Site Activations</p>
 						<div class="flex items-center gap-2 text-base text-brand-navy leading-[38px]">
 							<span>{{ lic.siteActivations.used }} / {{ lic.siteActivations.total }}</span>
 							<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Manage Sites</a>
 						</div>
 					</div>
-					<div v-if="lic.aiCredits" class="flex flex-col gap-1">
+					<div v-if="lic.aiCredits" class="flex flex-col gap-1 w-[352px]">
 						<p class="text-sm font-semibold text-text-light">AI Credits</p>
 						<div class="flex items-center gap-1.5 text-base text-brand-navy leading-[38px]">
 							<span>{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining</span>
@@ -233,6 +234,7 @@ async function copyKey(key: string) {
 							</template>
 						</div>
 					</div>
+					<div class="flex-1 min-w-0"></div>
 				</div>
 
 				<!-- Addons section -->

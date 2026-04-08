@@ -51,9 +51,9 @@ export const licenses: License[] = [
 ]
 
 export const aiCredits: AiCredits = {
-	used: 0,
-	total: 0,
-	includedInSubscription: 0,
+	used: 190000,
+	total: 200000,
+	includedInSubscription: 200000,
 	paidCredits: 0,
 	expiresAt: '',
 }
