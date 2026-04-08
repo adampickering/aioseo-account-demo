@@ -102,7 +102,7 @@ async function copyKey(key: string) {
 			<div class="border border-border rounded-card shadow-xs bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
-					<ProductIcon product="blc" :size="46" />
+					<div class="aio-icon-box p-2"><ProductIcon product="blc" :size="30" /></div>
 					<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">Broken Link Checker</h2>
 					<a href="#" class="bg-brand-blue text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
 						Upgrade License
@@ -156,7 +156,7 @@ async function copyKey(key: string) {
 		<div v-if="activeTab === 'ai-credits' && hasCredits" class="border border-border rounded-card shadow-xs bg-white">
 			<!-- Header -->
 			<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
-				<ProductIcon product="ai-credits" :size="46" />
+				<div class="aio-icon-box p-2"><ProductIcon product="ai-credits" :size="30" /></div>
 				<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">AI Credits</h2>
 				<a href="#" class="bg-brand-green text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
 					Purchase Credits
@@ -181,7 +181,7 @@ async function copyKey(key: string) {
 			<div class="border border-border rounded-card shadow-xs bg-white">
 				<!-- Header -->
 				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
-					<ProductIcon product="aioseo" :size="46" />
+					<div class="aio-icon-box p-2"><ProductIcon product="aioseo" :size="30" /></div>
 					<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">AIOSEO</h2>
 					<a v-if="lic.tier !== 'elite'" href="#" class="bg-brand-blue text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
 						Upgrade License
