@@ -16,15 +16,23 @@ const hasBLC = computed(() => blcLicenses.value.length > 0)
 type ProductTab = 'aioseo' | 'ai-credits' | 'blc'
 const activeTab = ref<ProductTab>('aioseo')
 
+const baseUrl = import.meta.env.BASE_URL
+
+const tabIcons: Record<ProductTab, string> = {
+	'aioseo': 'tab-aioseo.svg',
+	'ai-credits': 'tab-ai-credits.svg',
+	'blc': 'tab-blc.svg',
+}
+
 const productTabs = computed(() => {
-	const tabs: { key: ProductTab; label: string; icon: string }[] = [
-		{ key: 'aioseo', label: 'AIOSEO', icon: 'aioseo' },
+	const tabs: { key: ProductTab; label: string }[] = [
+		{ key: 'aioseo', label: 'AIOSEO' },
 	]
 	if (hasCredits.value) {
-		tabs.push({ key: 'ai-credits', label: 'AI Credits', icon: 'ai-credits' })
+		tabs.push({ key: 'ai-credits', label: 'AI Credits' })
 	}
 	if (hasBLC.value) {
-		tabs.push({ key: 'blc', label: 'Broken Link Checker', icon: 'blc' })
+		tabs.push({ key: 'blc', label: 'Broken Link Checker' })
 	}
 	return tabs
 })
@@ -81,7 +89,7 @@ async function copyKey(key: string) {
 						? 'text-brand-blue font-bold shadow-[0px_2px_0px_0px_#005ae0]'
 						: 'text-brand-navy-60 font-normal hover:text-brand-navy'"
 				>
-					<ProductIcon :product="tab.icon as any" :size="20" />
+					<img :src="baseUrl + 'assets/icons/' + tabIcons[tab.key]" :alt="tab.label" class="w-5 h-5 shrink-0" />
 					{{ tab.label }}
 				</button>
 			</div>
