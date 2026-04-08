@@ -30,7 +30,7 @@ export const useCancellationStore = defineStore('cancellation', () => {
 
 	function canGoBack(route: RouteLocationNormalizedLoaded): boolean {
 		const num = currentStepNumber(route)
-		return num > 1 && num < 5
+		return num >= 1 && num < 5
 	}
 
 	function selectReason(router: Router, reason: Reason, followUp: string) {
@@ -81,6 +81,10 @@ export const useCancellationStore = defineStore('cancellation', () => {
 		}
 		if (name === 'cancel-reason') {
 			router.push({ name: 'cancel-support' })
+			return
+		}
+		if (name === 'cancel-support') {
+			router.push({ name: 'billing' })
 		}
 	}
 
