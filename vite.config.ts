@@ -12,7 +12,7 @@ export default defineConfig({
     tailwindcss(),
     svgLoader(),
   ],
-  base: '/account/',
+  base: process.env.GITHUB_PAGES ? '/aioseo-account-demo/' : '/account/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
