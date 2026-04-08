@@ -394,26 +394,32 @@
     background: white;
     position: relative;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .aio-addon-box .aio-addon-circle {
     width: 40px;
     height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     border-radius: 9999px;
     background-color: var(--color-brand-blue);
     border: 1px solid rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
   .aio-addon-box .aio-addon-circle svg {
     width: 20px !important;
     height: 20px !important;
-    min-width: 20px;
-    min-height: 20px;
-    max-width: 20px;
-    max-height: 20px;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
     fill: white !important;
-    display: block;
+    display: block !important;
   }
   .aio-addon-box .aio-addon-circle svg path {
     fill: white !important;
