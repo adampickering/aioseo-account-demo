@@ -1,23 +1,28 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const props = defineProps<{
 	title: string
-	originalPrice: string
-	currentPrice: string
+	baseOriginalPrice: number
+	baseCurrentPrice: number
 	timeSaved: string
 	features: string[]
-	includes: string
 	cartUrl: string
 }>()
 
-const siteCount = ref('1')
-const siteOptions = ['1', '5', '10', '25']
+const siteCount = ref(1)
+const siteOptions = [1, 5, 10, 25]
 
-// Parse price into dollar and cents parts
-const priceParts = props.currentPrice.replace('$', '').split('.')
-const priceDollars = priceParts[0]
-const priceCents = priceParts[1] || '00'
+const originalPrice = computed(() => props.baseOriginalPrice * siteCount.value)
+const currentPrice = computed(() => props.baseCurrentPrice * siteCount.value)
+
+const formattedOriginal = computed(() => `$${originalPrice.value.toFixed(2)}`)
+
+const priceDollars = computed(() => Math.floor(currentPrice.value).toString())
+const priceCents = computed(() => {
+	const cents = Math.round((currentPrice.value % 1) * 100)
+	return cents.toString().padStart(2, '0')
+})
 </script>
 
 <template>
@@ -29,7 +34,7 @@ const priceCents = priceParts[1] || '00'
 
 		<!-- Pricing -->
 		<div class="text-center mb-4">
-			<span class="text-sm text-text-light line-through">{{ originalPrice }}</span>
+			<span class="text-sm text-text-light line-through">{{ formattedOriginal }}</span>
 			<div class="flex items-start justify-center mt-1">
 				<span class="text-lg font-semibold text-text-primary mt-2">$</span>
 				<span class="text-5xl font-heading font-bold text-text-primary leading-none">{{ priceDollars }}</span>
@@ -55,7 +60,7 @@ const priceCents = priceParts[1] || '00'
 				class="aio-input text-sm appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23717680%22%20d%3D%22M3%204.5l3%203%203-3%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_12px_center]"
 			>
 				<option v-for="opt in siteOptions" :key="opt" :value="opt">
-					{{ opt }} {{ opt === '1' ? 'Site' : 'Sites' }}
+					{{ opt }} {{ opt === 1 ? 'Site' : 'Sites' }}
 				</option>
 			</select>
 		</div>

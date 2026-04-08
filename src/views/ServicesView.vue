@@ -4,27 +4,25 @@ import ServicePricingCard from '@/components/ServicePricingCard.vue'
 const services = [
 	{
 		title: 'Essential',
-		originalPrice: '$99.00',
-		currentPrice: '$49.50',
+		baseOriginalPrice: 99,
+		baseCurrentPrice: 49.50,
 		timeSaved: 'Save 1 hour',
 		features: [
 			'AIOSEO Pro Installation',
 			'Addon Installation (as per plan)',
 		],
-		includes: '1 Site',
 		cartUrl: '#',
 	},
 	{
 		title: 'Advanced',
-		originalPrice: '$249.00',
-		currentPrice: '$124.50',
+		baseOriginalPrice: 249,
+		baseCurrentPrice: 124.50,
 		timeSaved: 'Save 4+ hours',
 		features: [
 			'Everything in Essential +',
 			'AIOSEO Pro Installation',
 			'Basic AIOSEO Pro Configuration (addons not included)',
 		],
-		includes: '1 Site',
 		cartUrl: '#',
 	},
 ]
@@ -48,11 +46,10 @@ const services = [
 				v-for="service in services"
 				:key="service.title"
 				:title="service.title"
-				:original-price="service.originalPrice"
-				:current-price="service.currentPrice"
+				:base-original-price="service.baseOriginalPrice"
+				:base-current-price="service.baseCurrentPrice"
 				:time-saved="service.timeSaved"
 				:features="service.features"
-				:includes="service.includes"
 				:cart-url="service.cartUrl"
 			/>
 		</div>
