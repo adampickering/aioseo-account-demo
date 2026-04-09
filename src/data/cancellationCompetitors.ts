@@ -29,7 +29,7 @@ export const cancellationCompetitorData: CompetitorDataMap = {
 		],
 	},
 	'Search Atlas': {
-		subhead: 'Search Atlas isn\u2019t a WordPress plugin. This is what switching would actually mean.',
+		subhead: 'Unlike AIOSEO, Search Atlas isn\u2019t a WordPress plugin. This is what switching would actually mean.',
 		advantages: [
 			{ feature: 'All-in-One WordPress Plugin', detail: 'On-page SEO, schema, sitemaps, and redirects \u2014 all managed inside WordPress' },
 			{ feature: 'No Separate Subscription', detail: 'One plugin covers everything; Search Atlas starts at $99/month as a separate cloud platform' },
