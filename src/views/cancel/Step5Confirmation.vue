@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { useCancellation } from '@/composables/useCancellation'
 import CrossPromoCard from '@/components/cancel/CrossPromoCard.vue'
 
 const { user, acknowledgement } = useCancellation()
-const acknowledgementLine1 = computed(() => {
-	const dot = acknowledgement.value.indexOf('. ')
-	return dot !== -1 ? acknowledgement.value.slice(0, dot + 1) : acknowledgement.value
-})
-const acknowledgementLine2 = computed(() => {
-	const dot = acknowledgement.value.indexOf('. ')
-	return dot !== -1 ? acknowledgement.value.slice(dot + 2) : ''
-})
 const copied = ref(false)
 
 function copyCode() {
@@ -28,13 +20,13 @@ function copyCode() {
 				{{ user.firstName }}, you're still part of the AIOSEO community.
 			</h2>
 			<p class="text-body-lg mt-3 max-w-[480px] mx-auto">
-				Your subscription has been cancelled.<br>
-				Thanks for being a customer, and we hope to see you again.
+				Your subscription has been cancelled.
 			</p>
-			<p class="text-body-lg mt-1 max-w-[480px] mx-auto">
-				{{ acknowledgementLine1 }}<br>
-				{{ acknowledgementLine2 }}
-			</p>
+			<div class="mt-4 mx-auto max-w-[480px] rounded-[10px] bg-[#F7F8FA] px-6 py-4 text-center">
+				<p class="text-[14px] leading-relaxed text-text-secondary m-0">
+					{{ acknowledgement }}
+				</p>
+			</div>
 		</div>
 
 		<div class="flex items-start gap-3 p-5 bg-brand-green-5 border border-green-200/60 rounded-card mb-6">
