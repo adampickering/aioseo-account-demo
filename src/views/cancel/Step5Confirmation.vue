@@ -20,13 +20,11 @@ function copyCode() {
 				{{ user.firstName }}, you're still part of the AIOSEO community.
 			</h2>
 			<p class="text-body-lg mt-3 max-w-[480px] mx-auto">
-				Your subscription has been cancelled.
+				Your subscription has been cancelled. Thanks for being a customer, and we hope to see you again.
 			</p>
-			<div class="mt-4 mx-auto max-w-[480px] rounded-[10px] bg-[#F7F8FA] px-6 py-4 text-center">
-				<p class="text-[14px] leading-relaxed text-text-secondary m-0">
-					{{ acknowledgement }}
-				</p>
-			</div>
+			<p class="text-[14px] italic leading-relaxed text-text-muted mt-3 max-w-[420px] mx-auto">
+				{{ acknowledgement }}
+			</p>
 		</div>
 
 		<div class="flex items-start gap-3 p-5 bg-brand-green-5 border border-green-200/60 rounded-card mb-6">
