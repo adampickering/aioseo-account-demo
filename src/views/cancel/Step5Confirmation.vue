@@ -22,7 +22,7 @@ function copyCode() {
 			<p class="text-body-lg mt-3 max-w-[480px] mx-auto">
 				Your subscription has been cancelled. Thanks for being a customer, and we hope to see you again.
 			</p>
-			<p class="text-body-lg italic mt-2 max-w-[480px] mx-auto">
+			<p class="text-body-lg mt-2 max-w-[480px] mx-auto">
 				{{ acknowledgement }}
 			</p>
 		</div>
