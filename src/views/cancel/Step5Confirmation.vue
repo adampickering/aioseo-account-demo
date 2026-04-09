@@ -19,26 +19,9 @@ function copyCode() {
 			<h2 class="text-[26px] sm:text-[36px] font-bold text-brand-navy tracking-[-0.54px] leading-[32px] sm:leading-[43px] m-0">
 				{{ user.firstName }}, you're still part of the AIOSEO community.
 			</h2>
-		</div>
-
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-			<div class="aio-card p-6 text-center flex flex-col justify-center">
-				<svg aria-hidden="true" class="w-8 h-8 mx-auto mb-3 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-					<path d="M22 4L12 14.01l-3-3"/>
-				</svg>
-				<p class="text-[15px] leading-relaxed text-text-secondary m-0">
-					Your subscription has been cancelled. Thanks for being a customer, and we hope to see you again.
-				</p>
-			</div>
-			<div class="aio-card p-6 text-center flex flex-col justify-center">
-				<svg aria-hidden="true" class="w-8 h-8 mx-auto mb-3 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-				</svg>
-				<p class="text-[15px] leading-relaxed text-text-secondary m-0">
-					{{ acknowledgement }}
-				</p>
-			</div>
+			<p class="text-body-lg mt-3 max-w-[480px] mx-auto">
+				Your subscription has been cancelled. {{ acknowledgement }}
+			</p>
 		</div>
 
 		<div class="flex items-start gap-3 p-5 bg-brand-green-5 border border-green-200/60 rounded-card mb-6">
