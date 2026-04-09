@@ -88,7 +88,7 @@ function keepPlan() {
 					class="shrink-0 mt-0.5"
 				>
 				<span class="text-[15px] text-brand-navy leading-relaxed">
-					I understand I will lose <strong>all of the above</strong> when my plan expires on {{ user.renewalDate }}.
+					I understand I will lose <strong>all the above</strong> when my plan expires on {{ user.renewalDate }}.
 				</span>
 			</label>
 

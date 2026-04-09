@@ -6,7 +6,7 @@ import type { CancellationMockUser, LowerPlan, PlanPricingEntry, PlanTier } from
 // Change planKey to 'basic' | 'plus' | 'pro' | 'elite' to preview different tiers.
 export const cancellationMockUser: CancellationMockUser = {
 	firstName: 'Adam',
-	planName: 'AIOSEO - Elite',
+	planName: 'Elite',
 	planKey: 'elite',
 	renewalDate: 'Dec 9, 2026',
 	purchaseDate: 'Dec 9, 2025',

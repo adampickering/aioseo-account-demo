@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { useCancellationStore } from '@/stores/cancellation'
+import { useCancellation } from '@/composables/useCancellation'
 
 const router = useRouter()
 const store = useCancellationStore()
+const { user } = useCancellation()
 
 function continueCancel() {
 	store.skipOffer(router)
@@ -14,11 +16,10 @@ function continueCancel() {
 	<div class="max-w-[720px] mx-auto">
 		<div class="aio-card text-center">
 			<h2 class="text-[23px] font-bold text-brand-navy m-0 mb-3">
-				Let Us Help With Your Duplicate Subscription
+				{{ user.firstName }}, let us help with your duplicate subscription.
 			</h2>
 			<p class="text-[16px] text-brand-navy-60 leading-relaxed mb-6">
-				It looks like you have a duplicate subscription. Our billing team can resolve this quickly—no need to cancel.
-				We'll get this sorted for you.
+				Our billing team can resolve this quickly. We'll ensure you keep the right subscription on the right site(s).
 			</p>
 			<div class="bg-brand-blue-5 rounded-card p-6 mb-6 text-left">
 				<p class="text-[14px] text-text-muted m-0 mb-2 uppercase font-bold tracking-wide">
@@ -29,7 +30,7 @@ function continueCancel() {
 				</p>
 			</div>
 			<button class="aio-btn-green mb-4">
-				Contact Billing Support
+				Send My Support Ticket
 			</button>
 			<div class="mt-4">
 				<button @click="continueCancel" class="aio-link-skip">

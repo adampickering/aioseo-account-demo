@@ -78,17 +78,17 @@ function keepPlan() {
 					{{ user.firstName }}, you don't have to cancel&mdash;you can pause instead.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					We hear you&mdash;unexpected charges and auto-renewals are frustrating. Instead of losing everything, you can pause and pick back up when you're ready.
+					We hear you. Unexpected charges and auto-renewals are frustrating. Instead of losing everything, you can pause and pick back up when you're ready.
 				</p>
 			</div>
 
-			<div v-if="showRenewalReminderLine" class="flex items-start gap-3 p-4 mb-6 bg-brand-green-5 rounded-card border border-green-200/50">
-				<svg aria-hidden="true" class="w-5 h-5 mt-0.5 shrink-0 text-brand-green" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+			<div v-if="showRenewalReminderLine" class="flex items-start gap-3 p-4 mb-6 bg-brand-blue-5 rounded-card border border-brand-blue-10">
+				<svg aria-hidden="true" class="w-5 h-5 mt-0.5 shrink-0 text-brand-blue" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
 					<path d="M10 2a8 8 0 100 16 8 8 0 000-16z" stroke-linecap="round"/>
 					<path d="M10 6v4l2.5 1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 				<p class="text-[15px] text-brand-navy m-0">
-					<strong>We'll remind you before every renewal.</strong> You'll get an email 14 days before your next billing date&mdash;no surprises, ever.
+					<strong>We'll remind you before every renewal.</strong> You'll get an email 14 days before your next billing date. No surprises, ever.
 				</p>
 			</div>
 
@@ -245,14 +245,14 @@ function keepPlan() {
 					{{ user.firstName }}, you might already have what you need.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					We're sorry for the trouble. Our support team can usually resolve plugin issues within 24 hours, and your plan stays active while we work on it.
+					AIOSEO has a lot of features under the hood, and our team can help you find the right one. If what you're looking for truly doesn't exist yet, we want to hear about it.
 				</p>
 			</div>
 
 			<OfferCard
 				:primary="true"
 				title="Let us take a look"
-				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
+				body="Before you cancel, let our support team check if there's a feature or workaround that does what you need. You'd be surprised how often the answer is already built in. It'll take a few minutes, and your plan stays active while we look into it."
 				cta-text="Yes, let me talk to someone"
 				@cta-click="handleOffer('talk-to-support')"
 			/>

@@ -20,7 +20,7 @@ function copyCode() {
 				{{ user.firstName }}, you're still part of the AIOSEO community.
 			</h2>
 			<p class="text-body-lg mt-3 max-w-[480px] mx-auto">
-				Your subscription has been cancelled. Thank you for being a customer&mdash;we hope to see you again.
+				Your subscription has been cancelled.
 			</p>
 		</div>
 
@@ -36,7 +36,6 @@ function copyCode() {
 
 		<div class="aio-card text-center mb-6 py-8">
 			<h3 class="text-[23px] font-bold text-brand-navy m-0 mb-2">Changed your mind?</h3>
-			<p class="text-body m-0 mb-4">Use code</p>
 			<div class="coupon mb-3 mx-auto" @click="copyCode" role="button" tabindex="0" aria-label="Copy coupon code WELCOMEBACK">
 				<div class="coupon-inner">
 					<span class="coupon-code">WELCOMEBACK</span>
@@ -50,7 +49,7 @@ function copyCode() {
 				<p class="coupon-hint m-0">{{ copied ? 'Copied!' : 'Click to copy' }}</p>
 			</div>
 			<p class="text-body m-0 mb-6 max-w-[400px] mx-auto">
-				Use this code for 50% off when you resubscribe within 30 days.
+				Get 50% off when you resubscribe within 30 days.
 			</p>
 			<button class="aio-btn-green">
 				Reactivate My Plan
