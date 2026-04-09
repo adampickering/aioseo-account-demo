@@ -20,6 +20,11 @@ const competitorName = computed(() => {
 	return competitorData.value[name] ? name : 'Other SEO Tools'
 })
 
+const isFallback = computed(() => {
+	const name = store.followUpValue || ''
+	return !competitorData.value[name]
+})
+
 const lowerPlan = computed(() => getLowerPlan(user.value.planKey))
 
 const showRenewalReminderLine = computed(() =>
@@ -143,7 +148,7 @@ function keepPlan() {
 		<template v-if="variant === 'D'">
 			<div class="text-center mb-8">
 				<h2 class="text-[26px] sm:text-[36px] font-bold text-brand-navy tracking-[-0.54px] leading-[32px] sm:leading-[43px] m-0">
-					Before you switch to {{ competitorName }}, here's what you'd be giving up.
+					Before you switch<template v-if="!isFallback"> to {{ competitorName }}</template>, here's what you'd be giving up.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
 					{{ competitor.subhead }}
@@ -159,7 +164,7 @@ function keepPlan() {
 						<img src="/assets/icons/tab-aioseo.svg" alt="" class="w-4 h-4" />
 						AIOSEO
 					</div>
-					<div class="px-2 py-3.5 text-center text-text-muted">{{ competitorName }}</div>
+					<div class="px-2 py-3.5 text-center text-text-muted">{{ isFallback ? 'Other' : competitorName }}</div>
 				</div>
 
 				<!-- Data rows -->
