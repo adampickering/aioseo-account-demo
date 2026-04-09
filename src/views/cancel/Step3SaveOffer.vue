@@ -155,7 +155,10 @@ function keepPlan() {
 				<div class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] text-[14px] font-bold bg-brand-blue-10/60">
 					<div class="px-5 sm:px-6 py-3.5 text-brand-navy">Feature</div>
 					<div class="px-4 sm:px-6 py-3.5 text-brand-navy">What this means for you</div>
-					<div class="px-3 py-3.5 text-center text-brand-blue">AIOSEO</div>
+					<div class="px-3 py-3.5 text-center text-brand-blue flex items-center justify-center gap-1.5">
+							<img src="/assets/icons/tab-aioseo.svg" alt="" class="w-4 h-4" />
+							AIOSEO
+						</div>
 					<div class="px-3 py-3.5 text-center text-text-muted">{{ competitorName }}</div>
 				</div>
 
