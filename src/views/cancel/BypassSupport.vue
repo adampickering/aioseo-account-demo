@@ -15,7 +15,7 @@ function continueCancel() {
 <template>
 	<div class="max-w-[720px] mx-auto">
 		<div class="aio-card text-center">
-			<h2 class="text-[23px] font-bold text-brand-navy m-0 mb-3">
+			<h2 class="text-[26px] sm:text-[36px] font-bold text-brand-navy tracking-[-0.54px] leading-[32px] sm:leading-[43px] m-0 mb-3">
 				{{ user.firstName }}, let us help with your duplicate subscription.
 			</h2>
 			<p class="text-[16px] text-brand-navy-60 leading-relaxed mb-6">
