@@ -78,7 +78,7 @@ function keepPlan() {
 					{{ user.firstName }}, you don't have to cancel&mdash;you can pause instead.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					We hear you. Unexpected charges and auto-renewals are frustrating. Instead of losing everything, you can pause and pick back up when you're ready.
+					We hear you. Unexpected charges and auto-renewals are frustrating. Instead of losing everything, you can pause and come back when you're ready.
 				</p>
 			</div>
 
