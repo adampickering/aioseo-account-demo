@@ -147,6 +147,15 @@
     background-color: white;
   }
 
+  @media (max-width: 640px) {
+    .aio-card {
+      padding: 20px;
+    }
+    .aio-card-md {
+      padding: 20px;
+    }
+  }
+
   /* Buttons */
   .aio-btn-green {
     background-color: var(--color-brand-green);
