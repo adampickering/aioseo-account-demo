@@ -146,25 +146,28 @@ function keepPlan() {
 					{{ user.firstName }}, before you switch&mdash;here's what you'd be giving up.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
-					We're sorry for the trouble. Our support team can usually resolve plugin issues within 24 hours, and your plan stays active while we work on it.
+					{{ competitor.subhead }}
 				</p>
 			</div>
 
 			<div class="aio-card-primary p-0 overflow-hidden">
-				<div class="grid grid-cols-[1fr_90px_90px] sm:grid-cols-[1fr_120px_120px] text-[14px] font-bold">
+				<div class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] text-[14px] font-bold">
 					<div class="px-4 sm:px-6 py-3 text-brand-navy">Feature</div>
-					<div class="px-3 py-3 text-center text-brand-green">AIOSEO</div>
+					<div class="px-4 sm:px-6 py-3 text-brand-navy">What this means for you</div>
+					<div class="px-3 py-3 text-center text-brand-blue">AIOSEO</div>
 					<div class="px-3 py-3 text-center text-text-muted">{{ competitorName }}</div>
 				</div>
 
 				<div
 					v-for="adv in competitor.advantages"
 					:key="adv.feature"
-					class="grid grid-cols-[1fr_90px_90px] sm:grid-cols-[1fr_120px_120px] border-t border-border"
+					class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] border-t border-border"
 				>
 					<div class="px-4 sm:px-6 py-3">
-						<span class="text-[15px] font-bold text-brand-navy block">{{ adv.feature }}</span>
-						<span class="text-[13px] text-text-muted block mt-0.5">{{ adv.detail }}</span>
+						<span class="text-[15px] font-bold text-brand-navy">{{ adv.feature }}</span>
+					</div>
+					<div class="px-4 sm:px-6 py-3">
+						<span class="text-[13px] text-text-muted">{{ adv.detail }}</span>
 					</div>
 					<div class="px-3 py-3 flex items-center justify-center">
 						<svg aria-hidden="true" class="w-5 h-5 text-brand-green" viewBox="0 0 20 20" fill="none">
@@ -172,9 +175,14 @@ function keepPlan() {
 						</svg>
 					</div>
 					<div class="px-3 py-3 flex items-center justify-center">
-						<svg aria-hidden="true" class="w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="none">
-							<path d="M14 6L6 14M6 6l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
+						<template v-if="competitor.useCheckInstead">
+							<span class="text-[13px] font-semibold text-text-muted">Check</span>
+						</template>
+						<template v-else>
+							<svg aria-hidden="true" class="w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="none">
+								<path d="M14 6L6 14M6 6l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</template>
 					</div>
 				</div>
 
@@ -192,7 +200,7 @@ function keepPlan() {
 
 			<OfferCard
 				title="50% Off Your Next Renewal"
-				body="Still thinking about it? Stay for half the price and see how AIOSEO's latest updates compare. If you're still not satisfied after your next renewal, you can always cancel then."
+				body="Not ready to decide? Stay for half the price while you compare."
 				cta-text="Apply 50% Discount"
 				cta-type="blue"
 				@cta-click="handleOffer('apply-50-discount')"

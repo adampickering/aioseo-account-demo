@@ -34,7 +34,9 @@ export interface CompetitorAdvantage {
 }
 
 export interface Competitor {
+	subhead: string
 	advantages: CompetitorAdvantage[]
+	useCheckInstead?: boolean
 }
 
 export type CompetitorDataMap = Record<string, Competitor> & { _default: Competitor }
