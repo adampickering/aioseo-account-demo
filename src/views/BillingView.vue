@@ -104,7 +104,7 @@ function openManageSub(sub: Subscription) {
 
 		<!-- Saved Payments Method -->
 		<div class="aio-card !p-0">
-			<div class="px-10 pt-8 pb-5 flex justify-between items-center">
+			<div class="px-10 pt-8 pb-5 flex flex-wrap justify-between items-center gap-3">
 				<h2 class="text-h3 font-heading font-semibold text-brand-navy">Saved Payments Method</h2>
 				<button
 					@click="showAddPayment = true"
@@ -119,7 +119,7 @@ function openManageSub(sub: Subscription) {
 					<p class="text-text-muted text-sm">No saved payment methods.</p>
 				</div>
 				<div v-else class="divide-y divide-border">
-					<div v-for="method in localMethods" :key="method.id" class="flex items-center gap-4 py-4">
+					<div v-for="method in localMethods" :key="method.id" class="flex flex-wrap items-center gap-4 py-4">
 						<!-- Card brand logo -->
 						<img
 							:src="baseUrl + `assets/icons/card-${method.brand}.svg`"
@@ -137,7 +137,7 @@ function openManageSub(sub: Subscription) {
 							<p class="text-sm text-brand-navy-40 mt-0.5">Expiry {{ method.expiresAt }}</p>
 						</div>
 						<!-- Actions -->
-						<div class="flex items-center gap-2 shrink-0">
+						<div class="flex items-center gap-2 shrink-0 sm:ml-0 ml-auto">
 							<button
 								@click="openDeleteModal(method)"
 								class="px-5 py-2.5 text-sm font-semibold text-brand-navy bg-white border border-[#E9EAEB] rounded-btn hover:bg-gray-50 transition-all duration-200 cursor-pointer"
