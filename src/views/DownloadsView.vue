@@ -79,12 +79,12 @@ async function copyKey(key: string) {
 	<div>
 		<!-- Product sub-navigation -->
 		<div class="relative mb-8">
-			<div class="flex items-center">
+			<div class="flex items-center overflow-x-auto scrollbar-hide">
 				<button
 					v-for="tab in productTabs"
 					:key="tab.key"
 					@click="activeTab = tab.key"
-					class="flex items-center gap-2.5 px-6 h-[60px] bg-transparent border-0 cursor-pointer text-lg transition-colors"
+					class="flex items-center gap-2.5 px-6 h-[60px] bg-transparent border-0 cursor-pointer text-lg transition-colors shrink-0 whitespace-nowrap"
 					:class="activeTab === tab.key
 						? 'text-brand-blue font-bold shadow-[0px_2px_0px_0px_#005ae0]'
 						: 'text-brand-navy-60 font-normal hover:text-brand-navy'"
@@ -101,7 +101,7 @@ async function copyKey(key: string) {
 		<template v-if="activeTab === 'blc'" v-for="lic in blcLicenses" :key="lic.id">
 			<div class="border border-border rounded-card shadow-card bg-white">
 				<!-- Header -->
-				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
+				<div class="flex flex-wrap items-center gap-2 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 					<div class="aio-icon-box p-2"><ProductIcon product="blc" :size="30" /></div>
 					<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">Broken Link Checker</h2>
 					<a href="#" class="bg-brand-blue text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
@@ -114,12 +114,12 @@ async function copyKey(key: string) {
 				</div>
 
 				<!-- Body row 1: Plan Level / License / Expires -->
-				<div class="flex items-start justify-between p-6 border-b border-border">
+				<div class="flex flex-col sm:flex-row items-start justify-between p-6 border-b border-border gap-4">
 					<div class="flex-1 flex flex-col gap-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">Plan Level</p>
 						<p class="text-base text-brand-navy leading-[38px]">{{ lic.tierLabel }}</p>
 					</div>
-					<div class="flex flex-col gap-1 w-[352px]">
+					<div class="flex flex-col gap-1 w-full sm:w-[352px]">
 						<p class="text-sm font-semibold text-text-light">License</p>
 						<div class="flex items-center gap-2">
 							<p class="text-base text-brand-navy leading-[38px]">{{ lic.licenseKey }}</p>
@@ -136,7 +136,7 @@ async function copyKey(key: string) {
 				</div>
 
 				<!-- Body row 2: Site Activations / Links -->
-				<div class="flex items-start justify-between p-6 border-b border-border rounded-b-card gap-6">
+				<div class="flex flex-col sm:flex-row items-start justify-between p-6 border-b border-border rounded-b-card gap-4">
 					<div class="flex-1 flex flex-col gap-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">Site Activations</p>
 						<div class="flex items-center gap-2 text-base text-brand-navy leading-[38px]">
@@ -144,11 +144,11 @@ async function copyKey(key: string) {
 							<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Manage Sites</a>
 						</div>
 					</div>
-					<div v-if="lic.links" class="flex flex-col gap-1 w-[352px]">
+					<div v-if="lic.links" class="flex flex-col gap-1 w-full sm:w-[352px]">
 						<p class="text-sm font-semibold text-text-light">Links</p>
 						<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(lic.links.remaining || 0) }} / {{ formatNumber(lic.links.total || 0) }} Links Remaining</p>
 					</div>
-					<div class="flex-1 min-w-0"></div>
+					<div class="hidden sm:block flex-1 min-w-0"></div>
 				</div>
 			</div>
 		</template>
@@ -156,7 +156,7 @@ async function copyKey(key: string) {
 		<!-- AI Credits -->
 		<div v-if="activeTab === 'ai-credits' && hasCredits" class="border border-border rounded-card shadow-card bg-white">
 			<!-- Header -->
-			<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
+			<div class="flex flex-wrap items-center gap-2 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 				<div class="aio-icon-box p-2"><ProductIcon product="ai-credits" :size="30" /></div>
 				<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">AI Credits</h2>
 				<a href="#" class="bg-brand-green text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
@@ -165,7 +165,7 @@ async function copyKey(key: string) {
 			</div>
 
 			<!-- Body: AI Credits + Expires -->
-			<div class="flex items-start p-6 border-b border-border rounded-b-card">
+			<div class="flex flex-col sm:flex-row items-start p-6 border-b border-border rounded-b-card gap-4">
 				<div class="flex flex-col gap-1 flex-1 min-w-0">
 					<p class="text-sm font-semibold text-text-light">AI Credits</p>
 					<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(remaining) }} / {{ formatNumber(credits.total) }} AI Credits Remaining</p>
@@ -181,7 +181,7 @@ async function copyKey(key: string) {
 		<template v-if="activeTab === 'aioseo'" v-for="lic in aioseoLicenses" :key="lic.id">
 			<div class="border border-border rounded-card shadow-card bg-white">
 				<!-- Header -->
-				<div class="flex items-center gap-3 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
+				<div class="flex flex-wrap items-center gap-2 pl-3 pr-5 py-3 border-b border-border rounded-t-card">
 					<div class="aio-icon-box p-2"><ProductIcon product="aioseo" :size="30" /></div>
 					<h2 class="flex-1 text-lg font-bold text-brand-navy leading-6">AIOSEO</h2>
 					<a v-if="lic.tier !== 'elite'" href="#" class="bg-brand-blue text-white text-sm font-semibold rounded-btn px-3 py-2 h-9 inline-flex items-center gap-1 no-underline hover:opacity-90 transition-opacity">
@@ -194,12 +194,12 @@ async function copyKey(key: string) {
 				</div>
 
 				<!-- Body row 1: Plan Level / License / Expires -->
-				<div class="flex items-start justify-between p-6 border-b border-border gap-6">
+				<div class="flex flex-col sm:flex-row items-start justify-between p-6 border-b border-border gap-4">
 					<div class="flex-1 flex flex-col gap-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">Plan Level</p>
 						<p class="text-base text-brand-navy leading-[38px]">{{ lic.tierLabel }}</p>
 					</div>
-					<div class="flex flex-col gap-1 w-[352px]">
+					<div class="flex flex-col gap-1 w-full sm:w-[352px]">
 						<p class="text-sm font-semibold text-text-light">License</p>
 						<div class="flex items-center gap-2">
 							<p class="text-base text-brand-navy leading-[38px]">{{ lic.licenseKey }}</p>
@@ -216,7 +216,7 @@ async function copyKey(key: string) {
 				</div>
 
 				<!-- Body row 2: Site Activations / AI Credits -->
-				<div class="flex items-start justify-between p-6 border-b border-border gap-6">
+				<div class="flex flex-col sm:flex-row items-start justify-between p-6 border-b border-border gap-4">
 					<div class="flex-1 flex flex-col gap-1 min-w-0">
 						<p class="text-sm font-semibold text-text-light">Site Activations</p>
 						<div class="flex items-center gap-2 text-base text-brand-navy leading-[38px]">
@@ -224,12 +224,12 @@ async function copyKey(key: string) {
 							<a href="#" class="text-base text-brand-navy underline hover:opacity-80 transition-opacity">Manage Sites</a>
 						</div>
 					</div>
-					<div v-if="lic.aiCredits" class="flex flex-col gap-1 w-[352px]">
+					<div v-if="lic.aiCredits" class="flex flex-col gap-1 w-full sm:w-[352px]">
 						<p class="text-sm font-semibold text-text-light">AI Credits</p>
 						<p class="text-base text-brand-navy leading-[38px]">{{ formatNumber(lic.aiCredits.total - lic.aiCredits.used) }} / {{ formatNumber(lic.aiCredits.total) }} AI Credits Remaining</p>
 						<a v-if="lic.tier !== 'elite'" href="#" class="self-start text-sm font-semibold text-brand-navy bg-white border border-border-input rounded-btn px-3 py-1 no-underline hover:bg-gray-50 transition-colors mt-1">Add More Credits</a>
 					</div>
-					<div class="flex-1 min-w-0"></div>
+					<div class="hidden sm:block flex-1 min-w-0"></div>
 				</div>
 
 				<!-- Addons section -->
@@ -239,7 +239,7 @@ async function copyKey(key: string) {
 						<div
 							v-for="addon in lic.addons"
 							:key="addon.id"
-							class="flex items-center gap-4 w-[calc(25%-3px)]"
+							class="flex items-center gap-4 w-full sm:w-[calc(50%-3px)] lg:w-[calc(25%-3px)]"
 						>
 							<!-- Icon box -->
 							<div class="aio-addon-box">
