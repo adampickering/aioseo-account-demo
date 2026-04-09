@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useCancellation } from '@/composables/useCancellation'
 import CrossPromoCard from '@/components/cancel/CrossPromoCard.vue'
 
-const { user } = useCancellation()
+const { user, acknowledgement } = useCancellation()
 const copied = ref(false)
 
 function copyCode() {
@@ -20,7 +20,10 @@ function copyCode() {
 				{{ user.firstName }}, you're still part of the AIOSEO community.
 			</h2>
 			<p class="text-body-lg mt-3 max-w-[480px] mx-auto">
-				Your subscription has been cancelled.
+				Your subscription has been cancelled. Thanks for being a customer, and we hope to see you again.
+			</p>
+			<p class="text-[15px] text-text-muted mt-2 max-w-[480px] mx-auto">
+				{{ acknowledgement }}
 			</p>
 		</div>
 

@@ -8,6 +8,8 @@ import {
 	getLowerPlan as getLowerPlanHelper,
 } from '@/data/cancellationMockUser'
 import type { PlanTier, LowerPlan } from '@/types/cancellation'
+import { cancellationAcknowledgements } from '@/data/cancellationAcknowledgements'
+import { useCancellationStore } from '@/stores/cancellation'
 
 /**
  * Cancellation flow data accessor.
@@ -30,6 +32,12 @@ export function useCancellation() {
 		return getLowerPlanHelper(tier)
 	}
 
+	const store = useCancellationStore()
+	const acknowledgement = computed(() => {
+		const variant = store.selectedReason?.variant ?? 'H'
+		return cancellationAcknowledgements[variant] ?? cancellationAcknowledgements.H
+	})
+
 	return {
 		user,
 		reasons,
@@ -37,5 +45,6 @@ export function useCancellation() {
 		competitorData,
 		planPricing,
 		getLowerPlan,
+		acknowledgement,
 	}
 }
