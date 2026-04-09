@@ -41,7 +41,7 @@ function keepPlan() {
 				Here's what your site loses on {{ user.renewalDate }}
 			</h2>
 			<p class="text-body-lg mt-3 max-w-[520px] mx-auto">
-				Your {{ user.planName }} plan expires on {{ user.renewalDate }}. Everything below stops working for your site.
+				When your AIOSEO &ndash; {{ user.planName }} expires on {{ user.renewalDate }}, these features stop working on your site.
 			</p>
 		</div>
 
