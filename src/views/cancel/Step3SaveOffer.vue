@@ -199,23 +199,6 @@ function keepPlan() {
 					</div>
 				</div>
 
-				<!-- Summary badge -->
-				<div class="border-t border-brand-blue-10 bg-brand-blue-10/40 grid grid-cols-[1fr_1fr_90px_90px] sm:grid-cols-[1fr_1fr_110px_110px]">
-					<div class="col-span-2 flex items-center px-5 sm:px-6 py-3">
-						<span class="text-[13px] font-semibold text-brand-navy">Score</span>
-					</div>
-					<div class="py-3 flex items-center justify-center bg-brand-blue/[0.04]">
-						<span class="inline-flex items-center gap-1.5 bg-brand-green/10 text-brand-green text-[13px] font-bold rounded-full px-3 py-1">
-							{{ competitor.advantages.length }}/{{ competitor.advantages.length }}
-						</span>
-					</div>
-					<div class="py-3 flex items-center justify-center">
-						<span v-if="competitor.useCheckInstead" class="text-[13px] font-semibold text-text-muted">&mdash;</span>
-						<span v-else class="inline-flex items-center gap-1.5 bg-brand-red/10 text-brand-red text-[13px] font-bold rounded-full px-3 py-1">
-							0/{{ competitor.advantages.length }}
-						</span>
-					</div>
-				</div>
 
 				<!-- Action buttons -->
 				<div class="border-t border-brand-blue-10 bg-white px-5 sm:px-6 py-5 flex flex-col sm:flex-row gap-3">
