@@ -59,7 +59,7 @@ function keepPlan() {
 			<h2 class="text-display m-0">
 				{{ user.firstName }}, we're sorry to see you go.
 			</h2>
-			<p class="text-body-lg mt-3 mb-0 max-w-[520px] mx-auto">
+			<p class="text-body-lg mt-3 mb-0 mx-auto">
 				We appreciate you letting us know. Your feedback helps us improve.
 			</p>
 		</div>
@@ -134,7 +134,7 @@ function keepPlan() {
 
 				<div class="flex flex-col sm:flex-row gap-3 mt-5 pt-4 border-t border-border">
 					<button @click="keepPlan" class="aio-btn-green-sm w-full sm:w-auto">
-						Keep My Plan
+						Keep my plan
 					</button>
 					<button
 						@click="handleContinue"
@@ -144,7 +144,7 @@ function keepPlan() {
 						]"
 						:disabled="!canContinue"
 					>
-						Continue Cancelling
+						Continue cancelling
 					</button>
 				</div>
 			</div>

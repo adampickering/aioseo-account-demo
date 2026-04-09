@@ -26,7 +26,7 @@ const subOptions: SubOption[] = [
 		offer: {
 			title: "We'll set it up for you",
 			body: "Our team can configure AIOSEO for your site in about 15 minutes. Once it's set up, it mostly runs on its own—sitemaps generate automatically, TruSEO scores update as you write, and the Redirection Manager catches broken links in the background.",
-			cta: 'Yes, Set It Up for Me',
+			cta: 'Yes, set it up for me',
 		},
 	},
 	{
@@ -36,7 +36,7 @@ const subOptions: SubOption[] = [
 		offer: {
 			title: 'Free walkthrough with our team',
 			body: "Book a 15-minute session and we'll show you the ropes. We'll walk through the features that matter most for your site, answer your questions, and make sure you're comfortable. No cost, no commitment.",
-			cta: 'Yes, Walk Me Through It',
+			cta: 'Yes, walk me through it',
 		},
 	},
 	{
@@ -46,7 +46,7 @@ const subOptions: SubOption[] = [
 		offer: {
 			title: 'Pause your subscription',
 			body: "No problem—pause instead of cancelling. You'll keep full access until your renewal date, then your subscription freezes for up to 3 months. When you're ready to focus on SEO again, reactivate in one click.",
-			cta: 'Pause My Subscription',
+			cta: 'Pause my subscription',
 		},
 	},
 	{
@@ -150,7 +150,7 @@ function handleSaveOfferSkip() {
 				None of the above? Keep your plan at half the price and give it another shot.
 			</p>
 			<button @click="handleOfferAction('apply-50-discount')" class="aio-btn-outline-blue">
-				Apply 50% Discount
+				Apply 50% discount
 			</button>
 		</div>
 

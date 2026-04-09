@@ -107,12 +107,12 @@ function keepPlan() {
 
 		<div class="text-center space-y-4">
 			<button @click="keepPlan" class="aio-btn-green w-full max-w-[400px]">
-				Keep My Plan
+				Keep my plan
 			</button>
 
 			<div class="flex items-center justify-center gap-6">
 				<button @click="handlePause" class="text-[15px] text-brand-blue hover:underline bg-transparent border-none cursor-pointer font-bold">
-					Pause My Subscription Instead
+					Pause my subscription instead
 				</button>
 				<span class="text-border">|</span>
 				<button

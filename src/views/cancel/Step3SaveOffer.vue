@@ -96,7 +96,7 @@ function keepPlan() {
 				:primary="true"
 				title="Pause your subscription"
 				:body="`Keep full access until ${user.renewalDate}. On that date, instead of renewing, your subscription will pause for up to 3 months. No charges, no surprises. When you're ready, reactivate in one click at your current rate.`"
-				cta-text="Pause My Subscription"
+				cta-text="Pause my subscription"
 				@cta-click="handleOffer('pause-subscription')"
 			/>
 
@@ -105,7 +105,7 @@ function keepPlan() {
 			<OfferCard
 				title="50% off your next renewal"
 				:body="`Not interested in pausing? Keep your plan active at half the price. You'll save $${user.savings} on your next renewal and we'll send you a reminder 14 days before it's due.`"
-				cta-text="Apply 50% Discount Instead"
+				cta-text="Apply 50% discount instead"
 				cta-type="blue"
 				@cta-click="handleOffer('apply-50-discount')"
 			/>
@@ -125,7 +125,7 @@ function keepPlan() {
 				:primary="true"
 				title="Priority technical support"
 				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
-				cta-text="Yes, Fix My Issue First"
+				cta-text="Yes, fix my issue first"
 				@cta-click="handleOffer('priority-support')"
 			/>
 
@@ -134,7 +134,7 @@ function keepPlan() {
 			<OfferCard
 				title="50% off while we work on it"
 				body="If you'd rather keep your plan but at a lower cost while things get sorted, here's 50% off your next renewal."
-				cta-text="Apply 50% Discount"
+				cta-text="Apply 50% discount"
 				cta-type="blue"
 				@cta-click="handleOffer('apply-50-discount')"
 			/>
@@ -143,7 +143,7 @@ function keepPlan() {
 		<template v-if="variant === 'D'">
 			<div class="text-center mb-8">
 				<h2 class="text-[26px] sm:text-[36px] font-bold text-brand-navy tracking-[-0.54px] leading-[32px] sm:leading-[43px] m-0">
-					{{ user.firstName }}, before you switch&mdash;here's what you'd be giving up.
+					Before you switch to {{ competitorName }}, here's what you'd be giving up.
 				</h2>
 				<p class="text-[16px] text-text-muted mt-3 max-w-[520px] mx-auto">
 					{{ competitor.subhead }}
@@ -188,10 +188,10 @@ function keepPlan() {
 
 				<div class="border-t border-border px-4 sm:px-6 py-5 flex flex-col sm:flex-row gap-3">
 					<button @click="keepPlan" class="aio-btn-green">
-						Keep My AIOSEO Plan
+						Keep my AIOSEO plan
 					</button>
 					<a href="https://aioseo.com/feature-comparison/" target="_blank" rel="noopener noreferrer" class="aio-btn-outline-blue no-underline">
-						See Full Comparison
+						See full comparison
 					</a>
 				</div>
 			</div>
@@ -200,8 +200,8 @@ function keepPlan() {
 
 			<OfferCard
 				title="50% off your next renewal"
-				body="Not ready to decide? Stay for half the price while you compare."
-				cta-text="Apply 50% Discount"
+				body="Still thinking about it? Stay for half the price while you decide."
+				cta-text="Apply 50% discount"
 				cta-type="blue"
 				@cta-click="handleOffer('apply-50-discount')"
 			/>
@@ -221,7 +221,7 @@ function keepPlan() {
 				:primary="true"
 				title="Let us take a look"
 				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
-				cta-text="Yes, Let Me Talk to Someone"
+				cta-text="Yes, let me talk to someone"
 				@cta-click="handleOffer('talk-to-support')"
 			/>
 
@@ -250,7 +250,7 @@ function keepPlan() {
 				:primary="true"
 				title="Pause your subscription for up to 3 months"
 				:body="`Keep full access until ${user.renewalDate}. On that date, your subscription pauses instead of renewing. No charges during the pause. If you launch a new site, reactivate in one click and your license transfers over.`"
-				cta-text="Pause My Subscription"
+				cta-text="Pause my subscription"
 				@cta-click="handleOffer('pause-subscription')"
 			/>
 
