@@ -11,7 +11,7 @@ export const cancellationCompetitorData: CompetitorDataMap = {
 		],
 	},
 	'Yoast SEO': {
-		subhead: 'These features are included in your AIOSEO plan, but Yoast charges extra for them.',
+		subhead: 'These features are included in your AIOSEO plan, but Yoast charges extra.',
 		advantages: [
 			{ feature: 'Redirection Manager', detail: 'Catch 404s and manage redirects \u2014 included in your plan (requires Yoast Premium at $99/yr per site)' },
 			{ feature: 'Multi-Site Value', detail: '10 sites on one license; Yoast charges $99/year per site ($990 for 10 sites)' },
