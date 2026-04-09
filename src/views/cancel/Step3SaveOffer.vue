@@ -243,9 +243,9 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="Submit a feature request"
+				title="Share my idea"
 				body="If AIOSEO doesn't do what you need yet, tell us. Feature requests go directly to our product team and help shape what we build. You can also browse requests from other users to upvote ideas you care about."
-				cta-text="Submit a feature request"
+				cta-text="Share my idea"
 				cta-type="blue"
 				@cta-click="handleOffer('feature-request')"
 			/>
