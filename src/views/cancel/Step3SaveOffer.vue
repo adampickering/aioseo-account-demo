@@ -152,39 +152,54 @@ function keepPlan() {
 
 			<div class="bg-brand-blue-5 border border-brand-blue-10 rounded-card overflow-hidden">
 				<!-- Header row -->
-				<div class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] text-[14px] font-bold bg-brand-blue-10/60">
+				<div class="grid grid-cols-[1fr_1fr_90px_90px] sm:grid-cols-[1fr_1fr_110px_110px] text-[13px] font-bold bg-brand-blue-10/60">
 					<div class="px-5 sm:px-6 py-3.5 text-brand-navy">Feature</div>
 					<div class="px-4 sm:px-6 py-3.5 text-brand-navy">What this means for you</div>
-					<div class="px-3 py-3.5 text-center text-brand-blue flex items-center justify-center gap-1.5">
-							<img src="/assets/icons/tab-aioseo.svg" alt="" class="w-4 h-4" />
-							AIOSEO
-						</div>
-					<div class="px-3 py-3.5 text-center text-text-muted">{{ competitorName }}</div>
+					<div class="py-3.5 text-center text-brand-blue flex items-center justify-center gap-1.5 bg-brand-blue/[0.04]">
+						<img src="/assets/icons/tab-aioseo.svg" alt="" class="w-4 h-4" />
+						AIOSEO
+					</div>
+					<div class="px-2 py-3.5 text-center text-text-muted">{{ competitorName }}</div>
 				</div>
 
 				<!-- Data rows -->
 				<div
 					v-for="(adv, idx) in competitor.advantages"
 					:key="adv.feature"
-					class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] border-t border-brand-blue-10 transition-colors duration-150 hover:bg-brand-blue-10/30"
+					class="grid grid-cols-[1fr_1fr_90px_90px] sm:grid-cols-[1fr_1fr_110px_110px] border-t border-brand-blue-10 transition-colors duration-150 hover:bg-brand-blue-10/30"
 					:class="idx % 2 === 0 ? 'bg-white' : 'bg-brand-blue-5/50'"
 				>
-					<div class="px-5 sm:px-6 py-4">
+					<div class="px-5 sm:px-6 py-4 flex items-start gap-2.5">
+						<div class="w-5 h-5 mt-0.5 shrink-0 text-brand-blue opacity-50">
+							<!-- Feature icons based on keyword matching -->
+							<svg v-if="adv.feature.includes('SEO') || adv.feature.includes('TruSEO') || adv.feature.includes('On-Page')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+							<svg v-else-if="adv.feature.includes('Link') || adv.feature.includes('Redirect')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/></svg>
+							<svg v-else-if="adv.feature.includes('Schema') || adv.feature.includes('WooCommerce')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+							<svg v-else-if="adv.feature.includes('Site') || adv.feature.includes('License') || adv.feature.includes('Install')" viewBox="0 0 20 20" fill="currentColor"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.547l1.607.688a3 3 0 002.346 0l7.047-3.02V14a1 1 0 01-.553.894L10 18.897a1 1 0 01-.7-.324z"/></svg>
+							<svg v-else-if="adv.feature.includes('Setup') || adv.feature.includes('Beginner') || adv.feature.includes('Walkthrough')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+							<svg v-else-if="adv.feature.includes('Statistics') || adv.feature.includes('Dashboard')" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm6-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zm6-3a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+							<svg v-else-if="adv.feature.includes('Plugin') || adv.feature.includes('WordPress') || adv.feature.includes('Editor')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"/></svg>
+							<svg v-else-if="adv.feature.includes('Stability') || adv.feature.includes('Support') || adv.feature.includes('Subscription')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+							<svg v-else-if="adv.feature.includes('Author') || adv.feature.includes('E-A-T')" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+							<svg v-else viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+						</div>
 						<span class="text-[15px] font-bold text-brand-navy">{{ adv.feature }}</span>
 					</div>
 					<div class="px-4 sm:px-6 py-4">
 						<span class="text-[13px] text-text-secondary leading-relaxed">{{ adv.detail }}</span>
 					</div>
-					<div class="px-3 py-4 flex items-center justify-center">
+					<!-- AIOSEO column — highlighted -->
+					<div class="py-4 flex items-center justify-center bg-brand-blue/[0.04]">
 						<div class="w-7 h-7 rounded-full bg-brand-green/10 flex items-center justify-center">
 							<svg aria-hidden="true" class="w-4 h-4 text-brand-green" viewBox="0 0 20 20" fill="none">
 								<path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 						</div>
 					</div>
-					<div class="px-3 py-4 flex items-center justify-center">
+					<!-- Competitor column -->
+					<div class="px-2 py-4 flex flex-col items-center justify-center gap-1">
 						<template v-if="competitor.useCheckInstead">
-							<span class="text-[12px] font-semibold text-text-muted bg-gray-100 rounded-full px-2 py-0.5">Check</span>
+							<span class="text-[11px] font-semibold text-text-muted bg-gray-100 rounded-full px-2.5 py-0.5">Check</span>
 						</template>
 						<template v-else>
 							<div class="w-7 h-7 rounded-full bg-brand-red/10 flex items-center justify-center">
@@ -192,7 +207,26 @@ function keepPlan() {
 									<path d="M14 6L6 14M6 6l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 							</div>
+							<span class="text-[10px] text-text-muted">Not included</span>
 						</template>
+					</div>
+				</div>
+
+				<!-- Summary badge -->
+				<div class="border-t border-brand-blue-10 bg-brand-blue-10/40 px-5 sm:px-6 py-3 grid grid-cols-[1fr_1fr_90px_90px] sm:grid-cols-[1fr_1fr_110px_110px]">
+					<div class="col-span-2 flex items-center">
+						<span class="text-[13px] font-semibold text-brand-navy">Score</span>
+					</div>
+					<div class="flex items-center justify-center">
+						<span class="inline-flex items-center gap-1.5 bg-brand-green/10 text-brand-green text-[13px] font-bold rounded-full px-3 py-1">
+							{{ competitor.advantages.length }}/{{ competitor.advantages.length }}
+						</span>
+					</div>
+					<div class="flex items-center justify-center">
+						<span v-if="competitor.useCheckInstead" class="text-[13px] font-semibold text-text-muted">&mdash;</span>
+						<span v-else class="inline-flex items-center gap-1.5 bg-brand-red/10 text-brand-red text-[13px] font-bold rounded-full px-3 py-1">
+							0/{{ competitor.advantages.length }}
+						</span>
 					</div>
 				</div>
 
