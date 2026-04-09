@@ -24,7 +24,7 @@ const subOptions: SubOption[] = [
 		label: "No time to set it up",
 		description: "We'll configure everything for you in ~15 minutes",
 		offer: {
-			title: "We'll Set It Up for You",
+			title: "We'll set it up for you",
 			body: "Our team can configure AIOSEO for your site in about 15 minutes. Once it's set up, it mostly runs on its own—sitemaps generate automatically, TruSEO scores update as you write, and the Redirection Manager catches broken links in the background.",
 			cta: 'Yes, Set It Up for Me',
 		},
@@ -34,7 +34,7 @@ const subOptions: SubOption[] = [
 		label: "Not sure how to use it",
 		description: "Book a free 15-minute walkthrough with our team",
 		offer: {
-			title: 'Free Walkthrough With Our Team',
+			title: 'Free walkthrough with our team',
 			body: "Book a 15-minute session and we'll show you the ropes. We'll walk through the features that matter most for your site, answer your questions, and make sure you're comfortable. No cost, no commitment.",
 			cta: 'Yes, Walk Me Through It',
 		},
@@ -44,7 +44,7 @@ const subOptions: SubOption[] = [
 		label: "Don't need SEO right now",
 		description: "Pause for up to 3 months — reactivate anytime",
 		offer: {
-			title: 'Pause Your Subscription',
+			title: 'Pause your subscription',
 			body: "No problem—pause instead of cancelling. You'll keep full access until your renewal date, then your subscription freezes for up to 3 months. When you're ready to focus on SEO again, reactivate in one click.",
 			cta: 'Pause My Subscription',
 		},
@@ -54,7 +54,7 @@ const subOptions: SubOption[] = [
 		label: "Tried it, didn't see results",
 		description: "Let our team review your setup and find what's off",
 		offer: {
-			title: 'Let Us Review Your Setup',
+			title: 'Let us review your setup',
 			body: "Results depend a lot on how AIOSEO is configured for your specific site. Our team can review your settings, check for misconfigurations, and suggest changes that could make a real difference. Your plan stays active while we look into it.",
 			cta: 'Yes, Review My Setup',
 		},
@@ -144,7 +144,7 @@ function handleSaveOfferSkip() {
 
 		<div class="aio-card">
 			<h3 class="text-[20px] font-bold text-brand-navy m-0 mb-3">
-				50% Off Your Next Renewal
+				50% off your next renewal
 			</h3>
 			<p class="text-[16px] text-brand-navy-60 leading-relaxed m-0 mb-5">
 				None of the above? Keep your plan at half the price and give it another shot.

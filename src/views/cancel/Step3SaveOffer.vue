@@ -54,7 +54,7 @@ function keepPlan() {
 			<OfferCard
 				:primary="true"
 				:badge="`Save $${user.savings}`"
-				title="50% Off Your Next Renewal"
+				title="50% off your next renewal"
 				:body="`Keep every feature you have right now—TruSEO Analysis, Smart Sitemaps, Schema Generator, and everything else in your ${user.planName} plan—for half the price on your next renewal.`"
 				cta-text="Yes, Apply My 50% Discount"
 				@cta-click="handleOffer('apply-50-discount')"
@@ -64,7 +64,7 @@ function keepPlan() {
 
 			<OfferCard
 				v-if="lowerPlan"
-				title="Switch to a Smaller Plan"
+				title="Switch to a smaller plan"
 				:body="`Your current ${user.planName} plan covers ${user.sites} sites. If you only need coverage for fewer sites, you could switch to ${lowerPlan.name} and save $${(user.annualPrice - lowerPlan.price).toFixed(2)}/year while keeping the core features you use most.`"
 				cta-text="Compare Plans"
 				cta-type="blue"
@@ -94,7 +94,7 @@ function keepPlan() {
 
 			<OfferCard
 				:primary="true"
-				title="Pause Your Subscription"
+				title="Pause your subscription"
 				:body="`Keep full access until ${user.renewalDate}. On that date, instead of renewing, your subscription will pause for up to 3 months. No charges, no surprises. When you're ready, reactivate in one click at your current rate.`"
 				cta-text="Pause My Subscription"
 				@cta-click="handleOffer('pause-subscription')"
@@ -103,7 +103,7 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="50% Off Your Next Renewal"
+				title="50% off your next renewal"
 				:body="`Not interested in pausing? Keep your plan active at half the price. You'll save $${user.savings} on your next renewal and we'll send you a reminder 14 days before it's due.`"
 				cta-text="Apply 50% Discount Instead"
 				cta-type="blue"
@@ -123,7 +123,7 @@ function keepPlan() {
 
 			<OfferCard
 				:primary="true"
-				title="Priority Technical Support"
+				title="Priority technical support"
 				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
 				cta-text="Yes, Fix My Issue First"
 				@cta-click="handleOffer('priority-support')"
@@ -132,7 +132,7 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="50% Off While We Work on It"
+				title="50% off while we work on it"
 				body="If you'd rather keep your plan but at a lower cost while things get sorted, here's 50% off your next renewal."
 				cta-text="Apply 50% Discount"
 				cta-type="blue"
@@ -199,7 +199,7 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="50% Off Your Next Renewal"
+				title="50% off your next renewal"
 				body="Not ready to decide? Stay for half the price while you compare."
 				cta-text="Apply 50% Discount"
 				cta-type="blue"
@@ -219,7 +219,7 @@ function keepPlan() {
 
 			<OfferCard
 				:primary="true"
-				title="Let Us Take a Look"
+				title="Let us take a look"
 				body="We'll escalate your issue to a support specialist. You'll hear back within 24 hours with a fix or a clear update on what's happening. Your subscription stays fully active while we resolve the issue."
 				cta-text="Yes, Let Me Talk to Someone"
 				@cta-click="handleOffer('talk-to-support')"
@@ -228,7 +228,7 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="Submit a Feature Request"
+				title="Submit a feature request"
 				body="If AIOSEO doesn't do what you need yet, tell us. Feature requests go directly to our product team and help shape what we build. You can also browse requests from other users to upvote ideas you care about."
 				cta-text="Submit a Feature Request"
 				cta-type="blue"
@@ -248,7 +248,7 @@ function keepPlan() {
 
 			<OfferCard
 				:primary="true"
-				title="Pause Your Subscription for Up to 3 Months"
+				title="Pause your subscription for up to 3 months"
 				:body="`Keep full access until ${user.renewalDate}. On that date, your subscription pauses instead of renewing. No charges during the pause. If you launch a new site, reactivate in one click and your license transfers over.`"
 				cta-text="Pause My Subscription"
 				@cta-click="handleOffer('pause-subscription')"
@@ -257,7 +257,7 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="Transfer Your License to Another Site"
+				title="Transfer your license to another site"
 				body="If you have another WordPress site, you can move your AIOSEO license there right now. No extra cost, no new purchase."
 				cta-text="Transfer My License"
 				cta-type="blue"
@@ -278,7 +278,7 @@ function keepPlan() {
 			<OfferCard
 				:primary="true"
 				:badge="`Save $${user.savings}`"
-				title="50% Off Your Next Renewal"
+				title="50% off your next renewal"
 				:body="`Keep your full ${user.planName} plan—every feature, every integration, priority support—for half the price on your next renewal.`"
 				cta-text="Yes, Apply My 50% Discount"
 				@cta-click="handleOffer('apply-50-discount')"
@@ -287,7 +287,7 @@ function keepPlan() {
 			<div class="aio-or-divider">or</div>
 
 			<OfferCard
-				title="Pause Your Subscription"
+				title="Pause your subscription"
 				:body="`Not the right time? Pause for up to 3 months. You'll keep full access until ${user.renewalDate}, and nothing will be charged during the pause.`"
 				cta-text="Pause Instead"
 				cta-type="blue"
