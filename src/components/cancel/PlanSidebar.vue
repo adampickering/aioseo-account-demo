@@ -47,7 +47,7 @@ function keepPlan() {
 		</div>
 
 		<button @click="keepPlan" class="aio-btn-green pitch-cta">
-			Keep My Plan
+			Keep my plan
 		</button>
 	</div>
 </template>
