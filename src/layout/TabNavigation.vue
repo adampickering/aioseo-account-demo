@@ -64,32 +64,34 @@ onBeforeUnmount(() => {
 
 <template>
 	<nav aria-label="Account navigation" class="border-b border-border">
-		<ul
-			class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px] overflow-x-auto md:overflow-visible scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0"
-		>
-			<!-- Primary tabs -->
-			<li
-				v-for="tab in primaryTabs"
-				:key="tab.routeName"
-				class="flex p-0 m-0 shrink-0"
+		<div class="flex items-end -mx-5 px-5 md:mx-0 md:px-0">
+			<!-- Scrollable primary tabs -->
+			<ul
+				class="flex items-end list-none p-0 m-0 text-lg leading-[28.8px] overflow-x-auto md:overflow-visible scrollbar-hide flex-1 min-w-0"
 			>
-				<RouterLink
-					:to="{ name: tab.routeName }"
-					class="aio-tab no-underline whitespace-nowrap text-base md:text-lg"
-					:class="{ 'aio-tab-active': isTabActive(tab) }"
-					:aria-current="isTabActive(tab) ? 'page' : undefined"
+				<li
+					v-for="tab in primaryTabs"
+					:key="tab.routeName"
+					class="flex p-0 m-0 shrink-0"
 				>
-					{{ tab.label }}
-				</RouterLink>
-			</li>
+					<RouterLink
+						:to="{ name: tab.routeName }"
+						class="aio-tab no-underline whitespace-nowrap text-base md:text-lg"
+						:class="{ 'aio-tab-active': isTabActive(tab) }"
+						:aria-current="isTabActive(tab) ? 'page' : undefined"
+					>
+						{{ tab.label }}
+					</RouterLink>
+				</li>
 
-			<!-- Spacer (desktop only) -->
-			<li class="hidden md:flex flex-1 list-none"></li>
+				<!-- Spacer (desktop only) -->
+				<li class="hidden md:flex flex-1 list-none"></li>
+			</ul>
 
-			<!-- More dropdown -->
-			<li
+			<!-- More dropdown (outside scrollable area) -->
+			<div
 				ref="moreRef"
-				class="relative flex p-0 m-0 shrink-0"
+				class="relative flex shrink-0"
 			>
 				<button
 					@click="toggleMore"
@@ -141,8 +143,8 @@ onBeforeUnmount(() => {
 						</template>
 					</div>
 				</Transition>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</nav>
 </template>
 
