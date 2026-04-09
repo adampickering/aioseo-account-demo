@@ -22,7 +22,7 @@ function continueCancel() {
 				You can upgrade or downgrade your AIOSEO plan directly from your account.
 			</p>
 			<button class="aio-btn-green mb-4">
-				Switch to a Different Plan
+				Switch to a different plan
 			</button>
 			<div class="mt-4">
 				<button @click="continueCancel" class="aio-link-skip">

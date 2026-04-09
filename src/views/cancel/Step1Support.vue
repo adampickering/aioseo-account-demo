@@ -57,7 +57,7 @@ function handleSkip() {
 						@click="handleSupport"
 						class="aio-btn-green w-full max-w-[380px]"
 					>
-						Talk to Our Team &mdash; Priority Response
+						Talk to our team &mdash; priority response
 					</button>
 					<p class="text-caption mt-3 mb-0">
 						Your request will be escalated automatically. We'll be with you shortly.

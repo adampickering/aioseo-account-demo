@@ -134,7 +134,7 @@ function keepPlan() {
 
 				<div class="flex flex-col sm:flex-row gap-3 mt-5 pt-4 border-t border-border">
 					<button @click="keepPlan" class="aio-btn-green-sm w-full sm:w-auto">
-						Keep My Plan
+						Keep my plan
 					</button>
 					<button
 						@click="handleContinue"
@@ -144,7 +144,7 @@ function keepPlan() {
 						]"
 						:disabled="!canContinue"
 					>
-						Continue Cancelling
+						Continue cancelling
 					</button>
 				</div>
 			</div>

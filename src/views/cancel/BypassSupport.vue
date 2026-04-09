@@ -30,7 +30,7 @@ function continueCancel() {
 				</p>
 			</div>
 			<button class="aio-btn-green mb-4">
-				Send My Support Ticket
+				Send my support ticket
 			</button>
 			<div class="mt-4">
 				<button @click="continueCancel" class="aio-link-skip">

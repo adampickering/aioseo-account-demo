@@ -52,7 +52,7 @@ function copyCode() {
 				Get 50% off when you resubscribe within 30 days.
 			</p>
 			<button class="aio-btn-green">
-				Reactivate My Plan
+				Reactivate my plan
 			</button>
 		</div>
 

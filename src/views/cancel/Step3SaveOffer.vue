@@ -56,7 +56,7 @@ function keepPlan() {
 				:badge="`Save $${user.savings}`"
 				title="50% off your next renewal"
 				:body="`Keep every feature you have right now—TruSEO Analysis, Smart Sitemaps, Schema Generator, and everything else in your ${user.planName} plan—for half the price on your next renewal.`"
-				cta-text="Yes, Apply My 50% Discount"
+				cta-text="Yes, apply my 50% discount"
 				@cta-click="handleOffer('apply-50-discount')"
 			/>
 
@@ -66,7 +66,7 @@ function keepPlan() {
 				v-if="lowerPlan"
 				title="Switch to a smaller plan"
 				:body="`Your current ${user.planName} plan covers ${user.sites} sites. If you only need coverage for fewer sites, you could switch to ${lowerPlan.name} and save $${(user.annualPrice - lowerPlan.price).toFixed(2)}/year while keeping the core features you use most.`"
-				cta-text="Compare Plans"
+				cta-text="Compare plans"
 				cta-type="blue"
 				@cta-click="handleOffer('compare-plans')"
 			/>
@@ -245,7 +245,7 @@ function keepPlan() {
 			<OfferCard
 				title="Submit a feature request"
 				body="If AIOSEO doesn't do what you need yet, tell us. Feature requests go directly to our product team and help shape what we build. You can also browse requests from other users to upvote ideas you care about."
-				cta-text="Submit a Feature Request"
+				cta-text="Submit a feature request"
 				cta-type="blue"
 				@cta-click="handleOffer('feature-request')"
 			/>
@@ -274,7 +274,7 @@ function keepPlan() {
 			<OfferCard
 				title="Transfer your license to another site"
 				body="If you have another WordPress site, you can move your AIOSEO license there right now. No extra cost, no new purchase."
-				cta-text="Transfer My License"
+				cta-text="Transfer my license"
 				cta-type="blue"
 				@cta-click="handleOffer('transfer-license')"
 			/>
@@ -295,7 +295,7 @@ function keepPlan() {
 				:badge="`Save $${user.savings}`"
 				title="50% off your next renewal"
 				:body="`Keep your full ${user.planName} plan—every feature, every integration, priority support—for half the price on your next renewal.`"
-				cta-text="Yes, Apply My 50% Discount"
+				cta-text="Yes, apply my 50% discount"
 				@cta-click="handleOffer('apply-50-discount')"
 			/>
 
@@ -304,7 +304,7 @@ function keepPlan() {
 			<OfferCard
 				title="Pause your subscription"
 				:body="`Not the right time? Pause for up to 3 months. You'll keep full access until ${user.renewalDate}, and nothing will be charged during the pause.`"
-				cta-text="Pause Instead"
+				cta-text="Pause instead"
 				cta-type="blue"
 				@cta-click="handleOffer('pause-subscription')"
 			/>

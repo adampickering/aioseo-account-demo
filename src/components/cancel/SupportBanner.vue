@@ -8,8 +8,8 @@
 			</svg>
 		</div>
 		<p class="m-0 text-[15px]">
-			<span class="font-bold text-brand-navy">Have a Question?</span>
-			<a href="#" class="text-brand-blue hover:opacity-80 underline font-bold ml-1.5">Get Help Now &rarr;</a>
+			<span class="font-bold text-brand-navy">Have a question?</span>
+			<a href="#" class="text-brand-blue hover:opacity-80 underline font-bold ml-1.5">Get help now &rarr;</a>
 			<span class="text-text-muted ml-0 sm:ml-2 text-[13px] block sm:inline mt-1 sm:mt-0">Typically responds within 2 hours</span>
 		</p>
 	</div>

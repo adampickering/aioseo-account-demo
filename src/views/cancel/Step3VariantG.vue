@@ -56,7 +56,7 @@ const subOptions: SubOption[] = [
 		offer: {
 			title: 'Let us review your setup',
 			body: "Results depend a lot on how AIOSEO is configured for your specific site. Our team can review your settings, check for misconfigurations, and suggest changes that could make a real difference. Your plan stays active while we look into it.",
-			cta: 'Yes, Review My Setup',
+			cta: 'Yes, review my setup',
 		},
 	},
 ]

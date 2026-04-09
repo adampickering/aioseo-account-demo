@@ -122,7 +122,7 @@ function keepPlan() {
 						!confirmed ? 'text-text-muted/40 cursor-not-allowed' : 'text-text-muted hover:text-brand-navy-60'
 					]"
 				>
-					Confirm Cancellation
+					Confirm cancellation
 				</button>
 			</div>
 		</div>
