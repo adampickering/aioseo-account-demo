@@ -150,43 +150,51 @@ function keepPlan() {
 				</p>
 			</div>
 
-			<div class="aio-card-primary p-0 overflow-hidden">
-				<div class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] text-[14px] font-bold">
-					<div class="px-4 sm:px-6 py-3 text-brand-navy">Feature</div>
-					<div class="px-4 sm:px-6 py-3 text-brand-navy">What this means for you</div>
-					<div class="px-3 py-3 text-center text-brand-blue">AIOSEO</div>
-					<div class="px-3 py-3 text-center text-text-muted">{{ competitorName }}</div>
+			<div class="bg-brand-blue-5 border border-brand-blue-10 rounded-card overflow-hidden">
+				<!-- Header row -->
+				<div class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] text-[14px] font-bold bg-brand-blue-10/60">
+					<div class="px-5 sm:px-6 py-3.5 text-brand-navy">Feature</div>
+					<div class="px-4 sm:px-6 py-3.5 text-brand-navy">What this means for you</div>
+					<div class="px-3 py-3.5 text-center text-brand-blue">AIOSEO</div>
+					<div class="px-3 py-3.5 text-center text-text-muted">{{ competitorName }}</div>
 				</div>
 
+				<!-- Data rows -->
 				<div
-					v-for="adv in competitor.advantages"
+					v-for="(adv, idx) in competitor.advantages"
 					:key="adv.feature"
-					class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] border-t border-border"
+					class="grid grid-cols-[1fr_1fr_80px_80px] sm:grid-cols-[1fr_1fr_100px_100px] border-t border-brand-blue-10 transition-colors duration-150 hover:bg-brand-blue-10/30"
+					:class="idx % 2 === 0 ? 'bg-white' : 'bg-brand-blue-5/50'"
 				>
-					<div class="px-4 sm:px-6 py-3">
+					<div class="px-5 sm:px-6 py-4">
 						<span class="text-[15px] font-bold text-brand-navy">{{ adv.feature }}</span>
 					</div>
-					<div class="px-4 sm:px-6 py-3">
-						<span class="text-[13px] text-text-muted">{{ adv.detail }}</span>
+					<div class="px-4 sm:px-6 py-4">
+						<span class="text-[13px] text-text-secondary leading-relaxed">{{ adv.detail }}</span>
 					</div>
-					<div class="px-3 py-3 flex items-center justify-center">
-						<svg aria-hidden="true" class="w-5 h-5 text-brand-green" viewBox="0 0 20 20" fill="none">
-							<path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
+					<div class="px-3 py-4 flex items-center justify-center">
+						<div class="w-7 h-7 rounded-full bg-brand-green/10 flex items-center justify-center">
+							<svg aria-hidden="true" class="w-4 h-4 text-brand-green" viewBox="0 0 20 20" fill="none">
+								<path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
 					</div>
-					<div class="px-3 py-3 flex items-center justify-center">
+					<div class="px-3 py-4 flex items-center justify-center">
 						<template v-if="competitor.useCheckInstead">
-							<span class="text-[13px] font-semibold text-text-muted">Check</span>
+							<span class="text-[12px] font-semibold text-text-muted bg-gray-100 rounded-full px-2 py-0.5">Check</span>
 						</template>
 						<template v-else>
-							<svg aria-hidden="true" class="w-5 h-5 text-brand-red" viewBox="0 0 20 20" fill="none">
-								<path d="M14 6L6 14M6 6l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
+							<div class="w-7 h-7 rounded-full bg-brand-red/10 flex items-center justify-center">
+								<svg aria-hidden="true" class="w-4 h-4 text-brand-red" viewBox="0 0 20 20" fill="none">
+									<path d="M14 6L6 14M6 6l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
 						</template>
 					</div>
 				</div>
 
-				<div class="border-t border-border px-4 sm:px-6 py-5 flex flex-col sm:flex-row gap-3">
+				<!-- Action buttons -->
+				<div class="border-t border-brand-blue-10 bg-white px-5 sm:px-6 py-5 flex flex-col sm:flex-row gap-3">
 					<button @click="keepPlan" class="aio-btn-green">
 						Keep my AIOSEO plan
 					</button>
