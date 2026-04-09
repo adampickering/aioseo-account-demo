@@ -176,7 +176,7 @@ function keepPlan() {
 						<span class="text-[13px] text-text-secondary leading-relaxed">{{ adv.detail }}</span>
 					</div>
 					<!-- AIOSEO column — highlighted -->
-					<div class="py-4 flex items-center justify-center bg-brand-blue/[0.04]">
+					<div class="py-4 flex items-start justify-center bg-brand-blue/[0.04]">
 						<div class="w-7 h-7 rounded-full bg-brand-green/10 flex items-center justify-center">
 							<svg aria-hidden="true" class="w-4 h-4 text-brand-green" viewBox="0 0 20 20" fill="none">
 								<path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -184,7 +184,7 @@ function keepPlan() {
 						</div>
 					</div>
 					<!-- Competitor column -->
-					<div class="px-2 py-4 flex flex-col items-center justify-center gap-1">
+					<div class="px-2 py-4 flex flex-col items-center gap-1">
 						<template v-if="competitor.useCheckInstead">
 							<span class="text-[11px] font-semibold text-text-muted bg-gray-100 rounded-full px-2.5 py-0.5">Check</span>
 						</template>
